@@ -1,0 +1,32 @@
+body {
+  color: black;
+  background: #c6c8c3;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+}
+
+.fill-box {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
+}
+
+.fill-box img {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
