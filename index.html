@@ -1,12 +1,158 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
+<head>
+	<meta charset="utf-8">
+	<title>HTML Academy: Девайс</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+	<nav>
+		<a href="index.html">
+			<img src="./img/logo.png" alt="Логотип компании DEVICE">
+		</a>
+		<ul>
+			<li>
+				<input aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту">
+			</li>
+			<li>
+				<button aria-label="Авторизация" type="button">Войти</button>
+			</li>
+			<li><a href="compare.html">Сравнить</a></li>
+			<li><a href="basket.html">Корзина</a></li>
+		</ul>
+		<ul>
+			<li>
+				<button type="button">Каталог товаров</button>
+				<!--      кнопка выше должна открывать этот список-->
+				<ul class="visually-hidden">
+					<li>Виртуальная реальность</li>
+					<li>Моноподы для селфи</li>
+					<li>Экшн-камеры</li>
+					<li>Фитнес-браслеты</li>
+					<li>Умные часы</li>
+					<li>Квадрокоптеры</li>
+				</ul>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+			</li>
+			<li><a href="delivery.html">Доставка</a></li>
+			<li><a href="warranty.html">Гарантия</a></li>
+			<li><a href="contacts.html">Контакты</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<h1 class="visually-hidden">Каталог товаров</h1>
+	<!-- ========================список для слайдера ========================================-->
+	<ul>
+		<li>
+			<section class="preview">
+				<h2>Делай селфи,<br>
+					как Бен Стиллер!</h2>
+				<img src="./img/slider-1.png" width="384" height="486" alt="Монопод для селфи">
+				<p>Самая длинная палка для селфи доступна в нашем магазине.
+					Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+				</p>
+					<a href="ссылка на каталог товаров">подробнее</a>
+				<ul>
+					<li><p>8,5 M</p>
+						<p>Длина палки</p>
+					</li>
+					<li><p>5 кг</p>
+						<p>Вес палки</p>
+					</li>
+					<li><p>Карбон</p>
+						<p>Материал</p>
+					</li>
+				</ul>
+			</section>
+		</li>
+		<!--========= вторая секция с часами=====================-->
 
-  </body>
+		<li>
+			<section class="preview">
+				<h2>Худеем<br>
+					правильно!</h2>
+				<img src="./img/slider-2.png" width="345" height="485" alt="Фитнес-браслеты">
+				<p>Мотивирующие фитнес-браслеты помогут найти в себе силы
+					не пропускать занятия и соблюдать диету.
+				</p>
+				<a href="ссылка на каталог товаров">подробнее</a>
+
+				<p>48 часов</p>
+				<p>Без подзарядки</p>
+			</section>
+		</li>
+		<!--========= третья секция с квадрокоптером=====================-->
+		<li>
+			<section class="preview">
+				<h2>Порхает как бабочка,<br>
+					жалит как пчела!</h2>
+				<img src="./img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+				<p>Этот обычный, на первый взгляд, квадрокоптер оснащен
+					мощным лазером, замаскированным под стандартную камеру.
+				</p>
+				<ul>
+					<li><a href="ссылка на каталог товаров">подробнее</a></li>
+					<li>
+						<input aria-label="обзор монопода для селфи" type="radio" name="slider">
+						<input aria-label="обзор умных часов" type="radio" name="slider">
+						<input aria-label="обзор квадрокоптера" type="radio" name="slider" checked>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<p>800 M</p>
+						<p>Дальность полета</p>
+					</li>
+					<li>
+						<p>50 М</p>
+						<p>Радиус поражения</p>
+					</li>
+				</ul>
+			</section>
+		</li>
+	</ul>
+	<!--===================================================================-->
+	<ul>
+		<li>
+			<div class="fill-box">
+				<img src="./img/VR.png" alt="Виртуальная реальность">
+			</div>
+			<p>Виртуальная реальность</p>
+		</li>
+		<li>
+			<div class="fill-box">
+				<img src="./img/selfi.png" alt="Моноподы для селфи">
+			</div>
+			<p>Моноподы для селфи</p>
+		</li>
+		<li>
+			<div class="fill-box">
+				<img src="./img/camera.png" alt="Экшн-камеры">
+			</div>
+			<p>Экшн-камеры</p>
+		</li>
+		<li>
+			<div class="fill-box">
+				<img src="./img/fitness.png" alt="Фитнес-браслеты">
+			</div>
+			<p>Фитнес-браслеты</p>
+		</li>
+		<li>
+			<div class="fill-box">
+				<img src="./img/watch.png" alt="Умные часы">
+			</div>
+			<p>Умные часы</p>
+		</li>
+		<li>
+			<div class="fill-box">
+				<img src="./img/qudro.png" alt="Квадрокоптеры">
+			</div>
+			<p>Квадрокоптеры</p>
+		</li>
+	</ul>
+</main>
+
+</body>
 </html>
