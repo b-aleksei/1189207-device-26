@@ -22,38 +22,35 @@
 			<li><a href="basket.html">Корзина</a></li>
 		</ul>
 		<ul>
-			<li>
-				<button type="button">Каталог товаров</button>
-				<!--      кнопка выше должна открывать этот список-->
-				<ul class="visually-hidden">
-					<li>Виртуальная реальность</li>
-					<li>Моноподы для селфи</li>
-					<li>Экшн-камеры</li>
-					<li>Фитнес-браслеты</li>
-					<li>Умные часы</li>
-					<li>Квадрокоптеры</li>
-				</ul>
-
-			</li>
+			<li><a href="catalog.html">Каталог товаров</a></li>
 			<li><a href="delivery.html">Доставка</a></li>
 			<li><a href="warranty.html">Гарантия</a></li>
 			<li><a href="contacts.html">Контакты</a></li>
+		</ul>
+		<!--  кнопка + каталога товаров должна открывать этот список-->
+		<ul class="visually-hidden">
+			<li>Виртуальная реальность</li>
+			<li>Моноподы для селфи</li>
+			<li>Экшн-камеры</li>
+			<li>Фитнес-браслеты</li>
+			<li>Умные часы</li>
+			<li>Квадрокоптеры</li>
 		</ul>
 	</nav>
 </header>
 <main>
 	<h1 class="visually-hidden">Каталог товаров</h1>
 	<!-- ========================список для слайдера ========================================-->
-	<ul>
+	<ul class="slider1">
 		<li>
-			<section class="preview">
+			<section class="preview" >
 				<h2>Делай селфи,<br>
 					как Бен Стиллер!</h2>
 				<img src="./img/slider-1.png" width="384" height="486" alt="Монопод для селфи">
 				<p>Самая длинная палка для селфи доступна в нашем магазине.
 					Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
 				</p>
-					<a href="ссылка на каталог товаров">подробнее</a>
+					<a href="catalog.html">подробнее</a>
 				<ul>
 					<li><p>8,5 M</p>
 						<p>Длина палки</p>
@@ -77,7 +74,7 @@
 				<p>Мотивирующие фитнес-браслеты помогут найти в себе силы
 					не пропускать занятия и соблюдать диету.
 				</p>
-				<a href="ссылка на каталог товаров">подробнее</a>
+				<a href="catalog.html">подробнее</a>
 
 				<p>48 часов</p>
 				<p>Без подзарядки</p>
@@ -93,11 +90,11 @@
 					мощным лазером, замаскированным под стандартную камеру.
 				</p>
 				<ul>
-					<li><a href="ссылка на каталог товаров">подробнее</a></li>
+					<li><a href="catalog.html">подробнее</a></li>
 					<li>
-						<input aria-label="обзор монопода для селфи" type="radio" name="slider">
-						<input aria-label="обзор умных часов" type="radio" name="slider">
-						<input aria-label="обзор квадрокоптера" type="radio" name="slider" checked>
+						<input aria-label="обзор монопода для селфи" type="radio" name="slider" value="">
+						<input aria-label="обзор умных часов" type="radio" name="slider" value="">
+						<input aria-label="обзор квадрокоптера" type="radio" name="slider" value="" checked>
 					</li>
 				</ul>
 				<ul>
@@ -152,7 +149,111 @@
 			<p>Квадрокоптеры</p>
 		</li>
 	</ul>
+
+<!--	=========== 2-й слайдер========================-->
+	<ul class="slider2">
+<!--		1-я секция  -->
+		<li>
+			<button type="button" aria-label="">Доставка</button>
+			<section>
+				<h2>Доставка</h2>
+				<p>Мы с удовольствием доставим ваш товар прямо к вашему
+					подъезду совершенно бесплатно! Ведь мы неплохо
+					заработаем, поднимая его на ваш этаж.
+				</p>
+				<img src="./img/delivery.png" alt="Доставка">
+			</section>
+		</li>
+<!--		2-я секция  -->
+		<li>
+			<button type="button" aria-label="">Гарантия</button>
+			<section>
+				<h2>Гарантия</h2>
+				<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+					Товар, не дом, конечно же.
+				</p>
+				<img src="./img/warranty.png" alt="Гарантия">
+			</section>
+		</li>
+<!--		3-я секция  -->
+		<li>
+			<button type="button" aria-label="">Кредит</button>
+			<section>
+				<h2>Кредит</h2>
+				<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
+					условия кредита. Выгодные для нашего банка, разумеется.
+				</p>
+				<img src="./img/credit.png" alt="Кредит">
+			</section>
+		</li>
+	</ul>
+<section>
+	<h2 class="visually-hidden">Логотипы партнеров</h2>
+	<ul>
+		<li><img src="./img/partners/logo-1.jpg.png" alt="Логотип1"></li>
+		<li><img src="./img/partners/logo-2.jpg.png" alt="Логотип2"></li>
+		<li><img src="./img/partners/logo-3.jpg.png" alt="Логотип3"></li>
+		<li><img src="./img/partners/logo-4.jpg.png" alt="Логотип4"></li>
+	</ul>
+</section>
+	<div class="info">
+		<section>
+			<h2>О нас</h2>
+			<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+			</p>
+			<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+			</p>
+			<p>	Деловые Линии<br>
+				Автотрейдинг<br>
+				ЖелДорЭкспедиция
+			</p>
+			<button type="button" aria-label="">Подробнее о нас</button>
+		</section>
+		<section>
+			<h2>Контакты</h2>
+			<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+			</p>
+			<div>
+          <!--Здесь будет загружена карта-->
+			</div>
+			<button type="button" aria-label="">Напишите нам</button>
+		</section>
+	</div>
 </main>
+<footer>
+	<figure>
+		<img src="./img/logo-orange.png" alt="Логотип">
+		<figcaption>
+			г. Москва, ул. Строителей, 15
+		</figcaption>
+	</figure>
+<!--	доставка гарантия контакты + иконки соц.сетей ======-->
+	<ul>
+		<li><a href="delivery.html">доставка</a></li>
+		<li><a href="warranty.html">гарантия</a></li>
+		<li><a href="contacts.html">контакты</a></li>
+	</ul>
+	<ul>
+		<li><a href="#" aria-label="Мы на фейсбуке">
+			<img src="./img/icon/fb.png" alt="icon">
+		</a></li>
+		<li><a href="#" aria-label="Мы в инстаграмм">
+			<img src="./img/icon/inst.png" alt="icon">
+		</a></li>
+		<li><a href="#" aria-label="Мы в твиттере">
+			<img src="./img/icon/twitter.png" alt="icon">
+		</a></li>
+	</ul>
+<!--	=============== войти сравнить корзина + телефон -->
+	<ul>
+		<li><button type="button" aria-label="">Войти</button></li>
+		<li><a href="compare.html">Сравнить</a></li>
+		<li><a href="basket.html">Корзина</a></li>
+	</ul>
+	<p>Тел.: +7 (495) 495-95-95</p>
+	<img src="./img/icon/logo-mini.png" alt="Логотип">
+</footer>
+
 
 </body>
 </html>
