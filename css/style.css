@@ -1,6 +1,6 @@
 body {
   color: black;
-  background: #c6c8c3;
+  background: #fff;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -28,5 +28,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+
+footer {
+    background-color: #464646;
+    color: #ffffff;
 }
 
