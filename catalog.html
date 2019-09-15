@@ -39,47 +39,46 @@
 	</nav>
 </header>
 <main>
-<h1>Заголовок в зависимости от товара</h1>
+	<h1>Заголовок в зависимости от товара</h1>
 	<ul>
 		<li><a href="index.html">Главная</a></li>
 		<li><a href="#">Каталог товаров</a></li>
 		<li><a>текущий товар</a></li>
 	</ul>
 	<section class="filter">
-	  <h4>фильтр:</h4>
-	<form action="form.html" method="get">
-		<label>Стоимость<br>
-			<input type="range" name="range"></label>
-		
-		<fieldset>
-			<legend>Цвет</legend>
-			<ul>
-				<li><label><input type="checkbox" name="black" checked >Черный</label></li>
-				<li><label><input type="checkbox" name="white" >Белый</label></li>
-				<li><label><input type="checkbox" name="blue" checked >Синий</label></li>
-				<li><label><input type="checkbox" name="red" checked >Красный</label></li>
-				<li><label><input type="checkbox" name="pink" >Розовый</label></li>
-			</ul>
-		</fieldset>
+		<h2 class="visually-hidden">Фильтр товара</h2>
+		<p>фильтр:</p>
+		<form action="form.html" method="get">
 
-		<p>Bluetooth</p>
-		<label><input type="radio" name="bluetooth" value="yes" checked>Есть</label>
-		<label><input type="radio" name="bluetooth" value="no">Нет</label>
+			<fieldset>
+				<legend>Стоимость</legend>
+				<input type="range" name="range" aria-label="стоимость">
+				<p>Цвет</p>
+				<ul>
+					<li><label><input type="checkbox" name="black" checked>Черный</label></li>
+					<li><label><input type="checkbox" name="white">Белый</label></li>
+					<li><label><input type="checkbox" name="blue" checked>Синий</label></li>
+					<li><label><input type="checkbox" name="red" checked>Красный</label></li>
+					<li><label><input type="checkbox" name="pink">Розовый</label></li>
+				</ul>
+				<p>Bluetooth</p>
+				<label><input type="radio" name="bluetooth" value="yes" checked>Есть</label>
+				<label><input type="radio" name="bluetooth" value="no">Нет</label>
+				<button type="submit" aria-label="">показать</button>
+			</fieldset>
 
-		<button type="submit" aria-label="">показать</button>
-	</form>
+		</form>
 	</section>
 
 	<section class="goods">
-		<h4>Сортировка:</h4>
-		<fieldset>
-		  <legend class="visually-hidden">Меню сортировки товара</legend>
+		<h2 class="visually-hidden">Меню сортировки товара</h2>
+		<p>Сортировка:</p>
 			<ul>
 				<li>
-					<button type="button" >По цене</button>
+					<button type="button">По цене</button>
 				</li>
 				<li>
-					<button type="button" >По типу</button>
+					<button type="button">По типу</button>
 				</li>
 				<li>
 					<button type="button">По популярности</button>
@@ -91,7 +90,7 @@
 					<button type="button">&#9662;</button>
 				</li>
 			</ul>
-		</fieldset>
+
 		<ul>
 			<li>
 				<img src="./img/goods/item-1.jpg.png" alt="Любительская селфи-палка">
@@ -114,27 +113,26 @@
 				<p>4900 руб</p>
 			</li>
 		</ul>
-<!--		============ навигация по страницам ========-->
+		<!--		============ навигация по страницам ========-->
 		<fieldset>
 			<legend class="visually-hidden">Навигация по страницам</legend>
-			<button type="button" >назад</button>
-		<ul>
-			<li>
-				<button type="button" >1</button>
-			</li>
-			<li>
-				<button type="button">2</button>
-			</li>
-			<li>
-				<button type="button">3</button>
-			</li>
-		</ul>
-				<button type="button">вперед</button>
+			<button type="button">назад</button>
+			<ul>
+				<li>
+					<button type="button">1</button>
+				</li>
+				<li>
+					<button type="button">2</button>
+				</li>
+				<li>
+					<button type="button">3</button>
+				</li>
+			</ul>
+			<button type="button">вперед</button>
 		</fieldset>
 	</section>
-	
-</main>
 
+</main>
 
 
 <footer>
@@ -163,7 +161,9 @@
 	</ul>
 	<!--	=============== войти сравнить корзина + телефон -->
 	<ul>
-		<li><button type="button" aria-label="">Войти</button></li>
+		<li>
+			<button type="button" aria-label="">Войти</button>
+		</li>
 		<li><a href="compare.html">Сравнить</a></li>
 		<li><a href="basket.html">Корзина</a></li>
 	</ul>
