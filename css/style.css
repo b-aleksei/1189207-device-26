@@ -6,7 +6,11 @@ body {
   font-size: 14px;
 }
 
-main ul {
+header {
+  background-color: #f7e296;
+}
+
+ul {
   list-style: none;
 }
 
@@ -89,11 +93,15 @@ input[type="checkbox"]:checked + .check::before {
 }
 /*=======================================================================*/
 /*============== иконки для кнопок================*/
-.arrow li a,
+.arrow li a {
+  position: relative;
+}
+
 .icon li>a,
 .icon li label
 {
   position: relative;
+  margin-left: 15px;
 }
 
 .arrow li:first-child a::after,
@@ -107,30 +115,33 @@ input[type="checkbox"]:checked + .check::before {
   background-image: url("../img/svg-device/nav-arrow.svg");
 }
 
-.icon li:first-child label::before {
+.icon .search::before {
+  left: -25px;
   width: 16px;
   height: 16px;
   background-image: url("../img/svg-device/search.svg");
 }
 
-.icon li:nth-child(2) label::before {
+.icon .enter::before {
+  left: -25px;
   width: 13px;
   height: 12px;
   background-image: url("../img/svg-device/user.svg");
 }
 
-.icon li:nth-child(3) a::before {
+.icon .compare::before {
+  left: -25px;
    width: 10px;
    height: 10px;
    background-image: url("../img/svg-device/compare.svg");
  }
 
-.icon li:last-child a::before {
+.icon .cart::before {
+  left: -25px;
   width: 12px;
   height: 12px;
   background-image: url("../img/svg-device/cart.svg");
 }
-
 /*===============================================================*/
 .fill-box {
   position: relative;
@@ -149,5 +160,11 @@ input[type="checkbox"]:checked + .check::before {
 footer {
     background-color: #464646;
     color: #ffffff;
+}
+
+.orange-line {
+  width: 80px;
+  height: 7px;
+  background-color: #ffc600;
 }
 
