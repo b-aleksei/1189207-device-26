@@ -8,29 +8,32 @@
 </head>
 <body>
 <header>
+<div class="content">
 	<nav>
-		<a href="index.html">
+		<a class="focus" href="index.html">
 			<img src="./img/svg-device/logo-device.svg" width="163" height="35" alt="Логотип компании DEVICE">
 		</a>
 		<ul class="icon">
 			<li>
 				<label class="search"></label>
-				<input aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту">
+				<input class="focus searcher" aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту">
+				<button class="visually-hidden" type="button" aria-label="кнопка поиска">Найти</button>
 			</li>
 			<li>
 				<label class="enter" for="enter"></label>
-				<input type="button" id="enter" value="Войти">
+				<input class="focus button" type="button" id="enter" value="Войти">
 			</li>
 			<li>
-				<a class="compare" href="compare.html">Сравнить</a></li>
+				<a class="compare focus" href="compare.html">Сравнить</a></li>
 			<li>
-				<a class="cart" href="basket.html">Корзина</a>
+				<a class="cart focus" href="basket.html">Корзина</a>
 			</li>
 		</ul>
-		<ul>
+
+		<ul class="icon">
 			<li>
 				<a href="catalog.html">Каталог товаров</a>
-				<button type="button" aria-label="">
+				<button class="button" type="button" aria-label="Каталог товаров">
 				<img src="./img/svg-device/plus.svg" width="16" height="16" alt="Каталог товаров">
 				</button>
 			</li>
@@ -38,18 +41,23 @@
 			<li><a href="warranty.html">Гарантия</a></li>
 			<li><a href="contacts.html">Контакты</a></li>
 		</ul>
+
 		<!--  кнопка + каталога товаров должна открывать этот список-->
-		<ul class="visually-hidden">
-			<li>Виртуальная реальность</li>
-			<li>Моноподы для селфи</li>
-			<li>Экшн-камеры</li>
-			<li>Фитнес-браслеты</li>
-			<li>Умные часы</li>
-			<li>Квадрокоптеры</li>
+	<div class="modal-header">
+		<ul class="visually-hidde">
+			<li class="focus">Виртуальная реальность</li>
+			<li class="focus">Моноподы для селфи</li>
+			<li class="focus">Экшн-камеры</li>
+			<li class="focus">Фитнес-браслеты</li>
+			<li class="focus">Умные часы</li>
+			<li class="focus">Квадрокоптеры</li>
 		</ul>
+	</div>
 	</nav>
+</div>
 </header>
 <main>
+	<div class="content">
 	<h1 class="visually-hidden">Каталог товаров</h1>
 	<div class="radio">
 		<input  type="radio" name="slider" id="monopod" value="monopod for selfi">
@@ -72,7 +80,7 @@
 				<p>Самая длинная палка для селфи доступна в нашем магазине.
 					Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
 				</p>
-					<a href="catalog.html">подробнее</a>
+					<a class="yellow-button" href="catalog.html">подробнее</a>
 				<ul>
 					<li><p>8,5 M</p>
 						<p>Длина палки</p>
@@ -96,7 +104,7 @@
 				<p>Мотивирующие фитнес-браслеты помогут найти в себе силы
 					не пропускать занятия и соблюдать диету.
 				</p>
-				<a href="catalog.html">подробнее</a>
+				<a class="yellow-button" href="catalog.html">подробнее</a>
 
 				<p>48 часов</p>
 				<p>Без подзарядки</p>
@@ -111,7 +119,7 @@
 				<p>Этот обычный, на первый взгляд, квадрокоптер оснащен
 					мощным лазером, замаскированным под стандартную камеру.
 				</p>
-				<p><a href="catalog.html">подробнее</a></p>
+				<p><a class="yellow-button" href="catalog.html">подробнее</a></p>
 
 				<ul>
 					<li>
@@ -127,50 +135,66 @@
 		</li>
 	</ul>
 	<!--===================================================================-->
-	<ul>
+	<div class="product-icons">
+		<ul>
 		<li>
+			<figure>
 			<div class="fill-box">
 				<img src="./img/svg-device/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
 			</div>
-			<p>Виртуальная реальность</p>
+			<figcaption>Виртуальная реальность</figcaption>
+			</figure>
 		</li>
 		<li>
+			<figure>
 			<div class="fill-box">
 				<img src="./img/svg-device/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
 			</div>
-			<p>Моноподы для селфи</p>
+			<figcaption>Моноподы для селфи</figcaption>
+				</figure>
 		</li>
 		<li>
+			<figure>
 			<div class="fill-box">
 				<img src="./img/svg-device/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
 			</div>
-			<p>Экшн-камеры</p>
+			<figcaption>Экшн-камеры</figcaption>
+				</figure>
 		</li>
 		<li>
+			<figure>
 			<div class="fill-box">
 				<img src="./img/svg-device/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
 			</div>
-			<p>Фитнес-браслеты</p>
+			<figcaption>Фитнес-браслеты</figcaption>
+				</figure>
 		</li>
 		<li>
+			<figure>
 			<div class="fill-box">
 				<img src="./img/svg-device/popular-5.svg" width="56" height="98" alt="Умные часы">
 			</div>
-			<p>Умные часы</p>
+			<figcaption>Умные часы</figcaption>
+				</figure>
 		</li>
 		<li>
+			<figure>
 			<div class="fill-box">
 				<img src="./img/svg-device/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
 			</div>
-			<p>Квадрокоптеры</p>
+			<figcaption>Квадрокоптеры</figcaption>
+				</figure>
 		</li>
 	</ul>
-
+	</div>
+	</div>
 <!--	=========== 2-й слайдер========================-->
-	<ul class="slider2">
+	<div class="slider-2">
+		<div class="content">
+	<ul>
 <!--		1-я секция  -->
 		<li>
-			<button type="button" aria-label="">Доставка</button>
+			<button class="button yellow-button" type="button" aria-label="">Доставка</button>
 			<section>
 				<h2>Доставка</h2>
 				<p>Мы с удовольствием доставим ваш товар прямо к вашему
@@ -182,7 +206,7 @@
 		</li>
 <!--		2-я секция  -->
 		<li>
-			<button type="button" aria-label="">Гарантия</button>
+			<button class="button yellow-button" type="button" aria-label="">Гарантия</button>
 			<section>
 				<h2>Гарантия</h2>
 				<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
@@ -193,7 +217,7 @@
 		</li>
 <!--		3-я секция  -->
 		<li>
-			<button type="button" aria-label="">Кредит</button>
+			<button class="button yellow-button" type="button" aria-label="">Кредит</button>
 			<section>
 				<h2>Кредит</h2>
 				<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
@@ -203,13 +227,17 @@
 			</section>
 		</li>
 	</ul>
+	</div>
+	</div>
+
+	<div class="content">
 <section>
 	<h2 class="visually-hidden">Логотипы партнеров</h2>
-	<ul>
-		<li><img src="./img/partners/logo-1.jpg.png" alt="Логотип1"></li>
-		<li><img src="./img/partners/logo-2.jpg.png" alt="Логотип2"></li>
-		<li><img src="./img/partners/logo-3.jpg.png" alt="Логотип3"></li>
-		<li><img src="./img/partners/logo-4.jpg.png" alt="Логотип4"></li>
+	<ul class="filter">
+		<li><img src="./img/partners/logo-1-color.png" alt="Логотип1"></li>
+		<li><img src="./img/partners/logo-2-color.png" alt="Логотип2"></li>
+		<li><img src="./img/partners/logo-3-color.png" alt="Логотип3"></li>
+		<li><img src="./img/partners/logo-4-color.png" alt="Логотип4"></li>
 	</ul>
 </section>
 	<div class="info">
@@ -236,14 +264,17 @@
 			<button type="button" aria-label="">Напишите нам</button>
 		</section>
 	</div>
+	</div>
+
 </main>
 <footer>
-	<img src="./img/logo-orange.png" alt="Логотип">
+	<div class="content">
+		<a class="focus" href="#"><img src="./img/logo-orange.png" alt="Логотип"></a>
 
 	<ul class="icon icon-footer">
 		<li>
 			<label class="enter" for="enter-footer"></label>
-			<input type="button" id="enter-footer" value="Войти">
+			<input class="button focus2" type="button" id="enter-footer" value="Войти">
 		</li>
 		<li>
 			<a class="compare" href="compare.html">Сравнить</a></li>
@@ -255,27 +286,28 @@
 	<p>
 		г. Москва, ул. Строителей, 15
 	</p>
-	<ul>
-		<li><a href="delivery.html">доставка</a></li>
-		<li><a href="warranty.html">гарантия</a></li>
-		<li><a href="contacts.html">контакты</a></li>
+	<ul class="footer-info">
+		<li><a class="focus" href="delivery.html">доставка</a></li>
+		<li><a class="focus" href="warranty.html">гарантия</a></li>
+		<li><a class="focus" href="contacts.html">контакты</a></li>
 	</ul>
 	<p>Тел.: +7 (495) 495-95-95</p>
 
 	<div class="orange-line"></div>
-	<ul>
-		<li><a href="#" aria-label="Мы на фейсбуке">
+	<ul class="social-icon">
+		<li><a class="focus2" href="#" aria-label="Мы на фейсбуке">
 			<img src="./img/svg-device/fb.svg" width="32" height="32" alt="icon">
 		</a></li>
-		<li><a href="#" aria-label="Мы в инстаграмм">
+		<li><a class="focus2" href="#" aria-label="Мы в инстаграмм">
 			<img src="./img/svg-device/instagram.svg" width="32" height="32" alt="icon">
 		</a></li>
-		<li><a href="#" aria-label="Мы в твиттере">
+		<li><a class="focus2" href="#" aria-label="Мы в твиттере">
 			<img src="./img/svg-device/twitter.svg" width="32" height="32" alt="icon">
 		</a></li>
 	</ul>
 
-	<img src="./img/svg-device/logo-html.svg" width="27" height="34" alt="Логотип">
+		<a class="focus" href="#"><img src="./img/svg-device/logo-html.svg" width="27" height="34" alt="Логотип"></a>
+	</div>
 </footer>
 
 </body>

@@ -1,21 +1,24 @@
+@font-face {
+  font-family: 'gilroyextrabold';
+  src: url('../fonts/gilroyextrabold/gilroyextrabold-webfont.woff2') format('woff2'),
+  url('../fonts/gilroyextrabold/gilroyextrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
-  color: black;
+  color: #000;
   background: #fff;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.content {
-  max-width: 1160px;
-  margin: 0 auto;
-}
-
-header {
-  background-color: #f7e296;
-}
-
-ul {
-  list-style: none;
+  font-size: 15px;
+  line-height: 2;
 }
 
 .visually-hidden {
@@ -28,6 +31,71 @@ ul {
   clip: rect(0,0,0,0);
   overflow: hidden;
 }
+
+.content {
+  width: 100%;
+  max-width:1200px;
+  margin: auto;
+  padding: 20px;
+}
+/*===================стилизация header==========================*/
+
+.icon {
+  list-style: none;
+}
+
+.icon a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon li:hover,
+.icon li:focus,
+.focus:hover,
+.focus:focus
+{
+  opacity: 0.6;
+}
+
+.icon li:active,
+.focus:active
+{
+  opacity: 0.3;
+}
+
+header {
+  background-color: #f7e296;
+}
+
+.icon .searcher {
+border: 0;
+  background-color: transparent;
+  opacity: 0.3;
+}
+
+.icon .searcher:hover
+{
+  opacity: 0.8;
+}
+
+.icon .searcher:focus
+{
+  opacity: 1;
+}
+
+.button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-header {
+  width: 100%;
+  height: 150px;
+  background-color: #ffc33d;
+}
+
 /*=============== стилизация кнопок слайдера (радиобаттона)===============*/
 .radio input[type="radio"] {
   display: none;
@@ -80,8 +148,40 @@ input[type="radio"]:checked + .radio-catalog::before {
 input[type="checkbox"]:checked + .check::before {
   content: url("../img/svg-device/checkbox-on.svg");
 }
-/*=======================================================================*/
-/*============== иконки для кнопок================*/
+/*============== иконки для кнопок============================================*/
+.yellow-button {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-family: 'gilroyextrabold', sans-serif;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.yellow-button::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 110px);
+  top: calc(50% - 20px);
+  height: 40px;
+  width: 220px;
+  background-color: #f0c52e;
+  transform: scaleY(0.20);
+  z-index: -1;
+  transition: .5s
+}
+
+.yellow-button:hover::before,
+.yellow-button:focus::before
+{
+  transform: scaleY(1);
+}
+
+.yellow-button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .arrow li a {
   position: relative;
 }
@@ -125,36 +225,25 @@ input[type="checkbox"]:checked + .check::before {
   position: absolute;
   left: -25px;
 }
-/*===============================================================*/
-/*================catalog images================================*/
-.sprite-item-1 {
-  background-image: url('../img/goods/spritesheet.png');
-  width: 360px;
-  height: 380px;
-  background-position: -5px -5px;
+/*==========================main style=====================================*/
+.slider1 ul,
+.slider-2 ul {
+  list-style: none;
 }
 
-.sprite-item-2 {
-  background-image: url('../img/goods/spritesheet.png');
-  width: 360px;
-  height: 380px;
-  background-position: -375px -5px;
+.slider-2 .yellow-button:active {
+  color: #f7e184;
+}
+.slider-2 .yellow-button:active::before {
+  background-color: #000;
+  width: 278px;
 }
 
-.sprite-item-3 {
-  background-image: url('../img/goods/spritesheet.png');
-  width: 360px;
-  height: 380px;
-  background-position: -745px -5px;
+/*==========================================================*/
+.product-icons ul {
+  list-style: none;
 }
 
-.sprite-item-4 {
-  background-image: url('../img/goods/spritesheet.png');
-  width: 360px;
-  height: 380px;
-  background-position: -5px -395px;
-}
-/*===============================================================*/
 .fill-box {
   position: relative;
   width: 160px;
@@ -169,9 +258,40 @@ input[type="checkbox"]:checked + .check::before {
   left: 50%;
 }
 
+.fill-box:hover,
+.fill-box:focus
+{
+  background-color: #f0c52e;
+}
+
+.fill-box:active > img,
+.fill-box:active + figcaption
+{
+  opacity: 0.3;
+}
+
 .slider-2 {
   background-color: #e5e5e5;
 }
+
+
+/*============================ img partner style===========================================*/
+.filter {
+  list-style: none;
+}
+
+.filter li img {
+filter: grayscale(100%);
+  opacity: 0.3;
+  transition: 0.2s;
+}
+.filter li img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+
+/*======================footer style=====================*/
 
 footer {
     background-color: #464646;
@@ -184,3 +304,36 @@ footer {
   background-color: #ffc600;
 }
 
+.footer-info {
+  list-style: none;
+}
+
+.footer-info a {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'gilroyextrabold', sans-serif;
+  font-size: 18px;
+}
+
+.social-icon {
+  list-style: none;
+}
+
+.focus2 {
+  opacity: 0.6;
+}
+
+.focus2:hover,
+.focus2:focus {
+  opacity: 1;
+}
+
+.focus2:active {
+  opacity: 0.2;
+}
+
+.icon-footer li a,
+.icon-footer li input
+{
+  color: #fff;
+}
