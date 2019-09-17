@@ -1,9 +1,13 @@
 body {
   color: black;
   background: #fff;
-  max-width: 1440px;
-  margin: 0 auto;
   font-size: 14px;
+  line-height: 1.5;
+}
+
+.content {
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 header {
@@ -12,14 +16,6 @@ header {
 
 ul {
   list-style: none;
-}
-
-label::before,
-a::before,
-a::after
-{
-  content: '';
-  position: absolute;
 }
 
 .visually-hidden {
@@ -49,16 +45,15 @@ input[type="checkbox"] {
   margin-right: 15px;
   margin-bottom: 15px;
 }
+
 .radio .radio-catalog {
   padding-left: 65px;
   margin-right: -20px
 }
 
 .radio label::before {
-  display: inline-block;
-  width: 23px;
-  height: 23px;
-  background-image: url("../img/svg-device/slider-button-empty.svg");
+  content: url("../img/svg-device/slider-button-empty.svg");
+  position: absolute;
   top: 0;
   left: 0;
   margin-right: 50px;
@@ -66,30 +61,24 @@ input[type="checkbox"] {
 }
 
 .radio .radio-catalog::before {
-  width: 25px;
-  height: 25px;
-  background-image: url("../img/svg-device/radio-off.svg");
+  content: url("../img/svg-device/radio-off.svg");
 }
 
 .radio .check::before {
+  content: url("../img/svg-device/checkbox-off.svg");
   margin-left: -5px;
-  width: 23px;
-  height: 23px;
-  background-image: url("../img/svg-device/checkbox-off.svg");
 }
 
 input[type="radio"]:checked + label::before {
-background-image: url("../img/svg-device/slider-button.svg");
+  content: url("../img/svg-device/slider-button.svg");
 }
 
 input[type="radio"]:checked + .radio-catalog::before {
-  background-image: url("../img/svg-device/radio-on.svg");
+  content: url("../img/svg-device/radio-on.svg");
 }
 
 input[type="checkbox"]:checked + .check::before {
-  width: 27px;
-  height: 23px;
-  background-image: url("../img/svg-device/checkbox-on.svg");
+  content: url("../img/svg-device/checkbox-on.svg");
 }
 /*=======================================================================*/
 /*============== иконки для кнопок================*/
@@ -97,7 +86,7 @@ input[type="checkbox"]:checked + .check::before {
   position: relative;
 }
 
-.icon li>a,
+.icon li > a,
 .icon li label
 {
   position: relative;
@@ -107,40 +96,63 @@ input[type="checkbox"]:checked + .check::before {
 .arrow li:first-child a::after,
 .arrow li:first-child + li a::after
 {
-  bottom: 3px;
+  content: url("../img/svg-device/nav-arrow.svg");
+  position: absolute;
   margin-left: 15px;
   margin-right: 15px;
-  width: 4px;
-  height: 7px;
-  background-image: url("../img/svg-device/nav-arrow.svg");
 }
 
 .icon .search::before {
+  content: url("../img/svg-device/search.svg");
+  position: absolute;
   left: -25px;
-  width: 16px;
-  height: 16px;
-  background-image: url("../img/svg-device/search.svg");
 }
 
 .icon .enter::before {
+  content: url("../img/svg-device/user.svg");
+  position: absolute;
   left: -25px;
-  width: 13px;
-  height: 12px;
-  background-image: url("../img/svg-device/user.svg");
 }
 
 .icon .compare::before {
+  content: url("../img/svg-device/compare.svg");
+  position: absolute;
   left: -25px;
-   width: 10px;
-   height: 10px;
-   background-image: url("../img/svg-device/compare.svg");
  }
 
 .icon .cart::before {
+  content: url("../img/svg-device/cart.svg");
+  position: absolute;
   left: -25px;
-  width: 12px;
-  height: 12px;
-  background-image: url("../img/svg-device/cart.svg");
+}
+/*===============================================================*/
+/*================catalog images================================*/
+.sprite-item-1 {
+  background-image: url('../img/goods/spritesheet.png');
+  width: 360px;
+  height: 380px;
+  background-position: -5px -5px;
+}
+
+.sprite-item-2 {
+  background-image: url('../img/goods/spritesheet.png');
+  width: 360px;
+  height: 380px;
+  background-position: -375px -5px;
+}
+
+.sprite-item-3 {
+  background-image: url('../img/goods/spritesheet.png');
+  width: 360px;
+  height: 380px;
+  background-position: -745px -5px;
+}
+
+.sprite-item-4 {
+  background-image: url('../img/goods/spritesheet.png');
+  width: 360px;
+  height: 380px;
+  background-position: -5px -395px;
 }
 /*===============================================================*/
 .fill-box {
@@ -155,6 +167,10 @@ input[type="checkbox"]:checked + .check::before {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+
+.slider-2 {
+  background-color: #e5e5e5;
 }
 
 footer {
