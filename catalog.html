@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Каталог товаров</title>
+	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -39,8 +40,9 @@
 	</nav>
 </header>
 <main>
+
 	<h1>Заголовок в зависимости от товара</h1>
-	<ul>
+	<ul class="arrow">
 		<li><a href="index.html">Главная</a></li>
 		<li><a href="#">Каталог товаров</a></li>
 		<li><a>текущий товар</a></li>
@@ -54,22 +56,41 @@
 				<legend>Стоимость</legend>
 				<input type="range" name="range" aria-label="стоимость">
 				<p>Цвет</p>
-				<ul>
-					<li><label><input type="checkbox" name="black" checked>Черный</label></li>
-					<li><label><input type="checkbox" name="white">Белый</label></li>
-					<li><label><input type="checkbox" name="blue" checked>Синий</label></li>
-					<li><label><input type="checkbox" name="red" checked>Красный</label></li>
-					<li><label><input type="checkbox" name="pink">Розовый</label></li>
+				<ul class="radio">
+					<li>
+						<input id="check1" type="checkbox" name="black" checked>
+						<label for="check1" class="check">Черный</label>
+					</li>
+					<li>
+							<input id="check2" type="checkbox" name="white">
+						<label for="check2" class="check">Белый</label>
+					</li>
+					<li>
+							<input id="check3" type="checkbox" name="blue" checked>
+						<label for="check3" class="check">Синий</label>
+					</li>
+					<li>
+							<input id="check4" type="checkbox" name="red" checked>
+						<label for="check4" class="check">Красный</label>
+					</li>
+					<li>
+							<input id="check5" type="checkbox" name="pink">
+						<label for="check5" class="check">Розовый</label>
+					</li>
 				</ul>
 				<p>Bluetooth</p>
-				<label><input type="radio" name="bluetooth" value="yes" checked>Есть</label>
-				<label><input type="radio" name="bluetooth" value="no">Нет</label>
+				<div class="radio">
+					<input id="radio-yes" type="radio" name="bluetooth" value="yes" checked>
+					<label class="radio-catalog" for="radio-yes">Есть</label>
+
+					<input id="radio-no" type="radio" name="bluetooth" value="no">
+					<label class="radio-catalog" for="radio-no">Нет</label>
+				</div>
 				<button type="submit" aria-label="">показать</button>
 			</fieldset>
 
 		</form>
 	</section>
-
 	<section class="goods">
 		<h2 class="visually-hidden">Меню сортировки товара</h2>
 		<p>Сортировка:</p>
@@ -84,10 +105,10 @@
 					<button type="button">По популярности</button>
 				</li>
 				<li>
-					<button type="button">&#9652;</button>
+					<button type="button"><img src="./img/svg-device/icon-up-dir.svg" width="11" height="10" alt="кнопка вверх"></button>
 				</li>
 				<li>
-					<button type="button">&#9662;</button>
+					<button type="button"><img src="./img/svg-device/icon-down-dir.svg" width="11" height="10" alt="кнопка вниз"></button>
 				</li>
 			</ul>
 
