@@ -14,26 +14,25 @@
 		</a>
 		<ul class="icon">
 			<li>
-				<label></label>
+				<label class="search"></label>
 				<input aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту">
 			</li>
 			<li>
-<!--				img src="./img/svg-device/user.svg" width="13" height="12" alt="Войти">-->
-				<label for="enter"></label>
+				<label class="enter" for="enter"></label>
 				<input type="button" id="enter" value="Войти">
 			</li>
 			<li>
-<!--				<img src="./img/svg-device/compare.svg" width="10" height="10" alt="Сравнить">-->
-				<a href="compare.html">Сравнить</a></li>
+				<a class="compare" href="compare.html">Сравнить</a></li>
 			<li>
-<!--				<img src="./img/svg-device/cart.svg" width="12" height="12" alt="Корзина">-->
-				<a href="basket.html">Корзина</a>
+				<a class="cart" href="basket.html">Корзина</a>
 			</li>
 		</ul>
 		<ul>
 			<li>
 				<a href="catalog.html">Каталог товаров</a>
+				<button type="button" aria-label="">
 				<img src="./img/svg-device/plus.svg" width="16" height="16" alt="Каталог товаров">
+				</button>
 			</li>
 			<li><a href="delivery.html">Доставка</a></li>
 			<li><a href="warranty.html">Гарантия</a></li>
@@ -239,18 +238,31 @@
 	</div>
 </main>
 <footer>
-	<figure>
-		<img src="./img/logo-orange.png" alt="Логотип">
-		<figcaption>
-			г. Москва, ул. Строителей, 15
-		</figcaption>
-	</figure>
+	<img src="./img/logo-orange.png" alt="Логотип">
+
+	<ul class="icon icon-footer">
+		<li>
+			<label class="enter" for="enter-footer"></label>
+			<input type="button" id="enter-footer" value="Войти">
+		</li>
+		<li>
+			<a class="compare" href="compare.html">Сравнить</a></li>
+		<li>
+			<a class="cart" href="basket.html">Корзина</a>
+		</li>
+	</ul>
 <!--	доставка гарантия контакты + иконки соц.сетей ======-->
+	<p>
+		г. Москва, ул. Строителей, 15
+	</p>
 	<ul>
 		<li><a href="delivery.html">доставка</a></li>
 		<li><a href="warranty.html">гарантия</a></li>
 		<li><a href="contacts.html">контакты</a></li>
 	</ul>
+	<p>Тел.: +7 (495) 495-95-95</p>
+
+	<div class="orange-line"></div>
 	<ul>
 		<li><a href="#" aria-label="Мы на фейсбуке">
 			<img src="./img/svg-device/fb.svg" width="32" height="32" alt="icon">
@@ -262,25 +274,9 @@
 			<img src="./img/svg-device/twitter.svg" width="32" height="32" alt="icon">
 		</a></li>
 	</ul>
-<!--	=============== войти сравнить корзина + телефон -->
-	<ul>
-		<li>
-			<img src="./img/svg-device/user.svg" width="13" height="12" alt="Войти">
-			<button type="button" aria-label="">Войти</button>
-		</li>
-		<li>
-			<img src="./img/svg-device/compare.svg" width="10" height="10" alt="Сравнить">
-			<a href="compare.html">Сравнить</a>
-		</li>
-		<li>
-			<img src="./img/svg-device/cart.svg" width="12" height="12" alt="Корзина">
-			<a href="basket.html">Корзина</a>
-		</li>
-	</ul>
-	<p>Тел.: +7 (495) 495-95-95</p>
+
 	<img src="./img/svg-device/logo-html.svg" width="27" height="34" alt="Логотип">
 </footer>
-
 
 </body>
 </html>
