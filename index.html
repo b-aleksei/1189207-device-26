@@ -3,26 +3,38 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Девайс</title>
+	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <header>
 	<nav>
 		<a href="index.html">
-			<img src="./img/logo.png" alt="Логотип компании DEVICE">
+			<img src="./img/svg-device/logo-device.svg" width="163" height="35" alt="Логотип компании DEVICE">
 		</a>
-		<ul>
+		<ul class="icon">
 			<li>
+				<label></label>
 				<input aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту">
 			</li>
 			<li>
-				<button aria-label="Авторизация" type="button">Войти</button>
+<!--				img src="./img/svg-device/user.svg" width="13" height="12" alt="Войти">-->
+				<label for="enter"></label>
+				<input type="button" id="enter" value="Войти">
 			</li>
-			<li><a href="compare.html">Сравнить</a></li>
-			<li><a href="basket.html">Корзина</a></li>
+			<li>
+<!--				<img src="./img/svg-device/compare.svg" width="10" height="10" alt="Сравнить">-->
+				<a href="compare.html">Сравнить</a></li>
+			<li>
+<!--				<img src="./img/svg-device/cart.svg" width="12" height="12" alt="Корзина">-->
+				<a href="basket.html">Корзина</a>
+			</li>
 		</ul>
 		<ul>
-			<li><a href="catalog.html">Каталог товаров</a></li>
+			<li>
+				<a href="catalog.html">Каталог товаров</a>
+				<img src="./img/svg-device/plus.svg" width="16" height="16" alt="Каталог товаров">
+			</li>
 			<li><a href="delivery.html">Доставка</a></li>
 			<li><a href="warranty.html">Гарантия</a></li>
 			<li><a href="contacts.html">Контакты</a></li>
@@ -40,14 +52,16 @@
 </header>
 <main>
 	<h1 class="visually-hidden">Каталог товаров</h1>
-	<ul>
-		<li><input aria-label="обзор монопода для селфи" type="radio" name="slider" value=""></li>
-		<li><input aria-label="обзор умных часов" type="radio" name="slider" value=""></li>
-		<li><input aria-label="обзор квадрокоптера" type="radio" name="slider" value="" checked></li>
-	</ul>
+	<div class="radio">
+		<input  type="radio" name="slider" id="monopod" value="monopod for selfi">
+		<label for="monopod"></label>
 
+		<input type="radio" name="slider" id="watch" value="watch" checked>
+		<label for="watch"></label>
 
-
+		<input type="radio" name="slider" id="quadro" value="quadrocopter" >
+		<label for="quadro"></label>
+	</div>
 
 	<!-- ========================список для слайдера ========================================-->
 	<ul class="slider1">
@@ -117,37 +131,37 @@
 	<ul>
 		<li>
 			<div class="fill-box">
-				<img src="./img/VR.png" alt="Виртуальная реальность">
+				<img src="./img/svg-device/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
 			</div>
 			<p>Виртуальная реальность</p>
 		</li>
 		<li>
 			<div class="fill-box">
-				<img src="./img/selfi.png" alt="Моноподы для селфи">
+				<img src="./img/svg-device/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
 			</div>
 			<p>Моноподы для селфи</p>
 		</li>
 		<li>
 			<div class="fill-box">
-				<img src="./img/camera.png" alt="Экшн-камеры">
+				<img src="./img/svg-device/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
 			</div>
 			<p>Экшн-камеры</p>
 		</li>
 		<li>
 			<div class="fill-box">
-				<img src="./img/fitness.png" alt="Фитнес-браслеты">
+				<img src="./img/svg-device/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
 			</div>
 			<p>Фитнес-браслеты</p>
 		</li>
 		<li>
 			<div class="fill-box">
-				<img src="./img/watch.png" alt="Умные часы">
+				<img src="./img/svg-device/popular-5.svg" width="56" height="98" alt="Умные часы">
 			</div>
 			<p>Умные часы</p>
 		</li>
 		<li>
 			<div class="fill-box">
-				<img src="./img/qudro.png" alt="Квадрокоптеры">
+				<img src="./img/svg-device/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
 			</div>
 			<p>Квадрокоптеры</p>
 		</li>
@@ -164,7 +178,7 @@
 					подъезду совершенно бесплатно! Ведь мы неплохо
 					заработаем, поднимая его на ваш этаж.
 				</p>
-				<img src="./img/delivery.png" alt="Доставка">
+				<img src="./img/svg-device/delivery.svg" width="136" height="164" alt="Доставка">
 			</section>
 		</li>
 <!--		2-я секция  -->
@@ -175,7 +189,7 @@
 				<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
 					Товар, не дом, конечно же.
 				</p>
-				<img src="./img/warranty.png" alt="Гарантия">
+				<img src="./img/svg-device/warranty.svg" width="171" height="195" alt="Гарантия">
 			</section>
 		</li>
 <!--		3-я секция  -->
@@ -186,7 +200,7 @@
 				<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
 					условия кредита. Выгодные для нашего банка, разумеется.
 				</p>
-				<img src="./img/credit.png" alt="Кредит">
+				<img src="./img/svg-device/credit.svg" width="156" height="188" alt="Кредит">
 			</section>
 		</li>
 	</ul>
@@ -239,23 +253,32 @@
 	</ul>
 	<ul>
 		<li><a href="#" aria-label="Мы на фейсбуке">
-			<img src="./img/icon/fb.png" alt="icon">
+			<img src="./img/svg-device/fb.svg" width="32" height="32" alt="icon">
 		</a></li>
 		<li><a href="#" aria-label="Мы в инстаграмм">
-			<img src="./img/icon/inst.png" alt="icon">
+			<img src="./img/svg-device/instagram.svg" width="32" height="32" alt="icon">
 		</a></li>
 		<li><a href="#" aria-label="Мы в твиттере">
-			<img src="./img/icon/twitter.png" alt="icon">
+			<img src="./img/svg-device/twitter.svg" width="32" height="32" alt="icon">
 		</a></li>
 	</ul>
 <!--	=============== войти сравнить корзина + телефон -->
 	<ul>
-		<li><button type="button" aria-label="">Войти</button></li>
-		<li><a href="compare.html">Сравнить</a></li>
-		<li><a href="basket.html">Корзина</a></li>
+		<li>
+			<img src="./img/svg-device/user.svg" width="13" height="12" alt="Войти">
+			<button type="button" aria-label="">Войти</button>
+		</li>
+		<li>
+			<img src="./img/svg-device/compare.svg" width="10" height="10" alt="Сравнить">
+			<a href="compare.html">Сравнить</a>
+		</li>
+		<li>
+			<img src="./img/svg-device/cart.svg" width="12" height="12" alt="Корзина">
+			<a href="basket.html">Корзина</a>
+		</li>
 	</ul>
 	<p>Тел.: +7 (495) 495-95-95</p>
-	<img src="./img/icon/logo-mini.png" alt="Логотип">
+	<img src="./img/svg-device/logo-html.svg" width="27" height="34" alt="Логотип">
 </footer>
 
 
