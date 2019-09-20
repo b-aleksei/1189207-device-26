@@ -6,6 +6,7 @@
   font-style: normal;
 }
 
+
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -17,8 +18,14 @@ html {
 body {
   color: #000;
   background: #fff;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 300;
   line-height: 2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background-color: #f7e296;
 }
 
 .visually-hidden {
@@ -40,7 +47,9 @@ body {
 }
 /*===================стилизация header==========================*/
 
-.icon {
+.icon,
+.icon-footer
+{
   list-style: none;
 }
 
@@ -63,8 +72,31 @@ body {
   opacity: 0.3;
 }
 
-header {
-  background-color: #f7e296;
+.focus2 {
+  opacity: 0.6;
+}
+
+.focus2:hover,
+.focus2:focus {
+  opacity: 1;
+}
+
+.focus2:active {
+  opacity: 0.2;
+}
+
+.focus3 {
+  opacity: 0.3;
+}
+
+.focus3:hover,
+.focus3:focus
+{
+  opacity: 0.6;
+}
+
+.focus3:active {
+  opacity: 1;
 }
 
 .icon .searcher {
@@ -75,7 +107,14 @@ border: 0;
 
 .icon .searcher:hover
 {
-  opacity: 0.8;
+  opacity: 0.6;
+}
+
+.icon .search:hover,
+.icon .enter:hover,
+.icon-footer .enter:hover
+{
+  cursor: pointer;
 }
 
 .icon .searcher:focus
@@ -147,6 +186,10 @@ input[type="radio"]:checked + .radio-catalog::before {
 
 input[type="checkbox"]:checked + .check::before {
   content: url("../img/svg-device/checkbox-on.svg");
+}
+
+input:disabled  + label{
+  opacity: 0.3;
 }
 /*============== иконки для кнопок============================================*/
 .yellow-button {
@@ -225,6 +268,7 @@ input[type="checkbox"]:checked + .check::before {
   position: absolute;
   left: -25px;
 }
+
 /*==========================main style=====================================*/
 .slider1 ul,
 .slider-2 ul {
@@ -319,21 +363,115 @@ footer {
   list-style: none;
 }
 
-.focus2 {
-  opacity: 0.6;
-}
-
-.focus2:hover,
-.focus2:focus {
-  opacity: 1;
-}
-
-.focus2:active {
-  opacity: 0.2;
-}
-
 .icon-footer li a,
 .icon-footer li input
 {
+  text-decoration: none;
   color: #fff;
 }
+
+.icon-footer .enter,
+.icon-footer .compare,
+.icon-footer .cart
+{
+  position: relative;
+}
+
+.icon-footer .enter::before {
+  content: url("../img/svg-device/user-yellow.svg");
+  position: absolute;
+  right: 63px;
+}
+
+.icon-footer .compare::before {
+  content: url("../img/svg-device/compare-yellow.svg");
+  position: absolute;
+  left: -24px;
+}
+
+.icon-footer .cart::before {
+  content: url("../img/svg-device/cart-yellow.svg");
+  position: absolute;
+  left: -25px;
+}
+
+.icon-footer .button:hover + .enter {
+  opacity: 1;
+}
+
+.icon-footer .button:active + .enter {
+  opacity: 0.2;
+}
+/*===================================================================================================*/
+/*========================== страница каталог========================================================*/
+
+.arrow {
+  list-style: none;
+}
+
+.arrow a {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.3;
+}
+
+.arrow a:hover,
+.arrow a:focus {
+  opacity: 0.6;
+}
+
+.arrow a:active {
+  opacity: 0.1;
+}
+
+.filter input[type="range"] {
+  display: block;
+  height: 5px;
+
+}
+.filter input[type="range"] + input {
+  margin-top: -5px;
+}
+
+
+/*  секция сортировка*/
+.goods ul {
+  list-style: none;
+}
+
+.sort::before {
+  content: "";
+  display: inline-block;
+  border: 10px solid #000;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+
+}
+
+.sort-up::before {
+  border-top-width: 0;
+}
+
+.sort-down::before {
+  border-bottom-width: 0;
+}
+
+.sort-list .button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.nav-page > button:nth-of-type(1):hover,
+.nav-page > button:nth-of-type(1):focus,
+.nav-page > button:nth-last-of-type(1):hover,
+.nav-page > button:nth-last-of-type(1):focus
+{
+  background-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+/*к сравнению: opacity 0.5/1/0.2*/
+
+
+

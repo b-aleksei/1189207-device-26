@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Девайс</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
@@ -10,28 +11,30 @@
 <header>
 	<div class="content">
 		<nav>
-			<a href="index.html">
+			<a class="focus" href="index.html">
 				<img src="./img/svg-device/logo-device.svg" width="163" height="35" alt="Логотип компании DEVICE">
 			</a>
 			<ul class="icon">
 				<li>
-					<label class="search"></label>
-					<input aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту">
+					<label class="search" for="search"></label>
+					<input class="focus searcher" id="search" aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту">
+					<button class="visually-hidden" type="button" aria-label="кнопка поиска">Найти</button>
 				</li>
 				<li>
 					<label class="enter" for="enter"></label>
-					<input type="button" id="enter" value="Войти">
+					<input class="focus button" type="button" id="enter" value="Войти">
 				</li>
 				<li>
-					<a class="compare" href="compare.html">Сравнить</a></li>
+					<a class="compare focus" href="compare.html">Сравнить</a></li>
 				<li>
-					<a class="cart" href="basket.html">Корзина</a>
+					<a class="cart focus" href="basket.html">Корзина</a>
 				</li>
 			</ul>
-			<ul>
+
+			<ul class="icon">
 				<li>
 					<a href="catalog.html">Каталог товаров</a>
-					<button type="button" aria-label="">
+					<button class="button" type="button" aria-label="Каталог товаров">
 						<img src="./img/svg-device/plus.svg" width="16" height="16" alt="Каталог товаров">
 					</button>
 				</li>
@@ -39,15 +42,18 @@
 				<li><a href="warranty.html">Гарантия</a></li>
 				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
+
 			<!--  кнопка + каталога товаров должна открывать этот список-->
-			<ul class="visually-hidden">
-				<li>Виртуальная реальность</li>
-				<li>Моноподы для селфи</li>
-				<li>Экшн-камеры</li>
-				<li>Фитнес-браслеты</li>
-				<li>Умные часы</li>
-				<li>Квадрокоптеры</li>
-			</ul>
+			<div class="modal-header">
+				<ul class="visually-hidde">
+					<li class="focus">Виртуальная реальность</li>
+					<li class="focus">Моноподы для селфи</li>
+					<li class="focus">Экшн-камеры</li>
+					<li class="focus">Фитнес-браслеты</li>
+					<li class="focus">Умные часы</li>
+					<li class="focus">Квадрокоптеры</li>
+				</ul>
+			</div>
 		</nav>
 	</div>
 </header>
@@ -62,13 +68,17 @@
 	</div>
 	<section class="filter">
 		<div class="content">
-		<h2 class="visually-hidden">Фильтр товара</h2>
-		<p>фильтр:</p>
+		<h2>Фильтр товара</h2>
+
 		<form action="form.html" method="get">
 
 			<fieldset>
-				<legend>Стоимость</legend>
-				<input type="range" name="range" aria-label="стоимость">
+				<legend class="visually-hidden">Группа полей</legend>
+				<label for="range1">Стоимость</label>
+				<input type="range" id="range1" name="range1"  min="0" step="1" max="100" value="0" aria-label="стоимость">
+				<input type="range" id="range2" name="range2"  min="0" step="1" max="100" value="60" aria-label="стоимость">
+				<label class="cost" for="range2">от 0</label>
+				<span class="cost">до 5000</span>
 				<p>Цвет</p>
 				<ul class="radio">
 					<li>
@@ -88,7 +98,7 @@
 						<label for="check4" class="check">Красный</label>
 					</li>
 					<li>
-							<input id="check5" type="checkbox" name="pink">
+							<input id="check5" type="checkbox" name="pink" >
 						<label for="check5" class="check">Розовый</label>
 					</li>
 				</ul>
@@ -107,23 +117,24 @@
 		</div>
 	</section>
 	<section class="goods">
-		<h2 class="visually-hidden">Меню сортировки товара</h2>
-		<p>Сортировка:</p>
-			<ul>
+		<h2>Сортировка:</h2>
+			<ul class="sort-list">
 				<li>
-					<button type="button">По цене</button>
+					<button class="button focus3" type="button">По цене</button>
 				</li>
 				<li>
-					<button type="button">По типу</button>
+					<button class="button focus3"  type="button">По типу</button>
 				</li>
 				<li>
-					<button type="button">По популярности</button>
+					<button class="button focus3"  type="button">По популярности</button>
 				</li>
 				<li>
-					<button type="button"><img src="./img/svg-device/icon-up-dir.svg" width="11" height="10" alt="кнопка вверх"></button>
+					<button class="button focus3 sort sort-up"  type="button"></button>
+<!--					<img src="./img/svg-device/icon-up-dir.svg" width="11" height="10" alt="кнопка вверх">-->
 				</li>
 				<li>
-					<button type="button"><img src="./img/svg-device/icon-down-dir.svg" width="11" height="10" alt="кнопка вниз"></button>
+					<button class="button focus3 sort sort-down"  type="button"></button>
+<!--					<img src="./img/svg-device/icon-down-dir.svg" width="11" height="10" alt="кнопка вниз">-->
 				</li>
 			</ul>
 
@@ -150,67 +161,67 @@
 			</li>
 		</ul>
 		<!--		============ навигация по страницам ========-->
-		<fieldset>
+		<fieldset class="nav-page">
 			<legend class="visually-hidden">Навигация по страницам</legend>
-			<button type="button">назад</button>
+			<button class="button" type="button">назад</button>
 			<ul>
 				<li>
-					<button type="button">1</button>
+					<button class="button focus3" type="button">1</button>
 				</li>
 				<li>
-					<button type="button">2</button>
+					<button class="button focus3" type="button">2</button>
 				</li>
 				<li>
-					<button type="button">3</button>
+					<button class="button focus3" type="button">3</button>
 				</li>
 			</ul>
-			<button type="button">вперед</button>
+			<button class="button" type="button">вперед</button>
 		</fieldset>
 	</section>
 
 </main>
 
-
 <footer>
 	<div class="content">
-		<img src="./img/logo-orange.png" alt="Логотип">
+		<a class="focus" href="#"><img src="./img/logo-orange.png" alt="Логотип"></a>
 
-		<ul class="icon icon-footer">
+
+		<ul class="icon-footer">
 			<li>
-				<label class="enter" for="enter-footer"></label>
-				<input type="button" id="enter-footer" value="Войти">
+				<input class="button focus2" type="button" id="enter-footer" value="Войти">
+				<label class="enter focus2" for="enter-footer"></label>
 			</li>
 			<li>
-				<a class="compare" href="compare.html">Сравнить</a></li>
+				<a class="compare focus2" href="compare.html">Сравнить</a></li>
 			<li>
-				<a class="cart" href="basket.html">Корзина</a>
+				<a class="cart focus2" href="basket.html">Корзина</a>
 			</li>
 		</ul>
 		<!--	доставка гарантия контакты + иконки соц.сетей ======-->
 		<p>
 			г. Москва, ул. Строителей, 15
 		</p>
-		<ul>
-			<li><a href="delivery.html">доставка</a></li>
-			<li><a href="warranty.html">гарантия</a></li>
-			<li><a href="contacts.html">контакты</a></li>
+		<ul class="footer-info">
+			<li><a class="focus" href="delivery.html">доставка</a></li>
+			<li><a class="focus" href="warranty.html">гарантия</a></li>
+			<li><a class="focus" href="contacts.html">контакты</a></li>
 		</ul>
 		<p>Тел.: +7 (495) 495-95-95</p>
 
 		<div class="orange-line"></div>
-		<ul>
-			<li><a href="#" aria-label="Мы на фейсбуке">
+		<ul class="social-icon">
+			<li><a class="focus2" href="#" aria-label="Мы на фейсбуке">
 				<img src="./img/svg-device/fb.svg" width="32" height="32" alt="icon">
 			</a></li>
-			<li><a href="#" aria-label="Мы в инстаграмм">
+			<li><a class="focus2" href="#" aria-label="Мы в инстаграмм">
 				<img src="./img/svg-device/instagram.svg" width="32" height="32" alt="icon">
 			</a></li>
-			<li><a href="#" aria-label="Мы в твиттере">
+			<li><a class="focus2" href="#" aria-label="Мы в твиттере">
 				<img src="./img/svg-device/twitter.svg" width="32" height="32" alt="icon">
 			</a></li>
 		</ul>
+		<a class="focus" href="#"><img src="./img/svg-device/logo-html.svg" width="27" height="34" alt="Логотип"></a>
 
-		<img src="./img/svg-device/logo-html.svg" width="27" height="34" alt="Логотип">
 	</div>
 </footer>
 
