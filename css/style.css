@@ -5,7 +5,13 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'gilroylight';
+  src: url('../fonts/gilroyextrabold/gilroylight-webfont.woff2') format('woff2'),
+  url('../fonts/gilroyextrabold/gilroylight-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 *, *::before, *::after {
   box-sizing: inherit;
@@ -19,13 +25,10 @@ body {
   color: #000;
   background: #fff;
   font-size: 14px;
+  line-height: 18px;
   font-weight: 300;
-  line-height: 2;
   font-family: 'Open Sans', sans-serif;
-}
-
-header {
-  background-color: #f7e296;
+  /*padding: 0;*/
 }
 
 .visually-hidden {
@@ -39,16 +42,116 @@ header {
   overflow: hidden;
 }
 
+.shadow {
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
 .content {
+  position: relative;
   width: 100%;
   max-width:1200px;
   margin: auto;
-  padding: 20px;
 }
 /*===================стилизация header==========================*/
+header .content {
+  height: 300px;
+  margin-top: 40px;
+  background-color: #f7e296;
+  padding: 0 60px 0;
+  /*padding-top: 50px;*/
+  /*border: 1px solid transparent;*/
+
+}
+
+header .logo {
+  position: absolute;
+  left: 60px;
+  top: -17px;
+}
+
+.flex-container {
+  display: flex;
+  padding-top: 45px;
+  /*outline: 1px dashed red;*/
+  flex-wrap: wrap;
+}
+
+.flex-container > ul:first-child {
+  display: flex;
+  width: 100%;
+  padding: 0 0 50px 0;
+  margin: 0;
+}
+
+.flex-container > ul:nth-child(2) {
+  display: flex;
+  width: 100%;
+  padding: 0;
+
+}
+
+.flex-container .icon input {
+  padding: 0;
+}
+
+.flex-container .icon li {
+  padding-left: 25px;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.flex-container .icon .col1 {
+  width: 600px;
+  font-size: 15px;
+  line-height: 30px;
+}
+.flex-container .icon .col2 {
+  width: 330px;
+}
+.flex-container .icon .col3 {
+  width: 120px;
+}
+.flex-container .icon .col4 {
+  width: 120px;
+  text-align: right;
+}
+
+.flex-container .navigation li {
+  padding: 0;
+  font-family: 'gilroyextrabold', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+
+.flex-container .icon .col5{
+  text-align: left;
+  width: 550px;
+
+}
+
+.flex-container .icon .col6{
+  width: 160px;
+}
+
+.flex-container .icon .col7{
+  width: 160px;
+}
+
+.flex-container .icon .col8{
+  width: 210px;
+  text-align: right;
+}
+
+
+
 
 .icon,
-.icon-footer
+.icon-footer,
+.slider1
 {
   list-style: none;
 }
@@ -198,6 +301,7 @@ input:disabled  + label{
   text-transform: uppercase;
   color: black;
   font-family: 'gilroyextrabold', sans-serif;
+  font-weight: bold;
   font-size: 18px;
   z-index: 1;
 }
@@ -233,7 +337,7 @@ input:disabled  + label{
 .icon li label
 {
   position: relative;
-  margin-left: 15px;
+  /*margin-left: 15px;*/
 }
 
 .arrow li:first-child a::after,
@@ -471,7 +575,93 @@ footer {
 }
 
 
+
+/*=====================modal===================================*/
+.modal {
+  position: relative;
+  padding: 0;
+  width: 960px;
+  height: 587px;
+  background-color: #fff;
+}
+.modal .inputs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px;
+  /*padding: 0;*/
+  justify-content: space-between;
+}
+
+.modal input {
+  width: 100%;
+  height: 50px;
+}
+
+.inputs li:first-child,
+.inputs li:nth-child(2) {
+  width: 360px;
+}
+
+.inputs li:nth-child(3) {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.inputs li:last-child {
+  margin-left: 45px;
+}
+
+.inputs li label {
+  font: 20px/40px 'gilroyextrabold', sans-serif;
+}
+
+.modal textarea {
+  width: 100%;
+  height: 156px;
+  overflow: auto;
+  font-weight: 400;
+  background-color: #f2f2f2;
+}
+
+.modal input:not(.yellow-button) {
+  background-color: #f2f2f2;
+}
+
+.modal input[placeholder],
+.modal textarea[placeholder]{
+  color: rgba(70, 70, 70, 0.4);
+  padding: 15px;
+}
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.6;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+  opacity: 1;
+}
+
+.modal .close:active {
+  opacity: 0.3;
+}
+
+.modal.full-size {
+  background: url('../img/map.jpg.png') 50%/cover no-repeat;
+
+}
+
+/*.modal .button {*/
+/*  padding-left: 100px;*/
+/*}*/
 /*к сравнению: opacity 0.5/1/0.2*/
+
+
 
 
 
