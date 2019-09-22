@@ -9,7 +9,7 @@
 	<title>HTML Academy: Девайс</title>
 </head>
 <body>
-<header>
+<header class="temp">
 	<div class="content">
 			<a class="focus logo" href="index.html">
 			<img src="./img/svg-device/logo-device.svg" width="163" height="35" alt="Логотип компании DEVICE">
@@ -35,7 +35,7 @@
 
 			<ul class="icon navigation">
 				<li class="col5">
-					<a href="catalog.html">Каталог товаров</a>
+					<a class="link-catalog" href="catalog.html">Каталог товаров</a>
 					<button class="button" type="button" aria-label="Каталог товаров">
 						<img src="./img/svg-device/plus.svg" width="16" height="16" alt="Каталог товаров">
 					</button>
@@ -59,9 +59,10 @@
 		</nav>
 	</div>
 </header>
-<main>
-	<div class="content">
-		<h1 class="visually-hidden">Каталог товаров</h1>
+<main class="temp">
+
+	<section class="content">
+		<h1 class="visually-hidden">Наши товары</h1>
 		<div class="radio">
 			<input type="radio" name="slider" id="monopod" value="monopod for selfi">
 			<label for="monopod"></label>
@@ -191,7 +192,7 @@
 				</li>
 			</ul>
 		</div>
-	</div>
+	</section>
 
 	<!--	=========== 2-й слайдер========================-->
 	<div class="slider-2">
@@ -342,6 +343,7 @@
 	</form>
 	<button class="button close focus3" type="button" aria-label="закрыть"><img src="./img/svg-device/modal-close.svg"
 																				alt="закрыть"></button>
+
 </div>
 <div class="modal shadow full-size">
 	<!--		<img class="full-size" src="./img/map.jpg.png" alt="схема проезда">-->
@@ -350,3 +352,4 @@
 </div>
 </body>
 </html>
+

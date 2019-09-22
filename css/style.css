@@ -30,6 +30,58 @@ body {
   font-family: 'Open Sans', sans-serif;
   /*padding: 0;*/
 }
+/*=====================временно для подсветки===================*/
+.temp >*::before {
+  content: attr(class);
+  position: absolute;
+  right: 0;
+  margin-top: -11px;
+  font:normal normal 14px/14px monospace;
+  text-transform: lowercase;
+  letter-spacing: normal;
+  background-color: rgba(255, 0, 0, 0.3);
+  color: black;
+}
+
+.temp > * > *::before {
+  content: attr(class);
+  position: absolute;
+  left: 0;
+  margin-top: -11px;
+  font:normal normal 14px/14px monospace;
+  text-transform: lowercase;
+  letter-spacing: normal;
+  background-color: rgba( 0, 0, 255, 0.3);
+  color: black;
+}
+
+.temp > * > * >*::before {
+  content: attr(class);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -11px;
+  font:normal normal 14px/14px monospace;
+  text-transform: lowercase;
+  letter-spacing: normal;
+  background-color: rgba( 0, 255, 0,  0.3);
+  color: black;
+}
+
+.temp > * {
+  position: relative;
+  outline: 1px dashed rgba(255, 0, 0, 0.3);
+}
+.temp > * > * {
+  position: relative;
+  outline: 1px dashed rgba(0, 0, 255, 0.3);
+  outline-offset:-2px;
+}
+.temp > * > * > * {
+  position: relative;
+  outline: 1px dashed rgba(0, 255, 0, 0.3);
+  outline-offset:-4px;
+}
+/*============================================================*/
 
 .visually-hidden {
   position: absolute;
@@ -38,6 +90,8 @@ body {
   margin: -1px;
   border: 0;
   padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0,0,0,0);
   overflow: hidden;
 }
@@ -73,19 +127,18 @@ header .logo {
   display: flex;
   padding-top: 45px;
   /*outline: 1px dashed red;*/
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .flex-container > ul:first-child {
   display: flex;
-  width: 100%;
   padding: 0 0 50px 0;
   margin: 0;
 }
 
 .flex-container > ul:nth-child(2) {
   display: flex;
-  width: 100%;
+  /*width: 100%;*/
   padding: 0;
 
 }
@@ -122,22 +175,18 @@ header .logo {
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   font-weight: bold;
 }
-
 
 .flex-container .icon .col5{
   text-align: left;
   width: 550px;
-
 }
 
-.flex-container .icon .col6{
-  width: 160px;
-}
-
-.flex-container .icon .col7{
+.flex-container .icon .col6,
+.flex-container .icon .col7
+{
   width: 160px;
 }
 
@@ -145,9 +194,6 @@ header .logo {
   width: 210px;
   text-align: right;
 }
-
-
-
 
 .icon,
 .icon-footer,
@@ -161,21 +207,25 @@ header .logo {
   color: black;
 }
 
-.icon li:hover,
-.icon li:focus,
+.icon li:hover:not(.col5),
+.icon li:focus:not(.col5),
 .focus:hover,
 .focus:focus
 {
   opacity: 0.6;
 }
 
-.icon li:active,
-.focus:active
+.icon li:active:not(.col5),
+.focus:active,
+.col5 button
 {
   opacity: 0.3;
 }
 
-.focus2 {
+.focus2,
+.icon.navigation .col5 .link-catalog:hover,
+.icon.navigation .col5 .link-catalog:focus
+{
   opacity: 0.6;
 }
 
@@ -188,7 +238,9 @@ header .logo {
   opacity: 0.2;
 }
 
-.focus3 {
+.focus3,
+.icon.navigation .col5 .link-catalog:active
+{
   opacity: 0.3;
 }
 
@@ -422,7 +474,6 @@ input:disabled  + label{
   background-color: #e5e5e5;
 }
 
-
 /*============================ img partner style===========================================*/
 .filter {
   list-style: none;
@@ -433,11 +484,11 @@ filter: grayscale(100%);
   opacity: 0.3;
   transition: 0.2s;
 }
+
 .filter li img:hover {
   filter: grayscale(0);
   opacity: 1;
 }
-
 
 /*======================footer style=====================*/
 
@@ -508,7 +559,6 @@ footer {
 }
 /*===================================================================================================*/
 /*========================== страница каталог========================================================*/
-
 .arrow {
   list-style: none;
 }
@@ -536,7 +586,6 @@ footer {
 .filter input[type="range"] + input {
   margin-top: -5px;
 }
-
 
 /*  секция сортировка*/
 .goods ul {
@@ -573,7 +622,6 @@ footer {
   background-color: #d9d9d9;
   color: rgba(0, 0, 0, 0.3);
 }
-
 
 
 /*=====================modal===================================*/
@@ -614,7 +662,7 @@ footer {
 }
 
 .inputs li label {
-  font: 20px/40px 'gilroyextrabold', sans-serif;
+  font: bold 20px/40px 'gilroyextrabold', sans-serif;
 }
 
 .modal textarea {
@@ -629,8 +677,8 @@ footer {
   background-color: #f2f2f2;
 }
 
-.modal input[placeholder],
-.modal textarea[placeholder]{
+.modal input::placeholder,
+.modal textarea::placeholder{
   color: rgba(70, 70, 70, 0.4);
   padding: 15px;
 }
