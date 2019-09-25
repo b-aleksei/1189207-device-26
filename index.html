@@ -21,7 +21,7 @@
 					<label class="search" for="search"></label>
 					<input class="focus searcher" id="search" aria-label="Поиск по сайту" type="search"
 						   placeholder="Поиск по сайту">
-					<button class="visually-hidden" type="button" aria-label="кнопка поиска">Найти</button>
+					<button class="btn-search" type="button" aria-label="кнопка поиска">Найти</button>
 				</li>
 				<li class="col2">
 					<label class="enter" for="enter"></label>
@@ -37,7 +37,8 @@
 			<ul class="icon navigation">
 				<li class="col5">
 					<a class="link-catalog" href="catalog.html">Каталог товаров
-						<svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#272525" d="M16 7H9V0H7v7H0v2h7v7h2V9h7z"/>
+						<svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+							<path fill="#272525" d="M16 7H9V0H7v7H0v2h7v7h2V9h7z"/>
 						</svg>
 					</a>
 			<!--		<button class="button plus" type="button" aria-label="Каталог товаров">
@@ -45,12 +46,24 @@
 					</button>-->
 					<!--  кнопка + каталога товаров должна открывать этот список-->
 					<ul class="modal-header">
-						<li class="focus">Виртуальная реальность</li>
-						<li class="focus">Моноподы для селфи</li>
-						<li class="focus">Экшн-камеры</li>
-						<li class="focus">Фитнес-браслеты</li>
-						<li class="focus">Умные часы</li>
-						<li class="focus">Квадрокоптеры</li>
+						<li>
+							<ul class="drop-menu">
+								<li><a class="focus" href="">Виртуальная реальность</a></li>
+								<li><a class="focus" href="">Моноподы для селфи</a></li>
+								<li><a class="focus" href="">Экшн-камеры</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="drop-menu">
+								<li><a class="focus" href="">Фитнес-браслеты</a></li>
+								<li><a class="focus" href="">Умные часы</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="drop-menu">
+								<li><a class="focus" href="">Квадрокоптеры</a></li>
+							</ul>
+						</li>
 					</ul>
 				</li>
 				<li class="col6"><a href="delivery.html">Доставка</a></li>
