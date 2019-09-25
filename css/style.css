@@ -126,9 +126,6 @@ header .content {
   margin-top: 40px;
   background-color: #f7e296;
   padding: 0 60px 0;
-  /*padding-top: 50px;*/
-  /*border: 1px solid transparent;*/
-
 }
 
 header .logo {
@@ -433,7 +430,8 @@ input:disabled  + label{
   color: black;
   font-family: 'gilroyextrabold', sans-serif;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 17px;
+  letter-spacing: 3px;
   z-index: 1;
 }
 
@@ -506,9 +504,10 @@ input:disabled  + label{
 }
 
 /*==========================main style=====================================*/
-.slider1 ul,
+.slider1,
 .slider-2 ul {
   list-style: none;
+  padding: 0;
 }
 
 .slider-2 .yellow-button:active {
@@ -518,7 +517,59 @@ input:disabled  + label{
   background-color: #000;
   width: 278px;
 }
+.selfie-monopod {
+  display: flex;
+}
 
+section .picture{
+  display: flex;
+  width: 575px;
+}
+
+section .picture img {
+  margin: auto;
+}
+
+.selfie-monopod .slider1-info {
+  width: 515px;
+}
+
+.slider1-info {
+  /*display: flex;*/
+  /*flex-direction: column;*/
+}
+
+.slider1-info h2 {
+  font-family: 'gilroyextrabold', sans-serif;
+  font-size: 44px;
+  line-height: 56px;
+  margin-bottom: 10px;
+}
+
+.slider1-info span {
+  font-size: 175px;
+}
+
+.slider1-info > p {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  padding: 5px 40px 40px 0;
+}
+
+.slider1-info a.yellow-button {
+  margin-left: 43px;
+}
+.slider1-info a.yellow-button::before {
+}
+
+.selfie-monopod .radio label {
+display: inline-block;
+  margin: 0;
+}
+.slider1-description {
+  display: flex;
+}
 /*==========================================================*/
 .product-icons ul {
   list-style: none;

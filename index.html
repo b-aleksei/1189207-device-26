@@ -11,108 +11,114 @@
 <body>
 <header class="">
 	<div class="container">
-	<div class="content">
+		<div class="content">
 			<a class="focus logo" href="index.html">
-			<img src="./img/svg-device/logo-device.svg" width="163" height="35" alt="Логотип компании DEVICE">
-		</a>
-		<nav class="flex-container">
-			<ul class="icon">
-				<li class="col1">
-					<label class="search" for="search"></label>
-					<input class="focus searcher" id="search" aria-label="Поиск по сайту" type="search"
-						   placeholder="Поиск по сайту">
-					<button class="btn-search" type="button" aria-label="кнопка поиска">Найти</button>
-				</li>
-				<li class="col2">
-					<label class="enter" for="enter"></label>
-					<input class="focus button" type="button" id="enter" value="Войти">
-				</li>
-				<li class="col3">
-					<a class="compare focus" href="compare.html">Сравнить</a></li>
-				<li class="col4">
-					<a class="cart focus" href="basket.html">Корзина</a>
-				</li>
-			</ul>
+				<img src="./img/svg-device/logo-device.svg" width="163" height="35" alt="Логотип компании DEVICE">
+			</a>
+			<nav class="flex-container">
+				<ul class="icon">
+					<li class="col1">
+						<label class="search" for="search"></label>
+						<input class="focus searcher" id="search" aria-label="Поиск по сайту" type="search"
+							   placeholder="Поиск по сайту">
+						<button class="btn-search" type="button" aria-label="кнопка поиска">Найти</button>
+					</li>
+					<li class="col2">
+						<label class="enter" for="enter"></label>
+						<input class="focus button" type="button" id="enter" value="Войти">
+					</li>
+					<li class="col3">
+						<a class="compare focus" href="compare.html">Сравнить</a></li>
+					<li class="col4">
+						<a class="cart focus" href="basket.html">Корзина</a>
+					</li>
+				</ul>
 
-			<ul class="icon navigation">
-				<li class="col5">
-					<a class="link-catalog" href="catalog.html">Каталог товаров
-						<svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-							<path fill="#272525" d="M16 7H9V0H7v7H0v2h7v7h2V9h7z"/>
-						</svg>
-					</a>
-			<!--		<button class="button plus" type="button" aria-label="Каталог товаров">
-						<img src="./img/svg-device/plus.svg" width="16" height="16" alt="Каталог товаров">
-					</button>-->
-					<!--  кнопка + каталога товаров должна открывать этот список-->
-					<ul class="modal-header">
-						<li>
-							<ul class="drop-menu">
-								<li><a class="focus" href="">Виртуальная реальность</a></li>
-								<li><a class="focus" href="">Моноподы для селфи</a></li>
-								<li><a class="focus" href="">Экшн-камеры</a></li>
-							</ul>
-						</li>
-						<li>
-							<ul class="drop-menu">
-								<li><a class="focus" href="">Фитнес-браслеты</a></li>
-								<li><a class="focus" href="">Умные часы</a></li>
-							</ul>
-						</li>
-						<li>
-							<ul class="drop-menu">
-								<li><a class="focus" href="">Квадрокоптеры</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="col6"><a href="delivery.html">Доставка</a></li>
-				<li class="col7"><a href="warranty.html">Гарантия</a></li>
-				<li class="col8"><a href="contacts.html">Контакты</a></li>
-			</ul>
+				<ul class="icon navigation">
+					<li class="col5">
+						<a class="link-catalog" href="catalog.html">Каталог товаров
+							<svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+								 viewBox="0 0 16 16">
+								<path fill="#272525" d="M16 7H9V0H7v7H0v2h7v7h2V9h7z"/>
+							</svg>
+						</a>
+						<ul class="modal-header">
+							<li>
+								<ul class="drop-menu">
+									<li><a class="focus" href="">Виртуальная реальность</a></li>
+									<li><a class="focus" href="">Моноподы для селфи</a></li>
+									<li><a class="focus" href="">Экшн-камеры</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="drop-menu">
+									<li><a class="focus" href="">Фитнес-браслеты</a></li>
+									<li><a class="focus" href="">Умные часы</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="drop-menu">
+									<li><a class="focus" href="">Квадрокоптеры</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="col6"><a href="delivery.html">Доставка</a></li>
+					<li class="col7"><a href="warranty.html">Гарантия</a></li>
+					<li class="col8"><a href="contacts.html">Контакты</a></li>
+				</ul>
 
-
-		</nav>
-	</div>
+			</nav>
+		</div>
 	</div>
 </header>
-<main class="">
-
+<main class="container">
 	<section class="content">
 		<h1 class="visually-hidden">Наши товары</h1>
-		<div class="radio">
-			<input type="radio" name="slider" id="monopod" value="monopod for selfi">
+		<!--<div class="radio">
+			<input type="radio" name="slider" id="monopod" value="monopod for selfi" checked>
 			<label for="monopod"></label>
 
-			<input type="radio" name="slider" id="watch" value="watch" checked>
+			<input type="radio" name="slider" id="watch" value="watch" >
 			<label for="watch"></label>
 
 			<input type="radio" name="slider" id="quadro" value="quadrocopter">
 			<label for="quadro"></label>
-		</div>
+		</div>-->
 
 		<!-- ========================список для слайдера ========================================-->
-		<ul class="slider1">
+		<ul class="slider1 temp">
 			<li>
-				<section class="preview">
-					<h2>Делай селфи,<br>
-						как Бен Стиллер!</h2>
-					<img src="./img/slider-1.png" width="384" height="486" alt="Монопод для селфи">
-					<p>Самая длинная палка для селфи доступна в нашем магазине.
-						Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-					</p>
-					<a class="yellow-button" href="catalog.html">подробнее</a>
-					<ul>
-						<li><p>8,5 M</p>
-							<p>Длина палки</p>
-						</li>
-						<li><p>5 кг</p>
-							<p>Вес палки</p>
-						</li>
-						<li><p>Карбон</p>
-							<p>Материал</p>
-						</li>
-					</ul>
+				<section class="selfie-monopod">
+					<div class="picture"><img src="./img/slider-1.png" width="384" height="486" alt="Монопод для селфи"></div>
+					<div class="slider1-info">
+						<h2>Делай селфи, <span>01</span><br>
+							как Бен Стиллер!</h2>
+						<p>Самая длинная палка для селфи доступна в нашем магазине.
+						Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+						<a class="yellow-button" href="catalog.html">подробнее</a>
+						<div class="radio">
+							<input type="radio" name="slider" id="monopod" value="monopod for selfi" checked>
+							<label for="monopod"></label>
+
+							<input type="radio" name="slider" id="watch" value="watch">
+							<label for="watch"></label>
+
+							<input type="radio" name="slider" id="quadro" value="quadrocopter">
+							<label for="quadro"></label>
+						</div>
+						<ul class="slider1-description temp">
+							<li><p>8,5 M</p>
+								<p>Длина палки</p>
+							</li>
+							<li><p>5 кг</p>
+								<p>Вес палки</p>
+							</li>
+							<li><p>Карбон</p>
+								<p>Материал</p>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</li>
 			<!--========= вторая секция с часами=====================-->
