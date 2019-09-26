@@ -110,15 +110,16 @@ body {
 }
 
 .container {
- margin: 0;
+  width: 1200px;
  padding: 0 20px;
+  margin: auto;
 }
 
 .content {
   position: relative;
   width: 100%;
   max-width:1160px;
-  margin: auto;
+
 }
 /*===================стилизация header==========================*/
 header .content {
@@ -534,24 +535,23 @@ input:disabled  + label{
   background-color: #000;
   width: 278px;
 }
-.slider1 .selfie-monopod,
-.slider1 .watch {
+
+.slider1 .preview {
   display: flex;
 }
 
-section .picture{
+.preview .picture{
   display: flex;
   width: 575px;
 }
 
-section .picture img {
-  margin: auto;
-}
-
-.selfie-monopod .slider1-info,
-.watch .slider1-info
+.preview .slider1-info
 {
   width: 515px;
+}
+
+.preview .picture img {
+  margin: auto;
 }
 
 .slider1-info h2 {
@@ -569,7 +569,7 @@ section .picture img {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
-  padding: 5px 40px 40px 0;
+  padding: 5px 44px 40px 0;
 }
 
 .slider1-info a.yellow-button {
@@ -593,11 +593,29 @@ section .picture img {
   width: 150px;
 }
 
-/*==========================================================*/
+/*=========================стилизация миниатюр товара =================================*/
 .product-icons ul {
   list-style: none;
   display: flex;
+  padding: 0;
+  justify-content: space-between;
 }
+.product-icons ul li figure {
+  margin: 0;
+  width: 160px;
+}
+
+.product-icons ul li figure figcaption {
+  padding-top: 30px;
+  font-family: 'gilroyextrabold', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+/*============стилизация слайдер-2===============================*/
+
+
 
 .fill-box {
   display: flex;
