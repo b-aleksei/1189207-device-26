@@ -46,11 +46,11 @@ body {
 .temp *::before {
   content: attr(class);
   position: absolute;
-  /*margin-top: -11px;*/
   font:normal normal 12px/12px monospace;
   text-transform: lowercase;
   letter-spacing: normal;
   color: black;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .temp >*::before {
@@ -79,16 +79,17 @@ body {
 .temp > * {
   position: relative;
   outline: 1px dashed rgba(255, 0, 0, 0.3);
+    outline-offset:1px
 }
 .temp > * > * {
   position: relative;
   outline: 1px dashed rgba(0, 0, 255, 0.3);
-  outline-offset:-2px;
+  outline-offset:-1px;
 }
 .temp > * > * > * {
   position: relative;
   outline: 1px dashed rgba(0, 255, 0, 0.3);
-  outline-offset:-4px;
+  /*outline-offset:-4px;*/
 }
 /*============================================================*/
 
@@ -463,7 +464,7 @@ input:disabled  + label{
   background-color: #f0c52e;
   transform: scaleY(0.20);
   z-index: -1;
-  transition: .5s
+  transition: .3s
 }
 
 .yellow-button:hover::before,
@@ -476,15 +477,11 @@ input:disabled  + label{
   color: rgba(0, 0, 0, 0.3);
 }
 
-.arrow li a {
-  position: relative;
-}
-
+.arrow li a,
 .icon li > a,
 .icon li label
 {
   position: relative;
-  /*margin-left: 15px;*/
 }
 
 .arrow li:first-child a::after,
@@ -526,14 +523,6 @@ input:disabled  + label{
 .slider-2 ul {
   list-style: none;
   padding: 0;
-}
-
-.slider-2 .yellow-button:active {
-  color: #f7e184;
-}
-.slider-2 .yellow-button:active::before {
-  background-color: #000;
-  width: 278px;
 }
 
 .slider1 .preview {
@@ -594,11 +583,35 @@ input:disabled  + label{
 }
 
 /*=========================стилизация миниатюр товара =================================*/
+.fill-box {
+    display: flex;
+    width: 160px;
+    height: 160px;
+    background-color: #f7e296;
+}
+
+.fill-box img {
+    margin: auto;
+}
+
+.fill-box:hover,
+.fill-box:focus
+{
+    background-color: #f0c52e;
+}
+
+.fill-box:active > img,
+.fill-box:active + figcaption
+{
+    opacity: 0.3;
+}
+
 .product-icons ul {
   list-style: none;
   display: flex;
   padding: 0;
   justify-content: space-between;
+    margin-bottom: 177px;
 }
 .product-icons ul li figure {
   margin: 0;
@@ -606,7 +619,7 @@ input:disabled  + label{
 }
 
 .product-icons ul li figure figcaption {
-  padding-top: 30px;
+  padding-top: 34px;
   font-family: 'gilroyextrabold', sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -614,53 +627,209 @@ input:disabled  + label{
   line-height: 24px;
 }
 /*============стилизация слайдер-2===============================*/
-
-
-
-.fill-box {
-  display: flex;
-  width: 160px;
-  height: 160px;
-  background-color: #f7e296;
-}
-
-.fill-box img {
-  margin: auto;
-}
-
-.fill-box:hover,
-.fill-box:focus
-{
-  background-color: #f0c52e;
-}
-
-.fill-box:active > img,
-.fill-box:active + figcaption
-{
-  opacity: 0.3;
+.background-gray {
+    background-color: #e5e5e5;
 }
 
 .slider-2 {
-  background-color: #e5e5e5;
+    display: flex;
+    margin-bottom: 95px;
 }
 
-/*============================ img partner style===========================================*/
-.filter {
+.slider-2 .slider-2-buttons {
+    margin-top: -9px;
+}
+
+.slider-2 .slider-2-items {
+    flex-grow: 1;
+    margin-top: -18px;
+}
+
+.slider-2 ul {
   list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content .slider-2 .slider-2-buttons .yellow-button::before{
+    width: 160px;
+    left: calc(50% - 80px);
+}
+
+.content .slider-2 .slider-2-buttons .yellow-button:active::before,
+.content .slider-2 .slider-2-buttons .yellow-button:focus::before
+{
+    background-color: black;
+    width: 282px;
+}
+
+.content .slider-2 .slider-2-buttons .yellow-button:active,
+.content .slider-2 .slider-2-buttons .yellow-button:focus {
+    color: #f7e184;
+}
+
+.slider-2 ul:first-child {
+    width:275px;
+    padding-right: 125px;
+    padding-left: 8px;
+    text-align: center;
+}
+
+.slider-2 ul:first-child li {
+padding-bottom: 45px;
+}
+
+.slider-2-items li {
+    /*border-left: 7px solid black;*/
+    display: flex;
+    position: relative;
+}
+
+.slider-2-items section {
+    width: 500px;
+    margin-left: 120px;
+}
+
+.slider-2-items section h2,
+.info h2
+{
+    margin: 0;
+    padding-bottom: 25px;
+    font-family: 'gilroyextrabold', sans-serif;
+    font-weight: bold;
+    font-size: 47px;
+    line-height: 35px;
+}
+
+.slider-2-items section p {
+    min-height: 220px;
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.slider-2-items img {
+    margin-left: 50px;
+}
+
+.slider-2-items li:first-child::before {
+    content: '';
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 7px;
+    height: 320px;
+    background-color: #000;
+}
+/*==========================стилизация лого партнеров======================*/
+.partners .filter {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    justify-content: space-between;
+    margin-bottom: 150px;
 }
 
 .filter li img {
-filter: grayscale(100%);
-  opacity: 0.3;
-  transition: 0.2s;
+    filter: grayscale(100%);
+    opacity: 0.3;
+    transition: 0.2s;
 }
 
 .filter li img:hover {
-  filter: grayscale(0);
-  opacity: 1;
+    filter: grayscale(0);
+    opacity: 1;
+}
+/*========================стилизация раздела О НАС============================*/
+
+.info {
+    display: flex;
+    flex-grow: 1;
+    margin-bottom: 100px;
 }
 
-/*======================footer style=====================*/
+.info section {
+    width: 50%;
+}
+
+.info h2 {
+    position: relative;
+    padding-bottom: 35px;
+}
+
+.info h2:before {
+    position: absolute;
+    top: -60px;
+    content: '';
+    width: 80px;
+    height: 7px;
+    background-color: #000;
+}
+
+.info p {
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: 0.01em;
+    padding-bottom: 15px;
+}
+
+.info section:first-child div {
+    width: 485px;
+}
+
+.info section:last-child {
+    padding-left: 15px;
+}
+
+.info section:last-child p {
+    padding-bottom: 23px;
+}
+
+.info section:last-child img {
+    margin-bottom: 75px;
+}
+
+.info section button {
+    margin-left: 15px;
+}
+
+.info section:last-child button {
+    margin-left: 35px;
+}
+
+.info section button:before {
+    width: 260px;
+    left: calc(50% - 130px);
+}
+
+.deliver-company {
+    list-style: none;
+    padding: 48px 0 47px 0;
+}
+
+.deliver-company li {
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 32px;
+    font-family: 'gilroyextrabold', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.deliver-company li:before  {
+    position: absolute;
+    content: '';
+    top:4px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border: 1px solid black;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+
+    /*======================footer style=====================*/
 
 footer {
     background-color: #464646;
