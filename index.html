@@ -43,7 +43,7 @@
 							</svg>
 						</a>
 						<ul class="modal-header ">
-							<li>
+							<li >
 								<ul class="drop-menu">
 									<li><a class="focus" href="">Виртуальная реальность</a></li>
 									<li><a class="focus" href="">Моноподы для селфи</a></li>
@@ -74,29 +74,28 @@
 </header>
 <main>
 	<div class="container">
-		<section class="content">
+		<section class="content radio">
 			<!-- ================================	кнопки первого слайдера=========== -->
-			<div class="radio">
-				<input type="radio" name="slider" id="monopod" value="monopod for selfi" checked>
-				<label for="monopod"></label>
+			<input class="slide-1" type="radio" name="slider" id="monopod" value="monopod for selfi" checked>
+			<label class="slide-1" for="monopod"></label>
 
-				<input type="radio" name="slider" id="preview" value="preview">
-				<label for="preview"></label>
+			<input class="slide-2" type="radio" name="slider" id="preview" value="preview">
+			<label class="slide-2" for="preview"></label>
 
-				<input type="radio" name="slider" id="quadro" value="quadrocopter">
-				<label for="quadro"></label>
-			</div>
+			<input class="slide-3" type="radio" name="slider" id="quadro" value="quadrocopter">
+			<label class="slide-3" for="quadro"></label>
 			<!--==============================================================================-->
 			<h1 class="visually-hidden">Наши товары</h1>
 			<ul class="slider1">
-				<li>
-					<section class="preview">
-						<div class="picture"><img src="./img/slider-1.png" width="384" height="486"
-												  alt="Монопод для селфи">
+				<li class="slide-1">
+					<section class="preview ">
+						<div class="picture">
+							<img src="./img/slider-1.png" width="384" height="486" alt="Монопод для селфи">
 						</div>
-						<div class="slider1-info">
-							<h2>Делай селфи, <span>01</span>
+						<div class="slider1-info ">
+							<h2>Делай селфи,<br>
 								как Бен Стиллер!</h2>
+							<span>01</span>
 							<p>Самая длинная палка для селфи доступна в нашем магазине.
 								Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 							<a class="yellow-button" href="catalog.html">подробнее</a>
@@ -116,14 +115,15 @@
 					</section>
 				</li>
 				<!--========= вторая секция с часами=====================-->
-				<li>
+				<li class="slide-2">
 					<section class="preview">
 						<div class="picture">
 							<img src="./img/slider-2.png" width="345" height="485" alt="Фитнес-браслеты">
 						</div>
 						<div class="slider1-info">
-							<h2>Худеем <span>02</span>
+							<h2>Худеем<br>
 								правильно!</h2>
+							<span>02</span>
 							<p>Мотивирующие фитнес-браслеты помогут найти в себе силы
 								не пропускать занятия и соблюдать диету.
 							</p>
@@ -141,14 +141,15 @@
 					</section>
 				</li>
 				<!--========= третья секция с квадрокоптером=====================-->
-				<li>
+				<li class="slide-3">
 					<section class="preview">
 						<div class="picture">
 							<img src="./img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
 						</div>
 						<div class="slider1-info">
-							<h2>Порхает как бабочка, <span>03</span>
+							<h2>Порхает как бабочка,
 								жалит как пчела!</h2>
+							<span>03</span>
 							<p>Этот обычный, на первый взгляд, квадрокоптер оснащен
 								мощным лазером, замаскированным под стандартную камеру.
 							</p>

@@ -209,8 +209,7 @@ header .logo {
 }
 
 .icon,
-.icon-footer,
-.slider1
+.icon-footer
 {
   list-style: none;
 }
@@ -334,6 +333,8 @@ border-bottom: 2px solid black;
 
 .navigation .col5:hover .modal-header {
   visibility: visible;
+  position: absolute;
+  z-index: 6;
 }
 
 .modal-header li {
@@ -366,26 +367,40 @@ border-bottom: 2px solid black;
 }
 
 /*=============== стилизация кнопок слайдера (радиобаттона)===============*/
-.radio input[type="radio"] {
-  display: none;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
-
 .radio {
-  display: inline-block;
-  padding-left: 210px;
-}
-
-.radio label {
-  cursor: pointer;
   position: relative;
-  padding-left: 35px;
+}
+/*.radio > input[type="checkbox"],*/
+.radio > input[type="radio"]
+{
+  display: none;
 }
 
-.radio label::before {
+.radio > label {
+  position: absolute;
+  cursor: pointer;
+}
+
+.radio > .slide-1 {
+  top: 340px;
+  right: 162px;
+  z-index: 5;
+}
+
+.radio > .slide-2 {
+  top: 340px;
+  right: 127px;
+  z-index: 5;
+}
+
+.radio > .slide-3 {
+  top: 340px;
+  right: 90px;
+  z-index: 5;
+}
+
+
+.radio > label::before {
 /*url("../img/svg-device/slider-button-empty.svg")*/
   content:"";
   position: absolute;
@@ -398,7 +413,11 @@ input[type="checkbox"] {
   transition: 0.2s;
 }
 
-input[type="radio"]:checked + label::before {
+.radio > input[type="radio"]:hover + label::before {
+  transform: scale(1.3);
+}
+
+.radio > input[type="radio"]:checked + label::before {
 /*url("../img/svg-device/slider-button.svg")*/
   content:'';
   bottom: 8px;
@@ -409,10 +428,26 @@ input[type="radio"]:checked + label::before {
   box-shadow: 0 0 0 3px white,0 0 0 4px black;
 }
 
-input[type="radio"]:hover + label::before {
-  transform: scale(1.3);
+.slider1 .slide-1,
+.slider1 .slide-2,
+.slider1 .slide-3 {
+  margin-top: -125px ;
+  display: none;
+  z-index: 4;
 }
-/*==========================стилизация чекбоска и радобаттона каталога==========================================*/
+
+.radio > input:first-child[type="radio"]:checked ~.slider1 .slide-1{
+  display: block;
+}
+
+.radio > input:nth-of-type(2)[type="radio"]:checked ~.slider1 .slide-2{
+  display: block;
+}
+
+.radio > input:nth-of-type(3)[type="radio"]:checked ~.slider1 .slide-3{
+  display: block;
+}
+  /*==========================стилизация чекбоска и радобаттона каталога==========================================*/
 .radio .radio-catalog {
   padding-left: 65px;
   margin-right: -20px
@@ -528,7 +563,8 @@ input:disabled  + label{
 
 .preview .picture{
   display: flex;
-  width: 575px;
+  width: 555px;
+  margin-right: 45px;
 }
 
 .preview .slider1-info
@@ -537,25 +573,61 @@ input:disabled  + label{
 }
 
 .preview .picture img {
-  margin: auto;
+  margin: 0 auto;
+}
+
+.slide-3 .preview .picture img {
+  margin: 60px 0 0 auto;
+}
+
+.slide-2 .preview .picture img {
+  margin:  10px auto;
 }
 
 .slider1-info h2 {
+  position: absolute;
+  top: 45px;
+  left: 0;
   font-family: 'gilroyextrabold', sans-serif;
   font-size: 44px;
   line-height: 56px;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
+  z-index: 2;
+}
+
+.slider1-info {
+  position: relative;
+}
+
+.slider1-info:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height:7px;
+  top: 35px;
+  left: 0;
+  z-index: 3;
+  background-color: #fff;: #000;
 }
 
 .slider1-info span {
-  font-size: 175px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: 'gilroyextrabold', sans-serif;
+  font-size: 179px;
+  line-height: 158px;
+  z-index: 1;
+  color: #fff;
 }
 
 .slider1-info > p {
+  margin: 0;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
-  padding: 5px 44px 40px 0;
+  padding: 210px 44px 55px 0;
 }
 
 .slider1-info a.yellow-button {
@@ -569,8 +641,8 @@ input:disabled  + label{
 }
 
 .slider1-description li p:first-child {
-  padding-top: 60px;
-  margin: 0;
+  padding: 60px 0 0 0;
+  margin: 0 0 -5px 0;
   font-size: 36px;
   line-height: 48px;
 }
