@@ -43,7 +43,7 @@
 							</svg>
 						</a>
 						<ul class="modal-header ">
-							<li >
+							<li>
 								<ul class="drop-menu">
 									<li><a class="focus" href="">Виртуальная реальность</a></li>
 									<li><a class="focus" href="">Моноподы для селфи</a></li>
@@ -228,22 +228,28 @@
 	<!--	=========== 2-й слайдер========================-->
 	<div class="background-gray">
 		<div class="container">
-			<div class="content">
+			<div class="content temp">
+				<input class="delivery" type="radio" name="slider-2" id="delivery" checked>
+				<label class="yellow-button delivery" for="delivery">Доставка</label>
+				<input class="warranty" type="radio" name="slider-2" id="warranty">
+				<label class="yellow-button warranty" for="warranty">Гарантия</label>
+				<input class="credit" type="radio" name="slider-2" id="credit">
+				<label class="yellow-button credit" for="credit">Кредит</label>
 				<div class="slider-2 ">
 					<ul class="slider-2-buttons">
 						<li>
-							<button class="button yellow-button delivery" type="button" aria-label="">Доставка</button>
+							<!--							<button class="button yellow-button delivery" type="button" aria-label="">Доставка</button>-->
 						</li>
 						<li>
-							<button class="button yellow-button warranty" type="button" aria-label="">Гарантия</button>
+							<!--							<button class="button yellow-button warranty" type="button" aria-label="">Гарантия</button>-->
 						</li>
 						<li>
-							<button class="button yellow-button credit" type="button" aria-label="">Кредит</button>
+							<!--							<button class="button yellow-button credit" type="button" aria-label="">Кредит</button>-->
 						</li>
 					</ul>
 					<ul class="slider-2-items">
 						<!--		1-я секция  -->
-						<li>
+						<li class="delivery">
 							<section>
 								<h2>Доставка</h2>
 								<p>Мы с удовольствием доставим ваш товар прямо к вашему
@@ -254,7 +260,7 @@
 							<img src="./img/svg-device/delivery.svg" width="136" height="164" alt="Доставка">
 						</li>
 						<!--		2-я секция  -->
-						<li class="visually-hidden">
+						<li class="warranty">
 							<section>
 								<h2>Гарантия</h2>
 								<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы
@@ -266,7 +272,7 @@
 							<img src="./img/svg-device/warranty.svg" width="171" height="195" alt="Гарантия">
 						</li>
 						<!--		3-я секция  -->
-						<li class="visually-hidden">
+						<li class="credit">
 							<section>
 								<h2>Кредит</h2>
 								<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
@@ -324,47 +330,50 @@
 	</div>
 
 </main>
-<footer class="container">
-	<div class="content">
-		<a class="focus" href="#"><img src="./img/logo-orange.png" alt="Логотип"></a>
+<footer>
+	<div class="container">
+		<div class="content">
+			<a class="focus" href="#"><img src="./img/logo-orange.png" alt="Логотип"></a>
 
 
-		<ul class="icon-footer">
-			<li>
-				<input class="button focus2" type="button" id="enter-footer" value="Войти">
-				<label class="enter focus2" for="enter-footer"></label>
-			</li>
-			<li>
-				<a class="compare focus2" href="compare.html">Сравнить</a></li>
-			<li>
-				<a class="cart focus2" href="basket.html">Корзина</a>
-			</li>
-		</ul>
-		<!--	доставка гарантия контакты + иконки соц.сетей ======-->
-		<p>
-			г. Москва, ул. Строителей, 15
-		</p>
-		<ul class="footer-info">
-			<li><a class="focus" href="delivery.html">доставка</a></li>
-			<li><a class="focus" href="warranty.html">гарантия</a></li>
-			<li><a class="focus" href="contacts.html">контакты</a></li>
-		</ul>
-		<p>Тел.: +7 (495) 495-95-95</p>
+			<ul class="icon-footer">
+				<li>
+					<input class="button focus2" type="button" id="enter-footer" value="Войти">
+					<label class="enter focus2" for="enter-footer"></label>
+				</li>
+				<li>
+					<a class="compare focus2" href="compare.html">Сравнить</a></li>
+				<li>
+					<a class="cart focus2" href="basket.html">Корзина</a>
+				</li>
+			</ul>
+			<!--	доставка гарантия контакты + иконки соц.сетей ======-->
+			<p>
+				г. Москва, ул. Строителей, 15
+			</p>
+			<ul class="footer-info">
+				<li><a class="focus" href="delivery.html">доставка</a></li>
+				<li><a class="focus" href="warranty.html">гарантия</a></li>
+				<li><a class="focus" href="contacts.html">контакты</a></li>
+			</ul>
+			<p>Тел.: +7 (495) 495-95-95</p>
 
-		<div class="orange-line"></div>
-		<ul class="social-icon">
-			<li><a class="focus2" href="#" aria-label="Мы на фейсбуке">
-				<img src="./img/svg-device/fb.svg" width="32" height="32" alt="icon">
-			</a></li>
-			<li><a class="focus2" href="#" aria-label="Мы в инстаграмм">
-				<img src="./img/svg-device/instagram.svg" width="32" height="32" alt="icon">
-			</a></li>
-			<li><a class="focus2" href="#" aria-label="Мы в твиттере">
-				<img src="./img/svg-device/twitter.svg" width="32" height="32" alt="icon">
-			</a></li>
-		</ul>
-		<a class="focus" href="#"><img src="./img/svg-device/logo-html.svg" width="27" height="34" alt="Логотип"></a>
+			<div class="orange-line"></div>
+			<ul class="social-icon">
+				<li><a class="focus2" href="#" aria-label="Мы на фейсбуке">
+					<img src="./img/svg-device/fb.svg" width="32" height="32" alt="icon">
+				</a></li>
+				<li><a class="focus2" href="#" aria-label="Мы в инстаграмм">
+					<img src="./img/svg-device/instagram.svg" width="32" height="32" alt="icon">
+				</a></li>
+				<li><a class="focus2" href="#" aria-label="Мы в твиттере">
+					<img src="./img/svg-device/twitter.svg" width="32" height="32" alt="icon">
+				</a></li>
+			</ul>
+			<a class="focus" href="#"><img src="./img/svg-device/logo-html.svg" width="27" height="34"
+										   alt="Логотип"></a>
 
+		</div>
 	</div>
 </footer>
 <div class="modal shadow">
