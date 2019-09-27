@@ -323,15 +323,19 @@ border-bottom: 2px solid black;
 
 .modal-header {
   display:flex;
-  /*position: relative;*/
-  /*z-index: 100;*/
   visibility: hidden;
   width: 1080px;
   height: 161px;
   padding: 0;
   list-style: none;
   background-color: #f7e296 ;
+  transition: 0.2s;
 }
+
+.navigation .col5:hover .modal-header {
+  visibility: visible;
+}
+
 .modal-header li {
   padding: 0;
 }
@@ -359,12 +363,6 @@ border-bottom: 2px solid black;
   margin-left: 4px;
   margin-top: 2px;
   vertical-align: top;
-}
-
-.navigation .col5 a:hover + .modal-header {
-  visibility: visible;
-  /*position: relative;*/
-  /*z-index: 5;*/
 }
 
 /*=============== стилизация кнопок слайдера (радиобаттона)===============*/
