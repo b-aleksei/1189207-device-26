@@ -323,12 +323,12 @@ border-bottom: 2px solid black;
 .modal-header {
   display:flex;
   visibility: hidden;
-  width: 1080px;
+  width: 1100px;
   height: 161px;
-  padding: 0;
+  padding: 0 35px;
+    margin-left: -35px;
   list-style: none;
   background-color: #f7e296 ;
-  transition: 0.2s;
 }
 
 .navigation .col5:hover .modal-header {
