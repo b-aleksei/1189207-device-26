@@ -11,7 +11,7 @@
 <body>
 <header>
 	<div class="container">
-		<div class="content">
+		<div class="catalog content">
 			<a class="focus logo" href="index.html">
 				<img src="./img/svg-device/logo-device.svg" width="163" height="35" alt="Логотип компании DEVICE">
 			</a>
@@ -72,146 +72,149 @@
 		</div>
 	</div>
 </header>
-<main>
-	<div class="content">
-		<h1>Заголовок в зависимости от товара</h1>
-		<ul class="arrow">
-			<li><a href="index.html">Главная</a></li>
-			<li><a href="#">Каталог товаров</a></li>
-			<li><a>текущий товар</a></li>
-		</ul>
-	</div>
-	<section class="filter">
-		<div class="content">
-			<h2>Фильтр товара</h2>
+<main class="container">
+	<section class="content">
 
-			<form action="form.html" method="get">
 
-				<fieldset>
-					<legend class="visually-hidden">Группа полей</legend>
-					<label for="range1">Стоимость</label>
-					<input type="range" id="range1" name="range1" min="0" step="1" max="100" value="0"
-						   aria-label="стоимость">
-					<input type="range" id="range2" name="range2" min="0" step="1" max="100" value="60"
-						   aria-label="стоимость">
-					<label class="cost" for="range2">от 0</label>
-					<span class="cost">до 5000</span>
-					<p>Цвет</p>
-					<ul class="radio">
-						<li>
-							<input id="check1" type="checkbox" name="black" checked>
-							<label for="check1" class="check">Черный</label>
-						</li>
-						<li>
-							<input id="check2" type="checkbox" name="white">
-							<label for="check2" class="check">Белый</label>
-						</li>
-						<li>
-							<input id="check3" type="checkbox" name="blue" checked>
-							<label for="check3" class="check">Синий</label>
-						</li>
-						<li>
-							<input id="check4" type="checkbox" name="red" checked>
-							<label for="check4" class="check">Красный</label>
-						</li>
-						<li>
-							<input id="check5" type="checkbox" name="pink">
-							<label for="check5" class="check">Розовый</label>
-						</li>
-					</ul>
-					<p>Bluetooth</p>
-					<div class="radio">
-						<input id="radio-yes" type="radio" name="bluetooth" value="yes" checked>
-						<label class="radio-catalog" for="radio-yes">Есть</label>
-
-						<input id="radio-no" type="radio" name="bluetooth" value="no">
-						<label class="radio-catalog" for="radio-no">Нет</label>
-					</div>
-					<button type="submit" aria-label="">показать</button>
-				</fieldset>
-
-			</form>
+		<div class="catalog">
+			<h1>Заголовок в зависимости от товара</h1>
+			<ul class="arrow">
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="#">Каталог товаров</a></li>
+				<li><a>текущий товар</a></li>
+			</ul>
 		</div>
-	</section>
-	<section class="goods">
-		<h2>Сортировка:</h2>
-		<ul class="sort-list">
-			<li>
-				<button class="button focus3" type="button">По цене</button>
-			</li>
-			<li>
-				<button class="button focus3" type="button">По типу</button>
-			</li>
-			<li>
-				<button class="button focus3" type="button">По популярности</button>
-			</li>
-			<li>
-				<button class="button focus3 sort sort-up" type="button"></button>
-				<!--					<img src="./img/svg-device/icon-up-dir.svg" width="11" height="10" alt="кнопка вверх">-->
-			</li>
-			<li>
-				<button class="button focus3 sort sort-down" type="button"></button>
-				<!--					<img src="./img/svg-device/icon-down-dir.svg" width="11" height="10" alt="кнопка вниз">-->
-			</li>
-		</ul>
+		<section class="filter">
+			<div class="content">
+				<h2>Фильтр товара</h2>
 
-		<ul>
-			<li>
-				<figure>
-					<img src="./img/goods/item-1.png" alt="Любительская селфи-палка">
-					<figcaption>
-						<p>Любительская селфи-палка</p>
-						<p>500 руб</p>
-					</figcaption>
-				</figure>
-			</li>
-			<li>
-				<figure>
-					<img src="./img/goods/item-2.png" alt="Профессиональная селфи-палка">
-					<figcaption>
-						<p>Профессиональная селфи-палка</p>
-						<p>1500 руб</p>
-					</figcaption>
-				</figure>
-			</li>
-			<li>
-				<figure>
-					<img src="./img/goods/item-3.png" alt="Непотопляемая селфи-палка">
-					<figcaption>
-						<p>Непотопляемая селфи-палка</p>
-						<p>2500 руб</p>
-					</figcaption>
-				</figure>
-			</li>
-			<li>
-				<figure>
-					<img src="./img/goods/item-4.png" alt="Селфи-палка «Следуй за мной»">
-					<figcaption>
-						<p>Селфи-палка «Следуй за мной»</p>
-						<p>4900 руб</p>
-					</figcaption>
-				</figure>
-			</li>
-		</ul>
-		<!--		============ навигация по страницам ========-->
-		<fieldset class="nav-page">
-			<legend class="visually-hidden">Навигация по страницам</legend>
-			<button class="button" type="button">назад</button>
-			<ul class="inputs">
+				<form action="form.html" method="get">
+
+					<fieldset>
+						<legend class="visually-hidden">Группа полей</legend>
+						<label for="range1">Стоимость</label>
+						<input type="range" id="range1" name="range1" min="0" step="1" max="100" value="0"
+							   aria-label="стоимость">
+						<input type="range" id="range2" name="range2" min="0" step="1" max="100" value="60"
+							   aria-label="стоимость">
+						<label class="cost" for="range2">от 0</label>
+						<span class="cost">до 5000</span>
+						<p>Цвет</p>
+						<ul class="radio">
+							<li>
+								<input id="check1" type="checkbox" name="black" checked>
+								<label for="check1" class="check">Черный</label>
+							</li>
+							<li>
+								<input id="check2" type="checkbox" name="white">
+								<label for="check2" class="check">Белый</label>
+							</li>
+							<li>
+								<input id="check3" type="checkbox" name="blue" checked>
+								<label for="check3" class="check">Синий</label>
+							</li>
+							<li>
+								<input id="check4" type="checkbox" name="red" checked>
+								<label for="check4" class="check">Красный</label>
+							</li>
+							<li>
+								<input id="check5" type="checkbox" name="pink">
+								<label for="check5" class="check">Розовый</label>
+							</li>
+						</ul>
+						<p>Bluetooth</p>
+						<div class="radio">
+							<input id="radio-yes" type="radio" name="bluetooth" value="yes" checked>
+							<label class="radio-catalog" for="radio-yes">Есть</label>
+
+							<input id="radio-no" type="radio" name="bluetooth" value="no">
+							<label class="radio-catalog" for="radio-no">Нет</label>
+						</div>
+						<button type="submit" aria-label="">показать</button>
+					</fieldset>
+
+				</form>
+			</div>
+		</section>
+		<section class="goods">
+			<h2>Сортировка:</h2>
+			<ul class="sort-list">
 				<li>
-					<button class="button focus3" type="button">1</button>
+					<button class="button focus3" type="button">По цене</button>
 				</li>
 				<li>
-					<button class="button focus3" type="button">2</button>
+					<button class="button focus3" type="button">По типу</button>
 				</li>
 				<li>
-					<button class="button focus3" type="button">3</button>
+					<button class="button focus3" type="button">По популярности</button>
+				</li>
+				<li>
+					<button class="button focus3 sort sort-up" type="button"></button>
+					<!--					<img src="./img/svg-device/icon-up-dir.svg" width="11" height="10" alt="кнопка вверх">-->
+				</li>
+				<li>
+					<button class="button focus3 sort sort-down" type="button"></button>
+					<!--					<img src="./img/svg-device/icon-down-dir.svg" width="11" height="10" alt="кнопка вниз">-->
 				</li>
 			</ul>
-			<button class="button" type="button">вперед</button>
-		</fieldset>
-	</section>
 
+			<ul>
+				<li>
+					<figure>
+						<img src="./img/goods/item-1.png" alt="Любительская селфи-палка">
+						<figcaption>
+							<p>Любительская селфи-палка</p>
+							<p>500 руб</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="./img/goods/item-2.png" alt="Профессиональная селфи-палка">
+						<figcaption>
+							<p>Профессиональная селфи-палка</p>
+							<p>1500 руб</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="./img/goods/item-3.png" alt="Непотопляемая селфи-палка">
+						<figcaption>
+							<p>Непотопляемая селфи-палка</p>
+							<p>2500 руб</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="./img/goods/item-4.png" alt="Селфи-палка «Следуй за мной»">
+						<figcaption>
+							<p>Селфи-палка «Следуй за мной»</p>
+							<p>4900 руб</p>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+			<!--		============ навигация по страницам ========-->
+			<fieldset class="nav-page">
+				<legend class="visually-hidden">Навигация по страницам</legend>
+				<button class="button" type="button">назад</button>
+				<ul class="inputs">
+					<li>
+						<button class="button focus3" type="button">1</button>
+					</li>
+					<li>
+						<button class="button focus3" type="button">2</button>
+					</li>
+					<li>
+						<button class="button focus3" type="button">3</button>
+					</li>
+				</ul>
+				<button class="button" type="button">вперед</button>
+			</fieldset>
+		</section>
+	</section>
 </main>
 
 <footer>
@@ -259,8 +262,9 @@
 						<img src="./img/svg-device/twitter.svg" width="32" height="32" alt="icon">
 					</a></li>
 				</ul>
-				<a class="focus" href="https://htmlacademy.ru/intensive/htmlcss"><img src="./img/svg-device/logo-html.svg" width="27" height="34"
-											   alt="Логотип"></a>
+				<a class="focus" href="https://htmlacademy.ru/intensive/htmlcss"><img
+					src="./img/svg-device/logo-html.svg" width="27" height="34"
+					alt="Логотип"></a>
 			</div>
 
 		</div>

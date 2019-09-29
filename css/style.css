@@ -130,6 +130,10 @@ header .content {
   padding: 0 60px 0;
 }
 
+header .catalog.content {
+    height: 188px;
+}
+
 header .logo {
   position: absolute;
   left: 60px;
@@ -200,7 +204,7 @@ header .logo {
 }
 
 .flex-container .icon .col7 {
-  width: 145px;
+  width: 130px;
 }
 
 .flex-container .icon .col8{
@@ -322,14 +326,12 @@ header .logo {
 }
 
 .modal-header {
-    position: absolute;
   display:flex;
   visibility: hidden;
-  width: 1100px;
-  /*top: 0;*/
+    width: 1160px;
   height: 161px;
-  padding: 0 35px;
-  margin-left: -35px;
+    padding: 0 0 0 60px;
+    margin-left: -60px;
   list-style: none;
   background-color: #f7e296 ;
 }
@@ -1075,11 +1077,27 @@ footer .content > div {
 }
 /*===================================================================================================*/
 /*========================== страница каталог========================================================*/
+.catalog {
+    position: relative;
+    background-color: #90d6dc;
+    background-position: 50% 50%;
+}
+.aside:before {
+    position: absolute;
+    content: '';
+    right: 800px;
+    width: 100vw;
+    height: 100%;
+    background-color: #cccccc;
+}
+
 .arrow {
   list-style: none;
+    display: flex;
 }
 
 .arrow a {
+    display: block;
   text-decoration: none;
   color: #000;
   opacity: 0.3;
@@ -1198,7 +1216,6 @@ footer .content > div {
 .modal input::placeholder,
 .modal textarea::placeholder{
   color: rgba(70, 70, 70, 0.4);
-  /*padding: 15px;*/
 }
 
 .modal .close {
@@ -1221,13 +1238,10 @@ footer .content > div {
   background: url('../img/map.jpg.png') 50%/cover no-repeat;
 }
 
-.test {
-    background-color: #2ecc40;
-}
+/*.test {
+    background-color: #f5f5f5;
+}*/
 
-/*.modal .button {*/
-/*  padding-left: 100px;*/
-/*}*/
 /*к сравнению: opacity 0.5/1/0.2*/
 
 
