@@ -42,26 +42,28 @@
 								<path fill="#272525" d="M16 7H9V0H7v7H0v2h7v7h2V9h7z"/>
 							</svg>
 						</a>
-						<ul class="modal-header ">
-							<li>
-								<ul class="drop-menu">
-									<li><a class="focus" href="">Виртуальная реальность</a></li>
-									<li><a class="focus" href="">Моноподы для селфи</a></li>
-									<li><a class="focus" href="">Экшн-камеры</a></li>
-								</ul>
-							</li>
-							<li>
-								<ul class="drop-menu">
-									<li><a class="focus" href="">Фитнес-браслеты</a></li>
-									<li><a class="focus" href="">Умные часы</a></li>
-								</ul>
-							</li>
-							<li>
-								<ul class="drop-menu">
-									<li><a class="focus" href="">Квадрокоптеры</a></li>
-								</ul>
-							</li>
-						</ul>
+						<div class="wrapper">
+							<ul class="modal-header ">
+								<li>
+									<ul class="drop-menu">
+										<li><a class="focus" href="">Виртуальная реальность</a></li>
+										<li><a class="focus" href="">Моноподы для селфи</a></li>
+										<li><a class="focus" href="">Экшн-камеры</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul class="drop-menu">
+										<li><a class="focus" href="">Фитнес-браслеты</a></li>
+										<li><a class="focus" href="">Умные часы</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul class="drop-menu">
+										<li><a class="focus" href="">Квадрокоптеры</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 					</li>
 					<li class="col6"><a href="delivery.html">Доставка</a></li>
 					<li class="col7"><a href="warranty.html">Гарантия</a></li>
@@ -73,33 +75,36 @@
 	</div>
 </header>
 <main class="container">
-	<section class="content">
+	<section class="content wrapper">
 
-
-		<div class="catalog">
-			<h1>Заголовок в зависимости от товара</h1>
+		<div class="caption">
+			<h1>Моноподы для селфи</h1>
 			<ul class="arrow">
 				<li><a href="index.html">Главная</a></li>
-				<li><a href="#">Каталог товаров</a></li>
-				<li><a>текущий товар</a></li>
+				<li><a href="catalog.html">Каталог товаров</a></li>
+				<li><a>Моноподы для селфи</a></li>
 			</ul>
 		</div>
-		<section class="filter">
-			<div class="content">
-				<h2>Фильтр товара</h2>
+		<div class="catalog-content">
+			<aside class="options">
+				<h2>ФИЛЬТР:</h2>
 
 				<form action="form.html" method="get">
 
 					<fieldset>
 						<legend class="visually-hidden">Группа полей</legend>
-						<label for="range1">Стоимость</label>
-						<input type="range" id="range1" name="range1" min="0" step="1" max="100" value="0"
-							   aria-label="стоимость">
-						<input type="range" id="range2" name="range2" min="0" step="1" max="100" value="60"
-							   aria-label="стоимость">
-						<label class="cost" for="range2">от 0</label>
-						<span class="cost">до 5000</span>
-						<p>Цвет</p>
+						<div class="price">
+							<h3 class="font-bold">Стоимость</h3>
+							<input type="range" id="range1" name="range1" min="0" step="1" max="100" value="0"
+								   aria-label="стоимость">
+							<label class="visually-hidden" for="range1" >Диапазон стоимости</label>
+							<input type="range" id="range2" name="range2" min="0" step="1" max="100" value="60"
+								   aria-label="стоимость">
+							<label class="cost visually-hidden" for="range2">Диапазон стоимости</label>
+							<span class="cost">от 0</span>
+							<span>до 5000</span>
+						</div>
+						<h3 class="font-bold color">Цвет</h3>
 						<ul class="radio">
 							<li>
 								<input id="check1" type="checkbox" name="black" checked>
@@ -122,7 +127,7 @@
 								<label for="check5" class="check">Розовый</label>
 							</li>
 						</ul>
-						<p>Bluetooth</p>
+						<h3 class="font-bold">Bluetooth</h3>
 						<div class="radio">
 							<input id="radio-yes" type="radio" name="bluetooth" value="yes" checked>
 							<label class="radio-catalog" for="radio-yes">Есть</label>
@@ -134,86 +139,86 @@
 					</fieldset>
 
 				</form>
-			</div>
-		</section>
-		<section class="goods">
-			<h2>Сортировка:</h2>
-			<ul class="sort-list">
-				<li>
-					<button class="button focus3" type="button">По цене</button>
-				</li>
-				<li>
-					<button class="button focus3" type="button">По типу</button>
-				</li>
-				<li>
-					<button class="button focus3" type="button">По популярности</button>
-				</li>
-				<li>
-					<button class="button focus3 sort sort-up" type="button"></button>
-					<!--					<img src="./img/svg-device/icon-up-dir.svg" width="11" height="10" alt="кнопка вверх">-->
-				</li>
-				<li>
-					<button class="button focus3 sort sort-down" type="button"></button>
-					<!--					<img src="./img/svg-device/icon-down-dir.svg" width="11" height="10" alt="кнопка вниз">-->
-				</li>
-			</ul>
-
-			<ul>
-				<li>
-					<figure>
-						<img src="./img/goods/item-1.png" alt="Любительская селфи-палка">
-						<figcaption>
-							<p>Любительская селфи-палка</p>
-							<p>500 руб</p>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="./img/goods/item-2.png" alt="Профессиональная селфи-палка">
-						<figcaption>
-							<p>Профессиональная селфи-палка</p>
-							<p>1500 руб</p>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="./img/goods/item-3.png" alt="Непотопляемая селфи-палка">
-						<figcaption>
-							<p>Непотопляемая селфи-палка</p>
-							<p>2500 руб</p>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="./img/goods/item-4.png" alt="Селфи-палка «Следуй за мной»">
-						<figcaption>
-							<p>Селфи-палка «Следуй за мной»</p>
-							<p>4900 руб</p>
-						</figcaption>
-					</figure>
-				</li>
-			</ul>
-			<!--		============ навигация по страницам ========-->
-			<fieldset class="nav-page">
-				<legend class="visually-hidden">Навигация по страницам</legend>
-				<button class="button" type="button">назад</button>
-				<ul class="inputs">
+			</aside>
+			<section class="goods">
+				<h2>СОРТИРОВКА:</h2>
+				<ul class="sort-list">
 					<li>
-						<button class="button focus3" type="button">1</button>
+						<button class="button focus3" type="button">По цене</button>
 					</li>
 					<li>
-						<button class="button focus3" type="button">2</button>
+						<button class="button focus3" type="button">По типу</button>
 					</li>
 					<li>
-						<button class="button focus3" type="button">3</button>
+						<button class="button focus3" type="button">По популярности</button>
+					</li>
+					<li>
+						<button class="button focus3 sort sort-up" type="button"></button>
+						<!--					<img src="./img/svg-device/icon-up-dir.svg" width="11" height="10" alt="кнопка вверх">-->
+					</li>
+					<li>
+						<button class="button focus3 sort sort-down" type="button"></button>
+						<!--					<img src="./img/svg-device/icon-down-dir.svg" width="11" height="10" alt="кнопка вниз">-->
 					</li>
 				</ul>
-				<button class="button" type="button">вперед</button>
-			</fieldset>
-		</section>
+
+				<ul>
+					<li>
+						<figure>
+							<img src="./img/goods/item-1.png" alt="Любительская селфи-палка">
+							<figcaption>
+								<p>Любительская селфи-палка</p>
+								<p>500 руб</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="./img/goods/item-2.png" alt="Профессиональная селфи-палка">
+							<figcaption>
+								<p>Профессиональная селфи-палка</p>
+								<p>1500 руб</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="./img/goods/item-3.png" alt="Непотопляемая селфи-палка">
+							<figcaption>
+								<p>Непотопляемая селфи-палка</p>
+								<p>2500 руб</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="./img/goods/item-4.png" alt="Селфи-палка «Следуй за мной»">
+							<figcaption>
+								<p>Селфи-палка «Следуй за мной»</p>
+								<p>4900 руб</p>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+				<!--		============ навигация по страницам ========-->
+				<fieldset class="nav-page">
+					<legend class="visually-hidden">Навигация по страницам</legend>
+					<button class="button" type="button">назад</button>
+					<ul class="inputs">
+						<li>
+							<button class="button focus3" type="button">1</button>
+						</li>
+						<li>
+							<button class="button focus3" type="button">2</button>
+						</li>
+						<li>
+							<button class="button focus3" type="button">3</button>
+						</li>
+					</ul>
+					<button class="button" type="button">вперед</button>
+				</fieldset>
+			</section>
+		</div>
 	</section>
 </main>
 
