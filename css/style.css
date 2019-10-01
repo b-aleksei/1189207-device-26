@@ -28,7 +28,11 @@ body {
   line-height: 18px;
   font-weight: 300;
   font-family: 'Open Sans', sans-serif;
-  /*padding: 0;*/
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 /*=====================временно для подсветки===================*/
 /*.temp::before {
@@ -387,7 +391,8 @@ header .logo {
   position: relative;
 }
 .radio input[type="checkbox"],
-.radio > input[type="radio"]
+.radio > input[type="radio"],
+.bluetooth-buttons input
 {
   display: none;
 }
@@ -493,7 +498,7 @@ input:disabled  + label{
   background-color: #f0c52e;
   transform: scaleY(0.20);
   z-index: -1;
-  transition: .3s
+  transition: transform .3s;
 }
 
 .yellow-button:hover::before,
@@ -1069,7 +1074,7 @@ footer .content > div {
 
 .catalog-content {
   display: flex;
-  align-items: start;
+    /*justify-content: space-between;*/
 }
 
 .options:before {
@@ -1087,6 +1092,8 @@ footer .content > div {
   width: 270px;
   position: relative;
   padding-right: 65px;
+    margin-right: 70px;
+    flex-shrink: 0;
 }
 
 .options fieldset {
@@ -1142,12 +1149,9 @@ footer .content > div {
   list-style: none;
   border-bottom: 2px solid black;
   padding: 0 0 18px 0;
+    margin-bottom: 0;
 }
 /*==========================стилизация чекбоска и радобаттона каталога==========================================*/
-.radio .radio-catalog::before {
-  content: url("../img/svg-device/radio-off.svg");
-}
-
 .options .radio li {
   padding-bottom: 25px;
 }
@@ -1162,58 +1166,178 @@ footer .content > div {
   position: absolute;
   content: url("../img/svg-device/checkbox-off.svg");
   top: -2px;
-  left: -5px;
+  left: -1px;
 }
 
 input[type="checkbox"]:checked + .check::before {
   content: url("../img/svg-device/checkbox-on.svg");
 }
 
+.bluetooth-buttons label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding:10px 0 15px 35px;
+}
 
+.bluetooth-buttons label::before {
+    content: url("../img/svg-device/radio-off.svg");
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.options .yellow-button {
+    margin-left: 35px;
+    margin-top: 35px;
+}
+
+.options .yellow-button:before {
+    width: 200px;
+    left: calc(50% - 100px);
+}
+/*=====================sort============================*/
 
 .arrow {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
 }
 
 .arrow li:not(:first-child) {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .arrow a {
     display: block;
-  text-decoration: none;
-  color: #000;
-  opacity: 0.3;
+    text-decoration: none;
+    color: #000;
+    opacity: 0.3;
 }
 
 .arrow li:not(:last-child ) a::after {
-  display: inline-block;
-  vertical-align: middle;
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  transform: rotate(45deg);
-  margin-left: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    transform: rotate(45deg);
+    margin-left: 20px;
 }
 
 .arrow a:hover,
 .arrow a:focus {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
 .arrow a:active {
-  opacity: 0.1;
+    opacity: 0.1;
+}
+/*=======================меню сортировки=================================*/
+.sort-items,
+.sort-list
+{
+    display: flex;
 }
 
-/*  секция сортировка*/
-.goods ul {
-  list-style: none;
+.sort-items h2 {
+    /*margin-bottom: 20px;*/
 }
+
+.sort-list {
+    list-style: none;
+    padding-top: 10px;
+    flex-grow: 1;
+}
+
+.sort-list li {
+    padding-left: 20px;
+}
+
+.sort-list li:nth-child(4) {
+    margin-left:  auto;
+}
+
+.sort-list li button {
+    padding: 0;
+}
+
+/*===============================================*/
+.goods .items-picture {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+.items-picture li {
+    width: 360px;
+}
+
+.image-container {
+    width: 360px;
+    height: 381px;
+    background-color: #eeeeee;
+}
+
+.image-1 {
+    background-image: url(../img/goods/item-1.png);
+    padding-top: 1px;
+}
+
+.image-2 {
+    background-image: url(../img/goods/item-2.png);
+    padding-top: 1px;
+}
+
+.image-3 {
+    background-image: url(../img/goods/item-3.png);
+    padding-top: 1px;
+}
+
+.image-4 {
+    background-image: url(../img/goods/item-4.png);
+    padding-top: 1px;
+}
+
+.box-buy  {
+    visibility: hidden;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.box-buy div {
+    margin: 50% auto 0;
+}
+
+.image-container:hover .box-buy {
+   visibility: visible;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description p {
+    margin: 30px 0 45px 0;
+}
+
+.description p:first-child {
+    font: bold 18px/24px 'gilroyextrabold', sans-serif;
+    width: 270px;
+}
+
+.description p:last-child {
+    font:  16px/24px 'gilroylight', sans-serif;
+}
+
 
 .sort::before {
   content: "";
@@ -1237,16 +1361,44 @@ input[type="checkbox"]:checked + .check::before {
   font-weight: 400;
 }
 
-.nav-page > button:nth-of-type(1):hover,
-.nav-page > button:nth-of-type(1):focus,
-.nav-page > button:nth-last-of-type(1):hover,
-.nav-page > button:nth-last-of-type(1):focus
-{
-  background-color: #d9d9d9;
-  color: rgba(0, 0, 0, 0.3);
+.nav-pages {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0 0 80px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ebebeb;
 }
 
 
+
+
+
+.nav-pages li:first-child {
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+.nav-pages li:last-child {
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+.nav-pages a {
+    display: block;
+    min-width: 40px;
+    text-decoration: none;
+    font: bold 18px/24px 'gilroyextrabold', sans-serif;
+    letter-spacing: 3px;
+}
+
+
+.nav-pages a:hover,
+.nav-pages a:focus
+{
+  /*background-color: #d9d9d9;*/
+  color: rgba(0, 0, 0, 0.3);
+}
 /*=====================modal===================================*/
 .modal {
   position: relative;
