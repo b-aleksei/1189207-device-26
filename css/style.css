@@ -197,7 +197,7 @@ header .logo {
 .flex-container .icon .col5{
   text-align: left;
   width: 540px;
-  min-height: 30px;
+  min-height: 60px;
 }
 
 .flex-container .icon .col6 {
@@ -332,7 +332,6 @@ header .logo {
 
 .modal-header {
   display:flex;
-  /*visibility: hidden;*/
     width: 1160px;
   height: 161px;
     padding: 0 0 0 60px;
@@ -341,17 +340,24 @@ header .logo {
   background-color: #f7e296 ;
 }
 
-.navigation .col5 a {
+.navigation .col5 a.link-catalog {
   display: block;
+  /*min-height: 60px;*/
 }
 
 .navigation .col5 a:hover + .wrapper,
 .navigation .col5 .wrapper:hover
 {
   display: block;
-  /*visibility: visible;*/
   position: absolute;
   z-index: 6;
+}
+
+.navigation .col5 a:hover + .wrapper.inner,
+.navigation .col5 .wrapper.inner:hover
+{
+  display: block;
+  position: static;
 }
 
 .modal-header li {
@@ -1071,7 +1077,6 @@ footer .content > div {
 
 .catalog-content {
   display: flex;
-    /*justify-content: space-between;*/
 }
 
 .options:before {
@@ -1277,7 +1282,7 @@ input[type="checkbox"]:checked + .check::before {
 
 .image-container {
     width: 360px;
-    height: 381px;
+    height: 380px;
     background-color: #eeeeee;
 }
 .items-picture img {
@@ -1287,22 +1292,18 @@ input[type="checkbox"]:checked + .check::before {
 
 .image-1 {
     background-image: url(../img/goods/item-1.png);
-    padding-top: 1px;
 }
 
 .image-2 {
     background-image: url(../img/goods/item-2.png);
-    padding-top: 1px;
 }
 
 .image-3 {
     background-image: url(../img/goods/item-3.png);
-    padding-top: 1px;
 }
 
 .image-4 {
     background-image: url(../img/goods/item-4.png);
-    padding-top: 1px;
 }
 
 .box-buy  {
@@ -1315,6 +1316,10 @@ input[type="checkbox"]:checked + .check::before {
 
 .box-buy div {
     margin: 50% auto 0;
+}
+
+.box-buy div button {
+  margin-bottom: 15px;
 }
 
 .image-container:hover .box-buy {
