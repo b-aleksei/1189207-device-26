@@ -30,10 +30,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
+
 /*=====================временно для подсветки===================*/
 /*.temp::before {
   content: attr(class);
@@ -1282,6 +1279,10 @@ input[type="checkbox"]:checked + .check::before {
     width: 360px;
     height: 381px;
     background-color: #eeeeee;
+}
+.items-picture img {
+    width: 100%;
+    height: auto;
 }
 
 .image-1 {
