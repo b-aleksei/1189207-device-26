@@ -571,7 +571,8 @@ input:disabled  + label{
 
 .preview .slider1-info
 {
-  width: 515px;
+  /*width: 515px;*/
+  width: 605px;
 }
 
 .preview .picture img {
@@ -616,7 +617,7 @@ input:disabled  + label{
   display: block;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 45px;
   font-family: 'gilroyextrabold', sans-serif;
   font-size: 179px;
   line-height: 158px;
@@ -629,7 +630,7 @@ input:disabled  + label{
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
-  padding: 210px 44px 55px 0;
+  padding: 210px 0 55px 0;
 }
 
 .slider1-info a.yellow-button {
@@ -710,20 +711,21 @@ input:disabled  + label{
   margin-bottom: 95px;
 }
 
-.background-gray input {
+.background-gray input,
+.slider-2-items li{
   display: none;
-}
-
-.background-gray label {
-  position: absolute;
 }
 
 .background-gray label::before {
   width: 160px;
   left: calc(50% - 80px);
+    transition: width 0.2s ease-out;
+
 }
 
-.background-gray input:checked + label:before,
+.background-gray input.delivery:checked ~ .slider-2 label.delivery::before,
+.background-gray input.warranty:checked ~ .slider-2 label.warranty::before,
+.background-gray input.credit:checked ~ .slider-2 label.credit::before,
 .background-gray .yellow-button:active::before,
 .background-gray .yellow-button:focus::before
 {
@@ -732,50 +734,40 @@ input:disabled  + label{
   transform: scaleY(1);
 }
 
-.background-gray input:checked + label {
-  color: #f7e184;
-}
-
+.background-gray input.delivery:checked ~ .slider-2 label.delivery,
+.background-gray input.warranty:checked ~ .slider-2 label.warranty,
+.background-gray input.credit:checked ~ .slider-2 label.credit,
 .background-gray label:active,
 .background-gray label:focus {
   color: #f7e184;
 }
 
-label.delivery {
-  top: -5px;
-  left: 20px;
-}
-
-label.warranty {
-  top: 60px;
-  left: 20px;
-}
-
-label.credit {
-  top: 125px;
-  left: 35px;
-}
-
 input.delivery:checked ~ .slider-2 .slider-2-items .delivery {
-  visibility: visible;
+    display: block;
 }
 
 input.warranty:checked ~ .slider-2 .slider-2-items .warranty {
-  visibility: visible;
+    display: block;
 }
 
 input.credit:checked ~ .slider-2 .slider-2-items .credit {
-  visibility: visible;
+    display: block;
 }
 
 .slider-2 {
   display: flex;
   margin-bottom: 95px;
-  position: relative;
+}
+
+.slider-2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .slider-2 .slider-2-buttons {
-  margin-top: -9px;
+  margin-top: -5px;
+    position: relative;
 }
 
 .slider-2 .slider-2-items {
@@ -783,16 +775,9 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
   margin-top: -18px;
 }
 
-.slider-2 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.slider-2 ul:first-child {
+.slider-2 .slider-2-buttons {
   width:275px;
-  padding-right: 125px;
-  padding-left: 8px;
+  padding-right: 115px;
   text-align: center;
 }
 
@@ -800,15 +785,13 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
   padding-bottom: 45px;
 }
 
-.slider-2-items li {
-  visibility: hidden;
-  position: absolute;
+.slider-2-items li .slide-show {
   display: flex;
 }
 
 .slider-2-items section {
   width: 500px;
-  margin-left: 120px;
+  margin-left: 125px;
 }
 
 .slider-2-items section h2,
@@ -833,11 +816,11 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
   margin-left: 50px;
 }
 
-.slider-2-items li::before {
+.slider-2-buttons::after {
   content: '';
   position: absolute;
-  bottom: 70px;
-  left: 0;
+  bottom:70px ;
+  right: -7px;
   width: 7px;
   height: 320px;
   background-color: #000;
@@ -1503,7 +1486,6 @@ input[type="checkbox"]:checked + .check::before {
   background-color: #01ff70;
 }
 */
-
 
 
 
