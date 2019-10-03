@@ -118,7 +118,7 @@ header .content.index {
     min-height: 300px;
 }
 
-header .catalog.content {
+header .content.catalog {
     min-height: 188px;
 }
 
@@ -153,7 +153,6 @@ header .logo {
     padding-left: 37px;
     font-size: 15px;
     line-height: 30px;
-    /*max-height: 100%;*/
     /*overflow: hidden;*/
 }
 
@@ -208,7 +207,7 @@ header .logo {
     text-transform: uppercase;
     letter-spacing: 0.26em;
     font-weight: bold;
-    /*max-height: 70px;*/
+    /*max-height: 50px;*/
 }
 
 .icon.navigation {
@@ -341,7 +340,6 @@ header .logo {
 .col5 .wrapper {
     display: none;
     /*visibility: hidden;*/
-    /*visibility: visible;*/
 }
 
 .modal-header {
@@ -349,7 +347,6 @@ header .logo {
     width: 1160px;
     height: 161px;
     padding: 0 0 0 60px;
-    /*margin-left: -60px;*/
     list-style: none;
     background-color: #f7e296;
 }
