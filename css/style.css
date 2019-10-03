@@ -208,7 +208,7 @@ header .logo {
     text-transform: uppercase;
     letter-spacing: 0.26em;
     font-weight: bold;
-    max-height: 70px;
+    /*max-height: 70px;*/
 }
 
 .icon.navigation {
@@ -217,19 +217,21 @@ header .logo {
 
 .flex-container .icon .col5 {
     text-align: left;
-    min-width: 210px;
-    width: 540px;
+    min-width: 250px;
+    width: 510px;
     flex-grow: 0;
 }
 
 .flex-container .icon .col6 {
     min-width: 150px;
     flex-grow: 1;
+    padding-left: 30px;
 }
 
 .flex-container .icon .col7 {
-    min-width: 120px;
+    min-width: 150px;
     flex-grow: 1;
+    padding-left: 30px;
 }
 
 .flex-container .icon .col8 {
@@ -237,6 +239,7 @@ header .logo {
     flex-grow: 1;
     text-align: right;
     margin-right: -5px;
+    padding-left: 30px;
 }
 
 .icon,
@@ -336,12 +339,9 @@ header .logo {
 }
 
 .col5 .wrapper {
-    /*display: none;*/
-    visibility: hidden;
-}
-
-.col5 {
-
+    display: none;
+    /*visibility: hidden;*/
+    /*visibility: visible;*/
 }
 
 .modal-header {
@@ -349,7 +349,7 @@ header .logo {
     width: 1160px;
     height: 161px;
     padding: 0 0 0 60px;
-    margin-left: -60px;
+    /*margin-left: -60px;*/
     list-style: none;
     background-color: #f7e296;
 }
@@ -360,9 +360,11 @@ header .logo {
 
 .navigation .col5 a:hover + .wrapper,
 .navigation .col5 .wrapper:hover {
-    /*display: block;*/
-    visibility: visible;
+    display: block;
+    /*visibility: visible;*/
     position: absolute;
+    left: 0;
+    bottom: 0;
     z-index: 6;
 }
 
@@ -373,7 +375,6 @@ header .logo {
 
 .modal-header li {
     padding: 0;
-
 }
 
 .modal-header .drop-menu {
