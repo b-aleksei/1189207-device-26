@@ -346,16 +346,17 @@ header .logo {
     background-color: #f7e296;
 }
 
-.navigation .col5 a.link-catalog {
-    display: block;
-}
-
 .navigation .wrapper {
     display: none;
 }
 
+.catalog .wrapper {
+    transition: display 0.9s;
+}
+
 .navigation .col5 a:hover + .wrapper,
-.navigation .col5 .wrapper:hover {
+.navigation .col5 .wrapper:hover
+{
     display: block;
     /*visibility: visible;*/
     position: absolute;
