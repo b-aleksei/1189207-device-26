@@ -19,13 +19,13 @@
 				<ul class="icon">
 					<li class="col1">
 						<label class="search" for="search"></label>
-						<input class="focus searcher" id="search" aria-label="Поиск по сайту" type="search"
+						<input class="searcher" id="search" aria-label="Поиск по сайту" type="search"
 							   placeholder="Поиск по сайту">
 						<button class="btn-search" type="button" aria-label="кнопка поиска">Найти</button>
 					</li>
 					<li class="col2">
 						<label class="enter" for="enter"></label>
-						<input class="focus button" type="button" id="enter" value="Войти">
+						<input class="focus button login" type="button" id="enter" value="Войти ">
 					</li>
 					<li class="col3">
 						<a class="compare focus" href="compare.html">Сравнить</a></li>
@@ -304,7 +304,9 @@
 					<li><img src="./img/partners/logo-4-color.png" alt="Логотип4"></li>
 				</ul>
 			</section>
+
 			<div class="info">
+
 				<section>
 					<h2>О нас</h2>
 					<div>
@@ -325,11 +327,14 @@
 					<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность
 						покупки. Всякое бывает.
 					</p>
-
-					<!--Здесь будет загружена карта-->
 					<img src="./img/map.jpg.png" width="560" height="222" alt="схема проезда">
-
-					<button class="button yellow-button" type="button" aria-label="">Напишите нам</button>
+					<button class="button yellow-button map-open" type="button" aria-label="">Напишите нам</button>
+							<div class="substrate">
+								<div class="modal shadow modal-map">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1570194833800!5m2!1sru!2sru" width="994" height="586" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+									<button class="button close focus3 close-map" type="button" aria-label="закрыть"><img src="./img/svg-device/modal-close.svg" alt="закрыть"></button>
+								</div>
+							</div>
 				</section>
 			</div>
 		</div>
@@ -389,36 +394,36 @@
 		</div>
 	</div>
 </footer>
-<div class="modal shadow">
-	<form action="catalog.html" method="get">
-		<ul class="inputs">
-			<li><label for="username">Ваше имя:</label><br>
-				<input id="username" type="text" placeholder="Имя Фамилия">
-			</li>
-			<li>
-				<label for="email">Ваш e-mail:</label><br>
-				<input id="email" type="email" placeholder="email@example.com">
-			</li>
-			<li>
-				<label for="comment">Текст письма:</label>
-				<textarea id="comment" placeholder="в свободной форме"></textarea>
-			</li>
-			<li>
-				<button class="button yellow-button" type="submit" id="submit">отправить</button>
-			</li>
-		</ul>
-		<!--		<label class="visually-hidden" for="submit">отправить</label>-->
 
-	</form>
-	<button class="button close focus3" type="button" aria-label="закрыть"><img src="./img/svg-device/modal-close.svg"
-																				alt="закрыть"></button>
+<div class="substrate">
+	<div class="modal shadow">
+		<form action="catalog.html" method="get">
+			<ul class="inputs">
+				<li><label for="username">Ваше имя:</label><br>
+					<input id="username" type="text" placeholder="Имя Фамилия">
+				</li>
+				<li>
+					<label for="email">Ваш e-mail:</label><br>
+					<input id="email" type="email" placeholder="email@example.com">
+				</li>
+				<li>
+					<label for="comment">Текст письма:</label>
+					<textarea id="comment" placeholder="в свободной форме"></textarea>
+				</li>
+				<li>
+					<button class="button yellow-button" type="submit" id="submit">отправить</button>
+				</li>
+			</ul>
 
+		</form>
+		<button class="button close focus3" type="button" aria-label="закрыть"><img
+			src="./img/svg-device/modal-close.svg"
+			alt="закрыть"></button>
+
+	</div>
 </div>
-<div class="modal shadow full-size">
-	<!--		<img class="full-size" src="./img/map.jpg.png" alt="схема проезда">-->
-	<button class="button close focus3" type="button" aria-label="закрыть"><img src="./img/svg-device/modal-close.svg"
-																				alt="закрыть"></button>
-</div>
+
+<script src="script.js"></script>
 </body>
 </html>
 
