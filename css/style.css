@@ -347,7 +347,7 @@ header .logo {
 
 .catalog .col5 a:hover + .wrapper,
 .catalog .col5 .wrapper:hover{
-    bottom: -110px;
+    top: 135px;
 }
 
 .modal-header li {
@@ -1307,6 +1307,7 @@ input[type="checkbox"]:checked + .check::before {
 }
 
 .image-container {
+    position: relative;
     width: 360px;
     height: 380px;
     background-color: #eeeeee;
@@ -1331,7 +1332,6 @@ input[type="checkbox"]:checked + .check::before {
 
 .image-4 {
     background-image: url(../img/goods/item-4.png);
-    position: relative;
 }
 
 .new {
