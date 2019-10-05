@@ -400,6 +400,10 @@ header .logo {
     offset: 2px;
 }
 
+.radio > input:focus + label {
+    box-shadow: 5px 5px 0 15px #f7e296;
+}
+
 .radio > label {
     position: absolute;
     cursor: pointer;
@@ -661,13 +665,19 @@ input:disabled + label {
     margin: auto;
 }
 
-.fill-box:hover,
-.fill-box:focus {
+.product-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.product-link:hover .fill-box,
+.product-link:focus .fill-box
+{
     background-color: #f0c52e;
 }
 
-.fill-box:active > img,
-.fill-box:active + figcaption {
+.product-link:active  .fill-box img,
+.product-link:active figcaption {
     opacity: 0.3;
 }
 
@@ -704,7 +714,7 @@ input:disabled + label {
     margin-bottom: 95px;
 }
 
-.background-gray input,
+
 .slider-2-items li {
     display: none;
 }
@@ -1367,7 +1377,7 @@ input[type="checkbox"]:checked + .check::before {
 }
 
 .box-buy {
-    visibility: hidden;
+    /*visibility: hidden;*/
     height: 100%;
     display: flex;
     align-items: stretch;
@@ -1394,14 +1404,13 @@ input[type="checkbox"]:checked + .check::before {
     opacity: 0.2;
 }
 
-/*к сравнению: opacity 0.5/1/0.2*/
 
 .box-buy .yellow-button {
     margin-bottom: 15px;
 }
 
 .image-container:hover .box-buy {
-    visibility: visible;
+    /*visibility: visible;*/
 }
 
 .description {
@@ -1482,13 +1491,6 @@ input[type="checkbox"]:checked + .check::before {
 .nav-pages .number-pages:not(:focus) {
     color: rgba(0, 0, 0, 0.3);
 }
-
-/*
-.nav-pages .number-pages:active,
-.nav-pages .number-pages:focus {
-    color: rgba(0, 0, 0, 1);
-}
-*/
 
 .move-pages:hover,
 .move-pages:focus
