@@ -468,6 +468,7 @@ input[type="radio"]:checked + .radio-catalog::before {
 
 input:disabled + label {
     opacity: 0.3;
+    cursor: unset;
 }
 
 /*============== иконки для кнопок============================================*/
@@ -1223,7 +1224,14 @@ input[type="checkbox"]:checked + .check::before {
     left: calc(50% - 100px);
 }
 
+.options input:disabled + label {
+    cursor: default;
+}
+
 /*=====================sort============================*/
+.disabled {
+    cursor: default;
+}
 
 .arrow {
     list-style: none;
@@ -1239,8 +1247,7 @@ input[type="checkbox"]:checked + .check::before {
 .arrow a {
     display: block;
     text-decoration: none;
-    color: #000;
-    opacity: 0.3;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .arrow li:not(:last-child ) a::after {
@@ -1255,13 +1262,13 @@ input[type="checkbox"]:checked + .check::before {
     margin-left: 20px;
 }
 
-.arrow a:hover,
-.arrow a:focus {
-    opacity: 0.6;
+.arrow a:not(.disabled):hover,
+.arrow a:not(.disabled):focus {
+    color: rgba(0, 0, 0, 0.6);
 }
 
-.arrow a:active {
-    opacity: 0.1;
+.arrow a:not(.disabled):active {
+    color: rgba(0, 0, 0, 0.1);
 }
 
 /*=======================меню сортировки=================================*/
@@ -1358,9 +1365,27 @@ input[type="checkbox"]:checked + .check::before {
 
 .box-buy div {
     margin: 50% auto 0;
+    text-align: center;
 }
 
-.box-buy div button {
+.add-to-compare {
+    display: block;
+    margin-top: 25px;
+    opacity: 0.5;
+}
+
+.add-to-compare:hover,
+.add-to-compare:focus {
+    opacity: 1;
+}
+
+.add-to-compare:active{
+    opacity: 0.2;
+}
+
+/*к сравнению: opacity 0.5/1/0.2*/
+
+.box-buy .yellow-button {
     margin-bottom: 15px;
 }
 
@@ -1411,7 +1436,7 @@ input[type="checkbox"]:checked + .check::before {
 
 .nav-pages {
     list-style: none;
-    padding: 20px 0;
+    padding: 0;
     margin: 0 0 80px 0;
     display: flex;
     justify-content: center;
@@ -1421,27 +1446,47 @@ input[type="checkbox"]:checked + .check::before {
 
 .nav-pages li:first-child {
     margin-right: auto;
-    padding-left: 20px;
+    /*padding-left: 20px;*/
 }
 
 .nav-pages li:last-child {
     margin-left: auto;
-    padding-right: 20px;
+    /*padding-right: 20px;*/
 }
 
 .nav-pages a {
     display: block;
     min-width: 40px;
+    padding: 30px 15px;
     text-decoration: none;
-    font: bold 18px/24px 'gilroyextrabold', sans-serif;
+    font: bold 16px/24px 'gilroyextrabold', sans-serif;
     letter-spacing: 3px;
+    color: #000;
 }
 
+.nav-pages .move-pages {
+    padding: 30px;
+}
 
-.nav-pages a:hover,
-.nav-pages a:focus {
-    /*background-color: #d9d9d9;*/
+.nav-pages .number-pages:not(:focus) {
     color: rgba(0, 0, 0, 0.3);
+}
+
+/*
+.nav-pages .number-pages:active,
+.nav-pages .number-pages:focus {
+    color: rgba(0, 0, 0, 1);
+}
+*/
+
+.move-pages:hover,
+.move-pages:focus
+{
+    background-color: #d9d9d9;
+}
+
+.move-pages:active {
+color: rgba(0, 0, 0, 0.3);
 }
 
 /*=====================modal===================================*/
@@ -1568,12 +1613,7 @@ input[type="checkbox"]:checked + .check::before {
     background-color: #f5f5f5;
 }*/
 
-/*к сравнению: opacity 0.5/1/0.2*/
-/*
-.test {
-  background-color: #01ff70;
-}
-*/
+
 
 @keyframes bounce {
     0% {
@@ -1614,4 +1654,5 @@ input[type="checkbox"]:checked + .check::before {
         transform: translateX(10px);
     }
 }
+
 
