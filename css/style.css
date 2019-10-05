@@ -33,46 +33,17 @@ body {
 
 
 /*=====================временно для подсветки===================*/
-/*.temp::before {
-  content: attr(class);
-  position: absolute;
-  bottom: -11px;
-  left: -50px;
-  font:normal normal 12px/12px monospace;
-  text-transform: lowercase;
-  letter-spacing: normal;
-  color: black;
-  background-color: rgba(122, 122, 122, 0.3);
-}
-
-
-.temp >*::before {
-  right: 0;
-  background-color: rgba(255, 0, 0, 0.3);
-}
-
-.temp > * > *::before {
-  left: 0;
-  top:-12px;
-  background-color: rgba( 0, 0, 255, 0.3);
-}*/
 
 .temp {
-    /*position: relative;*/
-    background-color: rgba(255, 0, 0, 0.1);
-    /*outline-offset:2px;*/
-}
+     background-color: rgba(255, 0, 0, 0.1);
+ }
 
 .temp > * {
-    /*position: relative;*/
     outline: 1px dotted red;
-    /*outline-offset:1px*/
 }
 
 .temp > * > * {
-    /*position: relative;*/
     background-color: rgba(0, 255, 0, 0.1);
-    /*outline-offset:-1px;*/
 }
 
 /*============================================================*/
@@ -375,16 +346,8 @@ header .logo {
 }
 
 .catalog .col5 a:hover + .wrapper,
-.catalog .col5 .wrapper:hover {
-    position: static;
-    display: block;
-}
-
-.catalog .col5 a + .wrapper .modal-header {
-    /*padding: 0;*/
-    margin-left: -60px;
-    margin-bottom: -15px;
-    /*margin-top: 10px;*/
+.catalog .col5 .wrapper:hover{
+    bottom: -110px;
 }
 
 .modal-header li {
@@ -904,10 +867,6 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
     padding-bottom: 15px;
 }
 
-.info section:first-child div {
-    width: 485px;
-}
-
 .info section:last-child {
     padding-left: 20px;
 }
@@ -999,8 +958,18 @@ footer .content > div {
     margin-top: 22px;
 }
 
+.footer-address p {
+    min-width: 210px;
+}
+
+.footer-address p:last-child {
+    text-align: right;
+    min-width: 170px;
+}
+
 .footer-logo {
     margin-top: 50px;
+    display: flex;
 }
 
 .orange-line {
@@ -1011,8 +980,13 @@ footer .content > div {
 }
 
 .footer-info {
+    padding: 0;
+    margin: 14px 0;
     list-style: none;
-    margin-right: 65px;
+}
+
+.footer-info li {
+    padding: 0 10px;
 }
 
 .footer-info a {
@@ -1021,14 +995,19 @@ footer .content > div {
     font-family: 'gilroyextrabold', sans-serif;
     font-size: 17px;
     font-weight: bold;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 
 .social-icon {
     list-style: none;
-    margin: 0 90px 0 0;
+    padding: 0;
+    margin: 0 50px 0 0;
+}
+
+.footer-logo a {
+    height: 34px;
 }
 
 .social-icon li {
