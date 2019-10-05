@@ -63,11 +63,11 @@ window.addEventListener("keydown", function (evt) {
 
 //=============map-popup============================================
 
-let writeUs = document.querySelector('.map-open');
+let mapOpen = document.querySelector('.map-open');
 let map = document.querySelector('.info .substrate');
 let closeMap = map.querySelector('.close-map');
 
-writeUs.addEventListener('click', function (par) {
+mapOpen.addEventListener('click', function (par) {
     par.preventDefault();
     map.classList.add('modal-map-block');
 });

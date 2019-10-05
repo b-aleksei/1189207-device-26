@@ -392,10 +392,12 @@ header .logo {
     position: relative;
 }
 
-.radio input[type="checkbox"],
-.radio > input[type="radio"],
-.bluetooth-buttons input {
-    display: none;
+.radio input:focus + label,
+.price input:focus,
+.bluetooth-buttons input:focus + label
+{
+    outline: 1px dotted black;
+    offset: 2px;
 }
 
 .radio > label {
@@ -1265,6 +1267,15 @@ input[type="checkbox"]:checked + .check::before {
 .arrow a:not(.disabled):hover,
 .arrow a:not(.disabled):focus {
     color: rgba(0, 0, 0, 0.6);
+}
+
+.arrow a:not(.disabled):focus {
+    outline: 1px dotted black;
+    offset: 2px;
+}
+
+.arrow a.disabled {
+    outline: none;
 }
 
 .arrow a:not(.disabled):active {
