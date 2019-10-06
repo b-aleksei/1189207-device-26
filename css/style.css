@@ -1330,12 +1330,47 @@ input[type="checkbox"]:checked + .check::before {
     justify-content: space-between;
 }
 
-.items-picture li {
-    width: 360px;
+.items-picture figure {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.items-picture figure button {
+    position: absolute;
+}
+
+.items-picture figure button:first-of-type {
+    top: 180px;
+    left: 110px;
+}
+
+.items-picture figure button:last-of-type {
+    top: 200px;
+    left: 100px;
+}
+
+.items-picture figure button {
+    opacity: 0;
+}
+
+.items-picture figure:hover button {
+    opacity: 1;
+}
+
+.items-picture figure button:focus,
+.items-picture figure button:focus + button
+{
+    opacity: 1;
+}
+
+.items-picture figure button:focus ~ .image-container,
+.items-picture figure:hover .image-container
+{
+    opacity: 0.7;
 }
 
 .image-container {
-    position: relative;
     width: 360px;
     height: 380px;
     background-color: #eeeeee;
@@ -1344,22 +1379,6 @@ input[type="checkbox"]:checked + .check::before {
 .items-picture img {
     width: 100%;
     height: auto;
-}
-
-.image-1 {
-    background-image: url(../img/goods/item-1.png);
-}
-
-.image-2 {
-    background-image: url(../img/goods/item-2.png);
-}
-
-.image-3 {
-    background-image: url(../img/goods/item-3.png);
-}
-
-.image-4 {
-    background-image: url(../img/goods/item-4.png);
 }
 
 .new {
@@ -1376,41 +1395,20 @@ input[type="checkbox"]:checked + .check::before {
     color: #cfcfcf;
 }
 
-.box-buy {
-    /*visibility: hidden;*/
-    height: 100%;
-    display: flex;
-    align-items: stretch;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.box-buy div {
-    margin: 50% auto 0;
-    text-align: center;
-}
-
-.add-to-compare {
-    display: block;
+.items-picture figure .add-to-compare {
+    /*display: block;*/
     margin-top: 25px;
-    opacity: 0.5;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
 }
 
-.add-to-compare:hover,
-.add-to-compare:focus {
-    opacity: 1;
+.items-picture figure .add-to-compare:hover,
+.items-picture figure .add-to-compare:focus {
+    color: rgba(0, 0, 0, 1);
 }
 
-.add-to-compare:active{
-    opacity: 0.2;
-}
-
-
-.box-buy .yellow-button {
-    margin-bottom: 15px;
-}
-
-.image-container:hover .box-buy {
-    /*visibility: visible;*/
+.items-picture figure .add-to-compare:active{
+    color: rgba(0, 0, 0, 0.2);
 }
 
 .description {
