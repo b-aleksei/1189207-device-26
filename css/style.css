@@ -75,9 +75,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 1160px;
-
 }
-
 /*===================стилизация header==========================*/
 header .content {
     margin-top: 40px;
@@ -136,6 +134,10 @@ header .logo {
     display: flex;
 }
 
+.flex-container .icon.catalog .col1 {
+    flex-grow: 45;
+}
+
 .icon .col1 .searcher {
     max-width: 320px;
     padding: 6px 3px;
@@ -152,6 +154,12 @@ header .logo {
     flex-grow: 1;
     flex-shrink: 0;
     overflow: hidden;
+}
+
+.flex-container .icon.catalog .col2 a {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 10px;
 }
 
 .flex-container .icon .col3 {
@@ -180,10 +188,6 @@ header .logo {
     font-weight: bold;
     /*max-height: 50px;*/
 }
-
-/*.icon.navigation {
-    min-height: 171px;
-}*/
 
 .flex-container .icon .col5 {
     text-align: left;
@@ -223,16 +227,17 @@ header .logo {
     color: black;
 }
 
-.icon li:hover:not(.col5):not(.col1),
-.icon li:focus:not(.col5):not(.col1),
+.icon li:hover:not(.col5):not(.col1):not(.col2),
+.icon li:focus:not(.col5):not(.col1):not(.col2),
 .focus:hover,
 .focus:focus {
     opacity: 0.6;
 }
 
-.icon li:active:not(.col5):not(.col1),
+.icon li:active:not(.col5):not(.col1):not(.col2),
 .focus:active,
-.col5 button {
+.col5 button
+{
     opacity: 0.3;
 }
 
@@ -531,6 +536,13 @@ input:disabled + label {
     left: -25px;
 }
 
+.icon.catalog .enter::before {
+    content: url("../img/svg-device/user.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .icon .compare::before {
     content: url("../img/svg-device/compare.svg");
     position: absolute;
@@ -568,7 +580,6 @@ input:disabled + label {
 }
 
 .preview .slider1-info {
-    /*width: 515px;*/
     width: 605px;
 }
 
@@ -1420,9 +1431,12 @@ input[type="checkbox"]:checked + .check::before {
     margin: 30px 0 45px 0;
 }
 
-.description p:first-child {
+.description a {
+    margin: 30px 0 45px 0;
+    text-decoration: none;
     font: bold 18px/24px 'gilroyextrabold', sans-serif;
     width: 270px;
+    color: #000;
 }
 
 .description p:last-child {
