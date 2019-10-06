@@ -424,11 +424,11 @@
 		<form action="catalog.html" method="get">
 			<ul class="inputs">
 				<li><label for="username">Ваше имя:</label><br>
-					<input id="username" type="text" name="login" placeholder="Имя Фамилия">
+					<input id="username" type="text" name="login" pattern="[A-zА-я]{2,}" placeholder="Имя Фамилия">
 				</li>
 				<li>
 					<label for="email">Ваш e-mail:</label><br>
-					<input id="email" type="email" name="email" placeholder="email@example.com">
+					<input id="email" type="email" name="email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" placeholder="email@example.com">
 				</li>
 				<li>
 					<label for="comment">Текст письма:</label>

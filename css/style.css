@@ -1606,15 +1606,23 @@ color: rgba(0, 0, 0, 0.3);
     height: 50px;
 }
 
-.modal input:focus,
-.modal input:active,
+.modal input:not(.yellow-button):hover,
+.modal textarea:hover
+{
+    /*background-color: #f6dada;*/
+    background-color: #eaeaea;
+}
+
+.modal .inputs input:invalid {
+    background-color: #f6dada;
+}
+
+.modal .inputs input:focus,
+.modal .inputs input:active,
 .modal textarea:focus,
 .modal textarea:active {
     outline: 3px solid #f7e296;
-}
-
-.modal input:invalid {
-    background-color: #f6dada;
+    background-color: #fff;
 }
 
 .inputs li:first-child,

@@ -30,11 +30,13 @@ close.addEventListener("click", function (evt) {
     popup.classList.remove("modal-error");
 });
 
+/*
 popup.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-block");
     popup.classList.remove("modal-error");
 });
+*/
 
 form.addEventListener("submit", function (evt) {
     if (!login.value || !email.value) {
