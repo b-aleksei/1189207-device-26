@@ -405,13 +405,30 @@ header .logo {
     offset: 2px;
 }
 
-.radio > input:focus + label {
-    box-shadow: 5px 5px 0 15px #f7e296;
+.radio > input + label::after {
+    display: none;
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 20px;
+    height: 20px;
+    border: 5px solid #f7e296;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.radio > input:focus + label::after {
+    display: block;
 }
 
 .radio > label {
     position: absolute;
     cursor: pointer;
+}
+
+.radio > input:focus + label {
+    outline: transparent;
 }
 
 .radio > .slide-1 {
@@ -942,7 +959,6 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
     opacity: 0.3;
 }
 
-
 /*======================footer style=====================*/
 
 footer {
@@ -1157,6 +1173,7 @@ footer .content > div {
 }
 
 .price {
+    position: relative;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     padding-bottom: 35px;
@@ -1170,11 +1187,9 @@ footer .content > div {
     margin-top: 35px;
 }
 
-.price input[id="range2"] {
-    margin-bottom: 10px;
-}
-
 .price span.cost {
+    display: inline-block;
+    margin-top: 35px;
     margin-right: 60px;
 }
 
@@ -1182,11 +1197,16 @@ footer .content > div {
     font: bold 18px/24px 'gilroyextrabold', sans-serif;
 }
 
-.options input[type="range"] {
-    position: static;
-    display: block;
-    height: 5px;
+.options .radio {
+    list-style: none;
+    border-bottom: 2px solid black;
+    padding: 0 0 18px 0;
+    margin-bottom: 0;
+}
 
+.options input[type="range"] {
+    position: absolute;
+    height: 5px;
 }
 
 .options input[type="range"] ~ input {
@@ -1194,11 +1214,42 @@ footer .content > div {
     margin-top: -5px;
 }
 
-.options .radio {
-    list-style: none;
-    border-bottom: 2px solid black;
-    padding: 0 0 18px 0;
-    margin-bottom: 0;
+.price input +label {
+    position: absolute;
+    font-size: 0;
+}
+
+.price input +label:before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 200px;
+    height: 2px;
+    background-color: #dbdbdb;
+}
+
+.price input + label.cost:before {
+    width: 120px;
+    background-color: #91c92f;
+}
+
+.price input +label:after {
+    content: url("../img/svg-device/filter-button.svg");
+    position: absolute;
+    height: 22px;
+    top: 10px;
+    left: 0;
+    z-index: 5;
+    border-radius: 50%;
+}
+
+.price input + label.cost:after {
+    left: 120px;
+}
+
+.range:focus + label:after {
+    box-shadow: 0 0 2px 2px #f7e296;
 }
 
 /*==========================стилизация чекбоска и радобаттона каталога==========================================*/
@@ -1428,11 +1479,11 @@ input[type="checkbox"]:checked + .check::before {
 }
 
 .description p {
-    margin: 30px 0 45px 0;
+    margin: 35px 0 45px 0;
 }
 
 .description a {
-    margin: 30px 0 45px 0;
+    margin: 35px 0 45px 0;
     text-decoration: none;
     font: bold 18px/24px 'gilroyextrabold', sans-serif;
     width: 270px;
@@ -1469,27 +1520,24 @@ input[type="checkbox"]:checked + .check::before {
 .nav-pages {
     list-style: none;
     padding: 0;
-    margin: 0 0 80px 0;
+    margin: -5px 0 80px 0;
     display: flex;
     justify-content: center;
     background-color: #ebebeb;
 }
 
-
 .nav-pages li:first-child {
     margin-right: auto;
-    /*padding-left: 20px;*/
 }
 
 .nav-pages li:last-child {
     margin-left: auto;
-    /*padding-right: 20px;*/
 }
 
 .nav-pages a {
     display: block;
     min-width: 40px;
-    padding: 30px 15px;
+    padding: 20px 15px;
     text-decoration: none;
     font: bold 16px/24px 'gilroyextrabold', sans-serif;
     letter-spacing: 3px;
@@ -1497,7 +1545,7 @@ input[type="checkbox"]:checked + .check::before {
 }
 
 .nav-pages .move-pages {
-    padding: 30px;
+    padding: 20px;
 }
 
 .nav-pages .number-pages:not(:focus) {
@@ -1634,8 +1682,78 @@ color: rgba(0, 0, 0, 0.3);
     left:0;
 }
 
-/*.test {
-    background-color: #f5f5f5;
+
+
+
+/*.options .price .range {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 22px;
+    padding: 0;
+    background-color: #efefef;
+    !* стили вашего ползунка *!
+}
+
+.options .price .range-2 {
+    width: 110px;
+    !*background-color: #91c92f;*!
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    background: url(../img/svg-device/filter-button.svg) no-repeat 50% 40%;
+    border-radius: 50%;
+    border-color: transparent;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: url(../img/svg-device/filter-button.svg) no-repeat 50% 40%;
+    border-radius: 50%;
+    border-color: transparent;
+    cursor: pointer;
+}
+.range::-ms-thumb { !* должен следовать после -webkit- *!
+    width: 20px;
+    height: 20px;
+    background: url(../img/svg-device/filter-button.svg) no-repeat 50% 40%;
+    border-radius: 50%;
+    border-color: transparent;
+    cursor: pointer;
+}
+.range::-webkit-slider-runnable-track {
+   height: 2px;
+    background-color: #dbdbdb;
+}
+
+.range-2::-webkit-slider-runnable-track {
+    background-color: #91c92f;
+}
+
+.range::-moz-range-track {
+    height: 2px;
+    background-color: #dbdbdb;
+    !* снова стили вашей дорожки *!
+}
+
+.range-2::-moz-range-track {
+    background-color: #91c92f;
+}
+.range::-ms-track { !* должен следовать после -webkit- *!
+    border-color: transparent;
+    color: transparent;
+    height: 2px;
+    background-color: #dbdbdb;#91c92f
+}
+
+.range-2::-ms-track {
+    background-color: #91c92f;
+    width: 128px;
 }*/
 
 

@@ -95,12 +95,12 @@
 						<legend class="visually-hidden">Группа полей</legend>
 						<div class="price">
 							<h3 class="font-bold">Стоимость</h3>
-							<input type="range" id="range1" name="range1" min="0" step="1" max="100" value="0"
+							<input class="range visually-hidden" type="range" id="range1" name="range1" min="0" step="1" max="200" value="125"
 								   aria-label="стоимость">
-							<label class="visually-hidden" for="range1">Диапазон стоимости</label>
-							<input type="range" id="range2" name="range2" min="0" step="1" max="100" value="60"
+							<label for="range1">Диапазон стоимости</label>
+							<input class="range visually-hidden" type="range" id="range2" name="range2" min="0" step="1" max="100" value="0"
 								   aria-label="стоимость">
-							<label class="cost visually-hidden" for="range2">Диапазон стоимости</label>
+							<label class="cost" for="range2">Диапазон стоимости</label>
 							<span class="cost">от 0</span>
 							<span>до 5000</span>
 						</div>
@@ -111,7 +111,7 @@
 								<label for="check1" class="check">Черный</label>
 							</li>
 							<li>
-								<input class="visually-hidden" id="check2" type="checkbox" name="white" disabled>
+								<input class="visually-hidden" id="check2" type="checkbox" name="white">
 								<label for="check2" class="check">Белый</label>
 							</li>
 							<li>
@@ -225,8 +225,6 @@
 
 				</ul>
 				<!--		============ навигация по страницам ========-->
-
-
 				<ul class="nav-pages">
 					<li>
 						<a class="move-pages" href="#" onclick="return false">НАЗАД</a>
