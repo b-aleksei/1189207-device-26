@@ -864,15 +864,16 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
     margin-bottom: 150px;
 }
 
-.filter li img {
-    filter: grayscale(100%);
-    opacity: 0.3;
-    transition: 0.2s;
+.filter svg {
+    opacity: 0.2;
 }
 
-.filter li img:hover {
-    filter: grayscale(0);
+.filter svg:hover {
     opacity: 1;
+}
+
+.filter svg:hover .grey {
+    display: none;
 }
 
 /*========================стилизация раздела О НАС============================*/
@@ -1690,82 +1691,6 @@ color: rgba(0, 0, 0, 0.3);
     bottom: 0;
     left:0;
 }
-
-
-
-
-/*.options .price .range {
-    -webkit-appearance: none;
-    width: 200px;
-    height: 22px;
-    padding: 0;
-    background-color: #efefef;
-    !* стили вашего ползунка *!
-}
-
-.options .price .range-2 {
-    width: 110px;
-    !*background-color: #91c92f;*!
-}
-
-.range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    box-sizing: content-box;
-    width: 20px;
-    height: 20px;
-    background: url(../img/svg-device/filter-button.svg) no-repeat 50% 40%;
-    border-radius: 50%;
-    border-color: transparent;
-    cursor: pointer;
-    margin-bottom: 5px;
-}
-.range::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: url(../img/svg-device/filter-button.svg) no-repeat 50% 40%;
-    border-radius: 50%;
-    border-color: transparent;
-    cursor: pointer;
-}
-.range::-ms-thumb { !* должен следовать после -webkit- *!
-    width: 20px;
-    height: 20px;
-    background: url(../img/svg-device/filter-button.svg) no-repeat 50% 40%;
-    border-radius: 50%;
-    border-color: transparent;
-    cursor: pointer;
-}
-.range::-webkit-slider-runnable-track {
-   height: 2px;
-    background-color: #dbdbdb;
-}
-
-.range-2::-webkit-slider-runnable-track {
-    background-color: #91c92f;
-}
-
-.range::-moz-range-track {
-    height: 2px;
-    background-color: #dbdbdb;
-    !* снова стили вашей дорожки *!
-}
-
-.range-2::-moz-range-track {
-    background-color: #91c92f;
-}
-.range::-ms-track { !* должен следовать после -webkit- *!
-    border-color: transparent;
-    color: transparent;
-    height: 2px;
-    background-color: #dbdbdb;#91c92f
-}
-
-.range-2::-ms-track {
-    background-color: #91c92f;
-    width: 128px;
-}*/
-
-
 
 @keyframes bounce {
     0% {
