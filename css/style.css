@@ -1613,9 +1613,6 @@ color: rgba(0, 0, 0, 0.3);
     background-color: #eaeaea;
 }
 
-.modal .inputs input:invalid {
-    background-color: #f6dada;
-}
 
 .modal .inputs input:focus,
 .modal .inputs input:active,
@@ -1623,6 +1620,10 @@ color: rgba(0, 0, 0, 0.3);
 .modal textarea:active {
     outline: 3px solid #f7e296;
     background-color: #fff;
+}
+
+.modal .inputs input:invalid {
+    background-color: #f6dada;
 }
 
 .inputs li:first-child,
