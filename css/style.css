@@ -32,7 +32,7 @@ body {
     font-weight: 300;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
-    position: relative;
+    /*position: relative;*/
 }
 
 
@@ -1653,9 +1653,6 @@ input[type="checkbox"]:checked + .check::before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     background-color: #ebebeb;
 }
 
