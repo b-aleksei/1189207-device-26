@@ -15,10 +15,12 @@
 }
 
 *, *::before, *::after {
+    -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
 
 html {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -35,8 +37,8 @@ body {
 /*=====================временно для подсветки===================*/
 
 .temp {
-     background-color: rgba(255, 0, 0, 0.1);
- }
+    background-color: rgba(255, 0, 0, 0.1);
+}
 
 .temp > * {
     outline: 1px dotted red;
@@ -56,12 +58,14 @@ body {
     border: 0;
     padding: 0;
     white-space: nowrap;
+    -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
 }
 
 .shadow {
+    -webkit-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -98,18 +102,27 @@ header .logo {
 }
 
 .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 45px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .flex-container > ul:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0 0 23px 0;
     margin: 0;
 }
 
 .flex-container > ul:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
 }
@@ -128,13 +141,19 @@ header .logo {
 .flex-container .icon .col1 {
     max-width: 530px;
     min-width: 200px;
+    -webkit-box-flex: 15;
+    -ms-flex-positive: 15;
     flex-grow: 15;
     font-size: 15px;
     line-height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .flex-container .icon.catalog .col1 {
+    -webkit-box-flex: 45;
+    -ms-flex-positive: 45;
     flex-grow: 45;
 }
 
@@ -145,13 +164,18 @@ header .logo {
     outline: 0;
     background-color: transparent;
     opacity: 0.3;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
 }
 
 .flex-container .icon .col2 {
     min-width: 100px;
     max-width: 500px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     overflow: hidden;
 }
@@ -167,6 +191,8 @@ header .logo {
     min-width: 110px;
     max-width: 500px;
     padding-left: 0;
+    -webkit-box-flex: 10;
+    -ms-flex-positive: 10;
     flex-grow: 10;
 }
 
@@ -175,6 +201,8 @@ header .logo {
     max-width: 500px;
     text-align: right;
     padding-left: 20px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
 }
 
@@ -193,23 +221,31 @@ header .logo {
     text-align: left;
     min-width: 250px;
     width: 510px;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
     flex-grow: 0;
 }
 
 .flex-container .icon .col6 {
     min-width: 150px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     padding-left: 30px;
 }
 
 .flex-container .icon .col7 {
     min-width: 150px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     padding-left: 30px;
 }
 
 .flex-container .icon .col8 {
     min-width: 210px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     text-align: right;
     margin-right: -5px;
@@ -322,6 +358,8 @@ header .logo {
 }
 
 .modal-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 1160px;
     min-height: 161px;
@@ -332,10 +370,14 @@ header .logo {
 
 .navigation .wrapper {
     display: none;
+    -webkit-transition: display 0.9s;
+    -o-transition: display 0.9s;
     transition: display 0.9s;
 }
 
 .catalog .wrapper {
+    -webkit-transition: display 0.9s;
+    -o-transition: display 0.9s;
     transition: display 0.9s;
 }
 
@@ -360,7 +402,12 @@ header .logo {
 }
 
 .modal-header .drop-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding: 20px 0 0 0;
     list-style: none;
@@ -457,6 +504,8 @@ header .logo {
     height: 12px;
     border: 1px solid black;
     border-radius: 50%;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -465,6 +514,7 @@ header .logo {
     content: '';
     width: 12px;
     height: 12px;
+    -webkit-box-shadow: inset 0 0 0 3px white, inset 0 0 0 4px black;
     box-shadow: inset 0 0 0 3px white, inset 0 0 0 4px black;
     border: 1px solid black;
     border-radius: 50%;
@@ -520,13 +570,21 @@ input:disabled + label {
     height: 40px;
     width: 220px;
     background-color: #f0c52e;
+    -webkit-transform: scaleY(0.20);
+    -ms-transform: scaleY(0.20);
     transform: scaleY(0.20);
     z-index: -1;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    -o-transition: transform .3s;
     transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
 }
 
 .yellow-button:hover::before,
 .yellow-button:focus::before {
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
     transform: scaleY(1);
 }
 
@@ -585,12 +643,17 @@ input:disabled + label {
 }
 
 .slider1 .preview {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .preview .picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 555px;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     margin-right: 45px;
     max-height: 486px;
@@ -663,6 +726,8 @@ input:disabled + label {
 }
 
 .slider1-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
     padding: 0;
@@ -683,6 +748,8 @@ input:disabled + label {
 
 /*=========================стилизация миниатюр товара =================================*/
 .fill-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 160px;
     height: 160px;
@@ -711,8 +778,12 @@ input:disabled + label {
 
 .product-icons ul {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 177px;
 }
@@ -750,6 +821,8 @@ input:disabled + label {
 .background-gray label::before {
     width: 160px;
     left: calc(50% - 80px);
+    -webkit-transition: width 0.2s ease-out;
+    -o-transition: width 0.2s ease-out;
     transition: width 0.2s ease-out;
 
 }
@@ -761,6 +834,8 @@ input:disabled + label {
 .background-gray .yellow-button:focus::before {
     background-color: black;
     width: 282px;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
     transform: scaleY(1);
 }
 
@@ -785,6 +860,8 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
 }
 
 .slider-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 95px;
 }
@@ -801,6 +878,8 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
 }
 
 .slider-2 .slider-2-items {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     margin-top: -18px;
 }
@@ -816,6 +895,8 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
 }
 
 .slider-2-items li .slide-show {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -857,9 +938,13 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
 
 /*==========================стилизация лого партнеров======================*/
 .partners .filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
     list-style: none;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 150px;
 }
@@ -879,7 +964,11 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
 /*========================стилизация раздела О НАС============================*/
 
 .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     margin-bottom: 90px;
 }
@@ -970,19 +1059,32 @@ footer {
 footer .content {
     padding-top: 62px;
     padding-bottom: 65px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 footer .content > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .footer-nav .icon-footer,
 .footer-info,
 .social-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
 }
 
@@ -1010,6 +1112,8 @@ footer .content > div {
 
 .footer-logo {
     margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1114,6 +1218,8 @@ footer .content > div {
 }
 
 .catalog-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1158,6 +1264,7 @@ footer .content > div {
     width: 270px;
     position: relative;
     padding-right: 65px;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
 }
 
@@ -1250,6 +1357,7 @@ footer .content > div {
 }
 
 .range:focus + label:after {
+    -webkit-box-shadow: 0 0 2px 2px #f7e296;
     box-shadow: 0 0 2px 2px #f7e296;
 }
 
@@ -1310,6 +1418,8 @@ input[type="checkbox"]:checked + .check::before {
 
 .arrow {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
     margin: 0;
@@ -1333,6 +1443,8 @@ input[type="checkbox"]:checked + .check::before {
     height: 5px;
     border-top: 1px solid black;
     border-right: 1px solid black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     margin-left: 20px;
 }
@@ -1358,6 +1470,8 @@ input[type="checkbox"]:checked + .check::before {
 /*=======================меню сортировки=================================*/
 .sort-items,
 .sort-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1368,6 +1482,8 @@ input[type="checkbox"]:checked + .check::before {
 .sort-list {
     list-style: none;
     padding-top: 10px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
 }
 
@@ -1385,11 +1501,16 @@ input[type="checkbox"]:checked + .check::before {
 
 /*===============================================*/
 .goods .items-picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -1475,7 +1596,11 @@ input[type="checkbox"]:checked + .check::before {
 }
 
 .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -1522,7 +1647,11 @@ input[type="checkbox"]:checked + .check::before {
     list-style: none;
     padding: 0;
     margin: -5px 0 80px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     background-color: #ebebeb;
 }
@@ -1560,7 +1689,7 @@ input[type="checkbox"]:checked + .check::before {
 }
 
 .move-pages:active {
-color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
 }
 
 /*=====================modal===================================*/
@@ -1577,10 +1706,12 @@ color: rgba(0, 0, 0, 0.3);
     display: block;
     top: 0;
     left: 0;
+    -webkit-animation: bounce 0.6s;
     animation: bounce 0.6s;
 }
 
 .modal-error {
+    -webkit-animation: shake 0.6s;
     animation: shake 0.6s;
 }
 
@@ -1595,10 +1726,15 @@ color: rgba(0, 0, 0, 0.3);
 
 .modal .inputs {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 100px;
     /*padding: 0;*/
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -1660,6 +1796,26 @@ color: rgba(0, 0, 0, 0.3);
     padding: 15px;
 }
 
+.modal input::-webkit-input-placeholder,
+.modal textarea::-webkit-input-placeholder {
+    color: rgba(70, 70, 70, 0.4);
+}
+
+.modal input::-moz-placeholder,
+.modal textarea::-moz-placeholder {
+    color: rgba(70, 70, 70, 0.4);
+}
+
+.modal input:-ms-input-placeholder,
+.modal textarea:-ms-input-placeholder {
+    color: rgba(70, 70, 70, 0.4);
+}
+
+.modal input::-ms-input-placeholder,
+.modal textarea::-ms-input-placeholder {
+    color: rgba(70, 70, 70, 0.4);
+}
+
 .modal input::placeholder,
 .modal textarea::placeholder {
     color: rgba(70, 70, 70, 0.4);
@@ -1692,27 +1848,54 @@ color: rgba(0, 0, 0, 0.3);
     left:0;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
     0% {
+        -webkit-transform: translateY(-2000px);
         transform: translateY(-2000px);
     }
 
     70% {
+        -webkit-transform: translateY(30px);
         transform: translateY(30px);
     }
 
     90% {
+        -webkit-transform: translateY(-10px);
         transform: translateY(-10px);
     }
 
     100% {
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 }
 
-@keyframes shake {
+@keyframes bounce {
+    0% {
+        -webkit-transform: translateY(-2000px);
+        transform: translateY(-2000px);
+    }
+
+    70% {
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+
+    90% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes shake {
     0%,
     100% {
+        -webkit-transform: translateX(0);
         transform: translateX(0);
     }
 
@@ -1721,6 +1904,7 @@ color: rgba(0, 0, 0, 0.3);
     50%,
     70%,
     90% {
+        -webkit-transform: translateX(-10px);
         transform: translateX(-10px);
     }
 
@@ -1728,6 +1912,32 @@ color: rgba(0, 0, 0, 0.3);
     40%,
     60%,
     80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
         transform: translateX(10px);
     }
 }
