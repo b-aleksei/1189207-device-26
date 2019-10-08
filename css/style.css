@@ -1646,7 +1646,7 @@ input[type="checkbox"]:checked + .check::before {
 }
 
 .nav-pages {
-    width: 760px;
+    max-width: 760px;
     list-style: none;
     padding: 0;
     margin: -5px 0 80px 0;
