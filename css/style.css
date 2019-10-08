@@ -720,7 +720,7 @@ input:disabled + label {
     font-size: 15px;
     line-height: 30px;
     font-weight: 300;
-    padding: 210px 0 55px 0;
+    padding: 210px 80px 55px 0;
 }
 
 .slider1-info a.yellow-button {
@@ -1103,15 +1103,17 @@ footer .content > div {
 
 .footer-address {
     margin-top: 22px;
+    /*align-items: end;*/
 }
 
 .footer-address p {
     min-width: 210px;
 }
 
-.footer-address p:last-child {
+.footer-address a {
     text-align: right;
     min-width: 170px;
+    margin: 14px 0;
 }
 
 .footer-logo {
