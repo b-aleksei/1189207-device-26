@@ -182,11 +182,25 @@ header .logo {
     overflow: hidden;
 }
 
+.col2 input:hover + label:before,
+.col2 input:focus + label:before{
+     opacity: 0.6;
+ }
+.col2 input:active + label:before {
+    opacity: 0.3;
+}
+
 .flex-container .icon.catalog .col2 a {
     position: relative;
     padding-left: 25px;
     padding-right: 10px;
 }
+
+.outline {
+    border: none;
+    background-color: transparent;
+}
+
 
 .flex-container .icon .col3 {
     text-align: right;
@@ -263,16 +277,17 @@ header .logo {
     display: inline-block;
     text-decoration: none;
     color: black;
+    vertical-align: bottom;
 }
 
-.icon li:hover:not(.col5):not(.col1):not(.col2),
-.icon li:focus:not(.col5):not(.col1):not(.col2),
+.icon > li:not(.col5):not(.col1):not(.col2):hover,
+.icon > li:not(.col5):not(.col1):not(.col2):focus,
 .focus:hover,
 .focus:focus {
     opacity: 0.6;
 }
 
-.icon li:active:not(.col5):not(.col1):not(.col2),
+.icon > li:not(.col5):not(.col1):not(.col2):active,
 .focus:active,
 .col5 button
 {
@@ -342,8 +357,7 @@ header .logo {
 .col1 .btn-search:focus{
     color: rgba(255, 255, 255, 0.3);
     visibility: visible;
-    outline: 1px dotted black;
-    outline-offset: 1px;
+    background-color: #000;
 }
 
 .icon .search:hover,
@@ -372,22 +386,13 @@ header .logo {
 
 .navigation .wrapper {
     display: none;
-    -webkit-transition: display 0.9s;
-    -o-transition: display 0.9s;
-    transition: display 0.9s;
 }
 
-.catalog .wrapper {
-    -webkit-transition: display 0.9s;
-    -o-transition: display 0.9s;
-    transition: display 0.9s;
-}
 
 .navigation .col5 a:hover + .wrapper,
 .navigation .col5 .wrapper:hover
 {
     display: block;
-    /*visibility: visible;*/
     position: absolute;
     left: 0;
     bottom: 0;
@@ -432,6 +437,7 @@ header .logo {
     letter-spacing: normal;
     text-transform: none;
     text-decoration: none;
+    vertical-align: bottom;
 }
 
 .navigation .plus {
@@ -450,8 +456,13 @@ header .logo {
 .price input:focus,
 .bluetooth-buttons input:focus + label
 {
-    outline: 1px dotted black;
-    offset: 2px;
+    outline: 1px dotted #90b1d4;
+    offset: 10px;
+}
+
+.radio input:hover + label,
+.bluetooth-buttons input:not(:focus):hover + label{
+    opacity: 0.6;
 }
 
 .radio > input + label::after {
@@ -462,7 +473,7 @@ header .logo {
     left: -4px;
     width: 20px;
     height: 20px;
-    border: 5px solid #f7e296;
+    border: 2px solid #90B0D6;
     border-radius: 50%;
     z-index: -1;
 }
@@ -610,7 +621,7 @@ input:disabled + label {
 .icon .enter::before {
     content: url("../img/svg-device/user.svg");
     position: absolute;
-    left: -25px;
+    left: -75px;
 }
 
 .icon.catalog .enter::before {
@@ -721,6 +732,14 @@ input:disabled + label {
     line-height: 30px;
     font-weight: 300;
     padding: 210px 80px 55px 0;
+}
+
+.slider1-info .correct-width-2 {
+    padding-right: 110px;
+ }
+
+.slider1-info .correct-width-3 {
+    padding-right: 90px;
 }
 
 .slider1-info a.yellow-button {
@@ -905,6 +924,7 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
 .slider-2-items section {
     width: 500px;
     margin-left: 125px;
+
 }
 
 .slider-2-items section h2,
@@ -922,6 +942,7 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
     font-size: 15px;
     line-height: 2;
     letter-spacing: 1px;
+    padding-right: 17px;
 }
 
 .slider-2-items img {
@@ -979,6 +1000,10 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
 
 .info section {
     width: 50%;
+}
+
+.about-us p {
+    padding-right: 93px;
 }
 
 .info h2 {
@@ -1114,6 +1139,8 @@ footer .content > div {
     text-align: right;
     min-width: 170px;
     margin: 14px 0;
+    text-decoration: none;
+    color: #fff;
 }
 
 .footer-logo {
@@ -1163,6 +1190,16 @@ footer .content > div {
 
 .social-icon li {
     padding: 0 10px;
+}
+
+.social-icon a:focus {
+    outline: none;
+}
+
+.social-icon a:focus img {
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px black,
+    0 0 0 4px #5776d2;
 }
 
 .icon-footer li a,
@@ -1307,6 +1344,7 @@ footer .content > div {
     display: inline-block;
     margin-top: 35px;
     margin-right: 60px;
+    vertical-align: bottom;
 }
 
 .font-bold {
@@ -1365,8 +1403,16 @@ footer .content > div {
 }
 
 .range:focus + label:after {
-    -webkit-box-shadow: 0 0 2px 2px #f7e296;
-    box-shadow: 0 0 2px 2px #f7e296;
+    -webkit-box-shadow: 0 0 2px 2px #90B0D6;
+    box-shadow: 0 0 2px 2px #90b0d6;
+    cursor: pointer;
+}
+
+.range:active + label:after {
+    -webkit-transform: scale(1.1);
+   -ms-transform: scale(1.1);
+   transform: scale(1.1);
+    cursor: pointer;
 }
 
 /*==========================стилизация чекбоска и радобаттона каталога==========================================*/
@@ -1460,11 +1506,6 @@ input[type="checkbox"]:checked + .check::before {
 .arrow a:not(.disabled):hover,
 .arrow a:not(.disabled):focus {
     color: rgba(0, 0, 0, 0.6);
-}
-
-.arrow a:not(.disabled):focus {
-    outline: 1px dotted black;
-    offset: 2px;
 }
 
 .arrow a.disabled {
@@ -1631,7 +1672,7 @@ input[type="checkbox"]:checked + .check::before {
     border: 10px solid #000;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
-
+    vertical-align: middle;
 }
 
 .sort-up::before {
@@ -1680,9 +1721,19 @@ input[type="checkbox"]:checked + .check::before {
     padding: 20px;
 }
 
-.nav-pages .number-pages:not(:focus) {
+.nav-pages .number-pages{
     color: rgba(0, 0, 0, 0.3);
 }
+
+.nav-pages .number-pages:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+.nav-pages .number-pages:active,
+.nav-pages .number-pages:focus
+{
+    color: rgba(0, 0, 0, 1);
+}
+
 
 .move-pages:hover,
 .move-pages:focus
