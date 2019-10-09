@@ -34,23 +34,6 @@ body {
     overflow-x: hidden;
 }
 
-
-/*=====================временно для подсветки===================*/
-
-.temp {
-    background-color: rgba(255, 0, 0, 0.1);
-}
-
-.temp > * {
-    outline: 1px dotted red;
-}
-
-.temp > * > * {
-    background-color: rgba(0, 255, 0, 0.1);
-}
-
-/*============================================================*/
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -1037,8 +1020,8 @@ input.credit:checked ~ .slider-2 .slider-2-items .credit {
     margin-bottom: 75px;
 }
 
-.info section button {
-    margin-left: 15px;
+.info section a {
+    margin-left: 20px;
 }
 
 .info section:last-child button {
