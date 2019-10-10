@@ -30,14 +30,6 @@ close.addEventListener("click", function (evt) {
     popup.classList.remove("modal-error");
 });
 
-/*
-popup.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-block");
-    popup.classList.remove("modal-error");
-});
-*/
-
 form.addEventListener("submit", function (evt) {
     if (!login.value || !email.value) {
         evt.preventDefault();
@@ -63,8 +55,7 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
-//=============map-popup============================================
-
+//===map-popup==
 let mapOpen = document.querySelector('.map-open');
 let map = document.querySelector('.info .substrate');
 let closeMap = map.querySelector('.close-map');
@@ -82,6 +73,5 @@ map.addEventListener('click', function (par) {
     par.preventDefault();
     map.classList.remove('modal-map-block');
 });
-// ========================================================================
 
 
