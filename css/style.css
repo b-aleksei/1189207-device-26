@@ -1774,7 +1774,6 @@ a.correct-width-4 {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 100px;
-    /*padding: 0;*/
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -1782,12 +1781,22 @@ a.correct-width-4 {
 
 .modal input {
     width: 100%;
-    height: 50px;
+		height: 50px;
+		border: none;
 }
 
-.modal input:not(.yellow-button):hover,
-.modal textarea:hover {
+.modal input:not(.yellow-button):not(:focus):hover,
+.modal textarea:not(:focus):hover {
     background-color: #eaeaea;
+}
+
+.modal input:not(.yellow-button) {
+	background-color: #f2f2f2;
+	padding: 15px;
+}
+
+.inputs input:invalid {
+background-color: #f6dada;
 }
 
 .inputs input:focus,
@@ -1796,10 +1805,6 @@ a.correct-width-4 {
 .modal textarea:active {
     outline: 3px solid #f7e296;
     background-color: #fff;
-}
-
-.inputs input:invalid {
-    background-color: #f6dada;
 }
 
 .inputs li:first-child,
@@ -1827,12 +1832,8 @@ a.correct-width-4 {
     overflow: auto;
     font-weight: 400;
     background-color: #f2f2f2;
-    padding: 15px;
-}
-
-.modal input:not(.yellow-button) {
-    background-color: #f2f2f2;
-    padding: 15px;
+		padding: 15px;
+		border: none;
 }
 
 .modal input::-webkit-input-placeholder,
@@ -1857,7 +1858,7 @@ a.correct-width-4 {
 
 .modal .close {
     position: absolute;
-    top: 20px;
+    top: 25px;
     right: 20px;
     opacity: 0.6;
 }
