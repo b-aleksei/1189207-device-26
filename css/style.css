@@ -1774,7 +1774,6 @@ a.correct-width-4 {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 100px;
-    /*padding: 0;*/
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
