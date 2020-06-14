@@ -24,13 +24,13 @@
 						<button class="btn-search" type="button" aria-label="кнопка поиска">Найти</button>
 					</li>
 					<li class="col-2">
-						<a class="enter focus" href="profile.html">Валентин Петухов</a>
+						<a class="enter focus" href="#">Валентин Петухов</a>
 						<button class="outline focus-3" type="button" aria-label="Выйти">Выйти</button>
 					</li>
 					<li class="col-3">
-						<a class="compare focus" href="compare.html">Сравнить</a></li>
+						<a class="compare focus" href="#">Сравнить</a></li>
 					<li class="col-4">
-						<a class="cart focus" href="basket.html">Корзина</a>
+						<a class="cart focus" href="#">Корзина</a>
 					</li>
 				</ul>
 
@@ -46,28 +46,28 @@
 							<ul class="modal-header catalog">
 								<li>
 									<ul class="drop-menu">
-										<li><a class="focus" href="vr.html">Виртуальная реальность</a></li>
-										<li><a class="focus" href="monopods.html">Моноподы для селфи</a></li>
-										<li><a class="focus" href="action-camers.html">Экшн-камеры</a></li>
+										<li><a class="focus" href="#">Виртуальная реальность</a></li>
+										<li><a class="focus" href="#">Моноподы для селфи</a></li>
+										<li><a class="focus" href="#">Экшн-камеры</a></li>
 									</ul>
 								</li>
 								<li>
 									<ul class="drop-menu">
-										<li><a class="focus" href="fitness-watch.html">Фитнес-браслеты</a></li>
-										<li><a class="focus" href="smart-watch.html">Умные часы</a></li>
+										<li><a class="focus" href="#">Фитнес-браслеты</a></li>
+										<li><a class="focus" href="#">Умные часы</a></li>
 									</ul>
 								</li>
 								<li>
 									<ul class="drop-menu">
-										<li><a class="focus" href="quadro.html">Квадрокоптеры</a></li>
+										<li><a class="focus" href="#">Квадрокоптеры</a></li>
 									</ul>
 								</li>
 							</ul>
 						</div>
 					</li>
-					<li class="col-6"><a class="focus" href="delivery.html">ДОСТАВКА</a></li>
-					<li class="col-7"><a class="focus" href="warranty.html">ГАРАНТИЯ</a></li>
-					<li class="col-8"><a class="focus" href="contacts.html">КОНТАКТЫ</a></li>
+					<li class="col-6"><a class="focus" href="#">ДОСТАВКА</a></li>
+					<li class="col-7"><a class="focus" href="#">ГАРАНТИЯ</a></li>
+					<li class="col-8"><a class="focus" href="#">КОНТАКТЫ</a></li>
 				</ul>
 
 			</nav>
@@ -87,18 +87,23 @@
 		<div class="catalog-content">
 			<aside class="options">
 				<h2>ФИЛЬТР:</h2>
-				<form action="form.html" method="get">
+				<form action="#" method="get">
 					<fieldset>
-						<legend class="visually-hidden">Группа полей</legend>
-						<div class="price">
+						<legend class="visually-hidden">Диапазон стоимости</legend>
+						<div class="double-range price">
 							<h3 class="font-bold">Стоимость</h3>
-							<input class="range visually-hidden" type="range" id="range1" name="range1" min="0" step="1" max="200" value="125" aria-label="стоимость">
-							<label for="range1">Диапазон стоимости</label>
+							<span class="double-range__track"></span>
+							<label class="double-range__label" aria-label="Стоимость от">
+								<input class=" double-range__input double-range__input--from" type="range" min="0" max="10000">
+								<span class="double-range__thumb double-range__thumb--from" style="left: 0"></span>
+							</label>
 
-							<input class="range visually-hidden" type="range" id="range2" name="range2" min="0" step="1" max="100" value="0" aria-label="стоимость">
-							<label class="cost" for="range2">Диапазон стоимости</label>
-							<span class="cost">от 0</span>
-							<span>до 5000</span>
+							<label class="double-range__label" aria-label="Стоимость до">
+								<input class="double-range__input double-range__input--to" type="range" min="6000" max="10000">
+								<span class="double-range__thumb double-range__thumb--to" style="left: 60%"></span>
+							</label>
+							<span class="cost">от <span class="double-range__output double-range__output--from">0</span></span>
+							<span>до <span class="double-range__output double-range__output--to">5000</span></span>
 						</div>
 						<h3 class="font-bold">Цвет</h3>
 						<ul class="radio checkboxes">
@@ -131,7 +136,7 @@
 							<input class="visually-hidden" id="radio-no" type="radio" name="bluetooth" value="no">
 							<label class="radio-catalog" for="radio-no">Нет</label>
 						</div>
-						<button class="button yellow-button" type="submit" aria-label="">показать</button>
+						<button onsubmit="return false" class="button yellow-button" type="submit" aria-label="">показать</button>
 					</fieldset>
 				</form>
 			</aside>
@@ -165,7 +170,7 @@
 								<img src="./img/goods/item-1.png" alt="Любительская селфи-палка" width="360" height="380">
 							</div>
 							<figcaption class="description">
-								<a href="catalog/goods/amateur-stick.html">Любительская селфи-палка</a>
+								<a href="#">Любительская селфи-палка</a>
 								<p>500 руб</p>
 							</figcaption>
 						</figure>
@@ -178,7 +183,7 @@
 								<img src="./img/goods/item-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
 							</div>
 							<figcaption class="description">
-								<a class="correct-width-4" href="catalog/goods-profesional-stick.html">Профессиональная
+								<a class="correct-width-4" href="#">Профессиональная
 									селфи-палка</a>
 								<p>1 500 руб</p>
 							</figcaption>
@@ -192,7 +197,7 @@
 								<img src="./img/goods/item-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
 							</div>
 							<figcaption class="description">
-								<a href="catalog/goods/unsinking-stick.html">Непотопляемая селфи-палка</a>
+								<a href="#">Непотопляемая селфи-палка</a>
 								<p>2 500 руб</p>
 							</figcaption>
 						</figure>
@@ -205,7 +210,7 @@
 								<img src="./img/goods/item-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
 							</div>
 							<figcaption class="description">
-								<a href="catalog/goods/sp-folow-me.html">Селфи-палка «Следуй за мной»</a>
+								<a href="#">Селфи-палка «Следуй за мной»</a>
 								<p>4 900 руб</p>
 								<span class="new">NEW</span>
 							</figcaption>
@@ -218,16 +223,16 @@
 						<a class="move-pages" href="#" onclick="return false">НАЗАД</a>
 					</li>
 					<li>
-						<a class="active number-pages" href="catalog-1.html" onclick="return false">1</a>
+						<a class="active number-pages" href="#" onclick="return false">1</a>
 					</li>
 					<li>
-						<a class="number-pages" href="catalog-2.html" onclick="return false">2</a>
+						<a class="number-pages" href="#" onclick="return false">2</a>
 					</li>
 					<li>
-						<a class="number-pages" href="catalog-3.html" onclick="return false">3</a>
+						<a class="number-pages" href="#" onclick="return false">3</a>
 					</li>
 					<li>
-						<a class="move-pages" href="catalog-4.html" onclick="return false">ВПЕРЕД</a>
+						<a class="move-pages" href="#" onclick="return false">ВПЕРЕД</a>
 					</li>
 				</ul>
 			</section>
@@ -243,13 +248,13 @@
 				</a>
 				<ul class="icon-footer">
 					<li>
-						<a class="enter focus-2 logout" href="profile.html">Валентин Петухов</a>
+						<a class="enter focus-2 logout" href="#">Валентин Петухов</a>
 						<button class="outline focus-2" type="button" aria-label="Выйти">Выйти</button>
 					</li>
 					<li>
-						<a class="compare focus-2 reset-gap" href="compare.html">Сравнить</a></li>
+						<a class="compare focus-2 reset-gap" href="#">Сравнить</a></li>
 					<li>
-						<a class="cart focus-2" href="basket.html">Корзина</a>
+						<a class="cart focus-2" href="#">Корзина</a>
 					</li>
 				</ul>
 			</div>
@@ -259,9 +264,9 @@
 					г. Москва, ул. Строителей, 15
 				</p>
 				<ul class="footer-info">
-					<li><a class="focus" href="delivery.html">ДОСТАВКА</a></li>
-					<li><a class="focus" href="warranty.html">ГАРАНТИЯ</a></li>
-					<li><a class="focus" href="contacts.html">КОНТАКТЫ</a></li>
+					<li><a class="focus" href="#">ДОСТАВКА</a></li>
+					<li><a class="focus" href="#">ГАРАНТИЯ</a></li>
+					<li><a class="focus" href="#">КОНТАКТЫ</a></li>
 				</ul>
 				<a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
 			</div>
@@ -291,5 +296,6 @@
 		</div>
 	</div>
 </footer>
+<script src="js/doubleRange.min.js"></script>
 </body>
 </html>

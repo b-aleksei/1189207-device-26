@@ -1,3 +1,5 @@
+(function () {
+
 let popup = document.querySelector('footer + .substrate');
 let close = popup.querySelector('.close');
 let link = document.querySelector('.login');
@@ -62,3 +64,7 @@ map.addEventListener('click', function(par) {
     par.preventDefault();
     map.classList.remove('modal-map-block')
 })
+
+})();
+
+

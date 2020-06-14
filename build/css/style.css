@@ -1321,22 +1321,8 @@ footer .content {
     letter-spacing: 2px;
 }
 
-.price {
-    position: relative;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    padding-bottom: 35px;
-}
-
 .options h3 {
     margin-top: 10px;
-}
-
-span.cost {
-    display: inline-block;
-    vertical-align: bottom;
-    margin-top: 35px;
-    margin-right: 60px;
 }
 
 .font-bold {
@@ -1350,52 +1336,6 @@ span.cost {
     margin-bottom: 0;
 }
 
-.range + label {
-    position: absolute;
-    font-size: 0;
-}
-
-.range + label:before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 200px;
-    height: 2px;
-    background-color: #dbdbdb;
-}
-
-.range + .cost:before {
-    width: 105px;
-    background-color: #91c92f;
-}
-
-.range + label:after {
-    content: url("../img/svg-device/filter-button.svg");
-    position: absolute;
-    height: 22px;
-    top: 10px;
-    left: -10px;
-    z-index: 5;
-    border-radius: 50%;
-}
-
-.range + .cost:after {
-    left: 105px;
-}
-
-.range:focus + label:after {
-    -webkit-box-shadow: 0 0 2px 2px #90B0D6;
-    box-shadow: 0 0 2px 2px #90b0d6;
-    cursor: pointer;
-}
-
-.range:active + label:after {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    cursor: pointer;
-}
 
 /*==========================стилизация чекбоска и радобаттона каталога==========================================*/
 .checkboxes li {
@@ -1558,24 +1498,6 @@ input[type="checkbox"]:checked + .check::before {
     left: 100px;
 }
 
-.items-picture button {
-    opacity: 0;
-}
-
-.product-description:hover button {
-    opacity: 1;
-}
-
-.items-picture button:focus,
-.buy:focus + button {
-    opacity: 1;
-}
-
-.items-picture button:focus ~ .image-container,
-.product-description:hover .image-container {
-    opacity: 0.7;
-}
-
 .image-container {
     width: 360px;
     height: 380px;
@@ -1610,10 +1532,29 @@ input[type="checkbox"]:checked + .check::before {
 .add-to-compare:hover,
 .add-to-compare:focus {
     color: rgba(0, 0, 0, 1);
+	cursor: pointer;
 }
 
 .add-to-compare:active {
     color: rgba(0, 0, 0, 0.2);
+}
+
+.items-picture .product-description button{
+	opacity: 0;
+}
+
+.buy:focus + button {
+	opacity: 1;
+}
+
+.product-description:hover button {
+	opacity: 1;
+}
+
+
+.items-picture button:focus ~ .image-container,
+.product-description:hover .image-container {
+	opacity: 0.7;
 }
 
 .description {
@@ -1728,6 +1669,62 @@ a.correct-width-4 {
 
 .move-pages:active {
     color: rgba(0, 0, 0, 0.3);
+}
+
+/*================= double -range ==============================*/
+.price {
+	position: relative;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	padding-bottom: 35px;
+}
+
+span.cost {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-top: 35px;
+	width: 90px;
+}
+
+.double-range__track {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 100%;
+	height: 2px;
+	background-color: #dbdbdb;
+	background-image: linear-gradient(to right, currentColor 65%, transparent 65%);
+	background-position: 2px 0;
+	border-radius: .25rem;
+	pointer-events: none;
+	color: #91c92f;
+}
+
+.double-range__input {
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	opacity: 0;
+}
+
+.double-range__thumb {
+	content: url("../img/svg-device/filter-button.svg");
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 22px;
+	margin: auto;
+	border-radius: 50%;
+	touch-action: none;
+	cursor: pointer;
+	z-index: 5;
+}
+
+.double-range__input:focus + .double-range__thumb,
+.double-range__input:active + .double-range__thumb {
+	transform: scale(1.2);
 }
 
 /*=====================modal===================================*/
